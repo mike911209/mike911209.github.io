@@ -1,0 +1,18 @@
+#Friend {
+    height: 200%;
+}
+
+#friend-container {
+    border-radius: 2rem;
+    background-color: rgb(255, 255, 255, 0.8);
+    height: 50%;
+}
+
+.friend-row {
+    height: 100%;
+    padding: 5rem;
+}
+
+#friend-row-text {
+    font-size: 1.5rem;
+}
