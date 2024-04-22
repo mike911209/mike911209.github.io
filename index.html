@@ -676,7 +676,7 @@ tecture, Software Studio, Hardware Design and Lab, Logic Design.
         - #PORTFOLIO
       -->
 
-      <!-- <article class="portfolio" data-page="portfolio">
+      <!-- <article class="portfolio" id="portfolio" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -920,29 +920,67 @@ tecture, Software Studio, Hardware Design and Lab, Logic Design.
 
         <section class="blog-posts">
 
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Food</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Food</button>
+              </li>
+
+            </ul>
+
+          </div>
+
           <ul class="blog-posts-list">
 
-            <li class="blog-post-item">
-              <a href="./blog_test.html">
+            <li class="blog-post-item active" data-filter-item data-category="food">
+              <a href="./happy_ending.html">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                  <img src="./assets/images/happy_ending/happy_ending1.jpg" alt="Design conferences in 2022" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">test</p>
+                    <p class="blog-category">Food</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2022-02-23">Apr 23, 2024</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Blog testing now</h3>
+                  <h3 class="h3 blog-item-title">食記 - 喜劇收場</h3>
 
                   <p class="blog-text">
-                    el magna finibus sagittis nec non augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce imperdiet nisi nec
+                    一間在巨城附近，裝潢很有個人風格的漢堡店
                   </p>
 
                 </div>
@@ -950,7 +988,8 @@ tecture, Software Studio, Hardware Design and Lab, Logic Design.
               </a>
             </li>
 
-            
+          </ul>
+
         </section>
 
       </article>

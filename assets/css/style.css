@@ -590,6 +590,11 @@ main {
   scroll-snap-align: center;
 }
 
+.blog-image-item {
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
 .testimonials-avatar-box {
   position: absolute;
   top: 0;
@@ -601,6 +606,7 @@ main {
 }
 
 .testimonials-item-title { margin-bottom: 7px; }
+.blog-image-item { margin-bottom: 7px; }
 
 .testimonials-text {
   color: var(--light-gray);
@@ -1047,6 +1053,13 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+}
+
+.blog-post-item { display: none; }
+
+.blog-post-item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
 }
 
 .blog-post-item > a {
@@ -1762,6 +1775,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* testimonials */
 
   .testimonials-item { min-width: calc(50% - 15px); }
+  .blog-image-item { min-width: calc(50% - 15px); }
 
   /* clients */
 
