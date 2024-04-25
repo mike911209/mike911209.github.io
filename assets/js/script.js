@@ -142,6 +142,7 @@ const pages = document.querySelectorAll("[data-page]");
 let host;
 
 window.onload = function() {
+  console.log("hello");
   host = window.location.href.split('#')[0];
 
   var lastIndex = window.location.href.lastIndexOf('#');
