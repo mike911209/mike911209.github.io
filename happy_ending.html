@@ -52,34 +52,34 @@
 
           <ul class="testimonials-list has-scrollbar">
 
-            <li class="blog-image-item">
+            <li class="blog-image-item" data-testimonials-item>
               <!-- <div class="content-card" data-testimonials-item> -->
                 <figure class="blog-img-box">
-                    <img src="./assets/images/happy_ending/happy_ending0.jpg" alt="Design conferences in 2022" loading="lazy">
+                    <img src="./assets/images/happy_ending/happy_ending0.jpg" loading="lazy" data-testimonials-avatar>
                   </figure>
               <!-- </div> -->
             </li>
 
-            <li class="blog-image-item">
+            <li class="blog-image-item" data-testimonials-item>
                 <!-- <div class="content-card" data-testimonials-item> -->
                   <figure class="blog-img-box">
-                      <img src="./assets/images/happy_ending/happy_ending1.jpg" alt="Design conferences in 2022" loading="lazy">
+                      <img src="./assets/images/happy_ending/happy_ending1.jpg" loading="lazy" data-testimonials-avatar>
                     </figure>
                 <!-- </div> -->
               </li>
 
-              <li class="blog-image-item">
+              <li class="blog-image-item" data-testimonials-item>
                 <!-- <div class="content-card" data-testimonials-item> -->
                   <figure class="blog-img-box">
-                      <img src="./assets/images/happy_ending/happy_ending2.jpg" alt="Design conferences in 2022" loading="lazy">
+                      <img src="./assets/images/happy_ending/happy_ending2.jpg" loading="lazy" data-testimonials-avatar>
                     </figure>
                 <!-- </div> -->
               </li>
 
-              <li class="blog-image-item">
+              <li class="blog-image-item" data-testimonials-item>
                 <!-- <div class="content-card" data-testimonials-item> -->
                   <figure class="blog-img-box">
-                      <img src="./assets/images/happy_ending/happy_ending3.jpg" alt="Design conferences in 2022" loading="lazy">
+                      <img src="./assets/images/happy_ending/happy_ending3.jpg" loading="lazy" data-testimonials-avatar>
                     </figure>
                 <!-- </div> -->
               </li>
@@ -137,6 +137,24 @@
             </p>
         </section>
 
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <figure class="testimonials-img-box">
+              <img src="./assets/images/lanternTraveling/day1_img6.jpg" width="80" data-modal-img>
+            </figure>
+
+          </section>
+
+        </div>
+
       </article>
     </div>
 
@@ -145,6 +163,7 @@
   <!--
     - ionicon link
   -->
+  <script src="./assets/js/lanternTraveling.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
