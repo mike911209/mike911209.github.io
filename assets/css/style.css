@@ -599,6 +599,11 @@ main {
   scroll-snap-align: center;
 }
 
+.gallery-item {
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
 .testimonials-avatar-box {
   position: absolute;
   top: 0;
@@ -611,6 +616,8 @@ main {
 
 .testimonials-item-title { margin-bottom: 7px; }
 .blog-image-item { margin-bottom: 7px; }
+.gallery-item { margin-bottom: 7px; }
+
 
 .testimonials-text {
   color: var(--light-gray);
@@ -1152,6 +1159,7 @@ main {
 }
 
 .blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
+.gallery-item:hover .blog-img-box img { transform: scale(1.1); }
 
 .blog-content { padding: 15px; }
 
@@ -1819,6 +1827,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-item { min-width: calc(50% - 15px); }
   .blog-image-item { min-width: calc(50% - 15px); }
+  .gallery-item { min-width: calc(50% - 15px); }
 
   /* clients */
 
