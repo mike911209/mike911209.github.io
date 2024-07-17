@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://mike911209.github.io/2024/07/17/ss/</loc>
-    
-    <lastmod>2024-07-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/2024/07/17/python/</loc>
-    
-    <lastmod>2024-07-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://mike911209.github.io/2024/07/17/ml/</loc>
     
     <lastmod>2024-07-17</lastmod>
@@ -38,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/2024/07/17/os/</loc>
+    <loc>https://mike911209.github.io/2024/07/17/ca/</loc>
     
     <lastmod>2024-07-17</lastmod>
     
@@ -47,7 +29,25 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/2024/07/17/ca/</loc>
+    <loc>https://mike911209.github.io/2024/07/17/ss/</loc>
+    
+    <lastmod>2024-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/2024/07/17/python/</loc>
+    
+    <lastmod>2024-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/2024/07/17/os/</loc>
     
     <lastmod>2024-07-17</lastmod>
     
@@ -201,6 +201,13 @@
   
   <url>
     <loc>https://mike911209.github.io/tags/ML/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/AI/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
