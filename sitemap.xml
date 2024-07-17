@@ -190,7 +190,21 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/tags/Burger/</loc>
+    <loc>https://mike911209.github.io/tags/Travel/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Cat/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Train/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -211,21 +225,7 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/tags/Travel/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Cat/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Train/</loc>
+    <loc>https://mike911209.github.io/tags/Burger/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
