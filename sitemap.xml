@@ -88,6 +88,13 @@
   </url>
   
   <url>
+    <loc>https://mike911209.github.io/tags/Drink/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mike911209.github.io/tags/Travel/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -131,13 +138,6 @@
   
   <url>
     <loc>https://mike911209.github.io/tags/Museum/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Drink/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
