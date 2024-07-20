@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mike911209.github.io/2024/07/21/git-stash/</loc>
+    
+    <lastmod>2024-07-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mike911209.github.io/2024/07/20/qqdumpling/</loc>
     
     <lastmod>2024-07-20</lastmod>
@@ -182,6 +191,20 @@
 
   
   <url>
+    <loc>https://mike911209.github.io/tags/Food/</loc>
+    <lastmod>2024-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Dessert/</loc>
+    <lastmod>2024-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mike911209.github.io/tags/Course/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -210,14 +233,14 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/tags/Food/</loc>
+    <loc>https://mike911209.github.io/tags/Learning/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/tags/Curry/</loc>
+    <loc>https://mike911209.github.io/tags/Git/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -225,6 +248,13 @@
   
   <url>
     <loc>https://mike911209.github.io/tags/Burger/</loc>
+    <lastmod>2024-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Curry/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -286,14 +316,14 @@
     <priority>0.2</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://mike911209.github.io/tags/Dessert/</loc>
+    <loc>https://mike911209.github.io/categories/Food/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
-
   
   <url>
     <loc>https://mike911209.github.io/categories/Course/</loc>
@@ -303,7 +333,7 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/categories/Food/</loc>
+    <loc>https://mike911209.github.io/categories/Learning/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
