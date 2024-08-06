@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mike911209.github.io/2024/08/07/posto/</loc>
+    
+    <lastmod>2024-08-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mike911209.github.io/2024/08/07/chunton/</loc>
     
     <lastmod>2024-08-06</lastmod>
@@ -323,13 +332,6 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/tags/Dry-pot/</loc>
-    <lastmod>2024-08-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mike911209.github.io/tags/Travel/</loc>
     <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -358,6 +360,13 @@
   </url>
   
   <url>
+    <loc>https://mike911209.github.io/tags/Dry-pot/</loc>
+    <lastmod>2024-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mike911209.github.io/tags/ML/</loc>
     <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -373,6 +382,13 @@
   
   <url>
     <loc>https://mike911209.github.io/tags/Drink/</loc>
+    <lastmod>2024-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Pizza/</loc>
     <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
