@@ -7,7 +7,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mike911209.github.io/images/ssh_tunneling/2.png">
 <meta property="article:published_time" content="2024-08-20T09:37:24.000Z">
-<meta property="article:modified_time" content="2024-08-20T12:54:38.292Z">
+<meta property="article:modified_time" content="2024-08-21T16:22:54.599Z">
 <meta property="article:author" content="BIN LUN LI">
 <meta property="article:tag" content="CS">
 <meta property="article:tag" content="Learning">
@@ -58,7 +58,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-08-20 20:54:38'
+  postUpdate: '2024-08-22 00:22:54'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -176,7 +176,7 @@
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/profile.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/ssh_tunneling/2.png')"><nav id="nav"><span id="blog-info"><a href="/" title="BIN LUN LI"><span class="site-name">BIN LUN LI</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">學記 - SSH Tunneling</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">Created</span><time datetime="2024-08-20T09:37:24.000Z" title="Created 2024-08-20 17:37:24">2024-08-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Learning/">Learning</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="What-is-SSH-Tunneling"><a href="#What-is-SSH-Tunneling" class="headerlink" title="What is SSH Tunneling?"></a>What is SSH Tunneling?</h2><p>網路的連線由 2 個端點組成，而連線中經常會經過 untrusted networks（例如 internet），其中的資料傳輸就不安全，可能會有被偷窺，甚至收到錯誤資料的風險，tunneling 技術就是為此而生。</p>
 <p>Tunneling 指的是將網路上的 2 個端點用某種方式連接起來，形成一個隧道，而 SSH tunneling 就是用 SSH protocol 建立隧道，不但能加密通訊，即便中間有設下防火牆或者要連上在別的內網的機器，SSH tunneling 都能建立連線。</p>
-<p><img src="https://johnliu55.tw/ssh-tunnel/images/tunneling.png"></p>
+<p><img src="/images/ssh_tunneling/0.png"></p>
 <blockquote>
 <p>舉例而言，今天有個 web server 建立在 remote server 的 9000 port，而該 server 並沒有 external IP，而是需要透過 jump host 才能連上。<br>我們可以透過 SSH 的 port forwarding 來建立一個在自己的 machine 與 remote server 間的 tunnel，如此一來便能連上架設在 remote server 上的 web server</p>
 </blockquote>
@@ -201,6 +201,7 @@
 <blockquote>
 <p>假設在 server 的 8080 port 架有一個 website，而該 server 需要透過 jump host 才能連上（也就是沒有 external IP），若我們想要在自己電腦的瀏覽器 access 該 website，可以怎麼做呢？</p>
 </blockquote>
+<p><img src="/images/ssh_tunneling/3.png"></p>
 <p>首先，設定 SSH 讓自己的電腦可以透過 SSH 連上 remote server，可以透過編輯 ~&#x2F;.ssh&#x2F;config 設定使用 jump host，而這並不是本篇學記的重點，因此不多著墨。</p>
 <p>目前的 ~&#x2F;.ssh&#x2F;config 如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host jumpHost</span><br><span class="line">    HostName 1.2.3.4</span><br><span class="line">    User mike</span><br><span class="line"></span><br><span class="line">Host remoteServer</span><br><span class="line">    HostName remote-server.com</span><br><span class="line">    User mike</span><br><span class="line">    ProxyJump jumpHost</span><br></pre></td></tr></table></figure>
@@ -229,6 +230,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -R 8080:localho:9090 user@remote-server</span><br></pre></td></tr></table></figure>
 
 <p>此時當 user 連線上 remote server 的 8080 port，我架設在我電腦 9090 port 的 web service 便會收到 request，因為我透過 remote port forwarding 將 remote server 的 8080 port 上的所有資料送到我電腦上的 9090 port 了。</p>
+<p><img src="/images/ssh_tunneling/4.png"></p>
 <h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p>我前幾天想要查看在 remote server 上的 prometheus 資料，該 server 需要透過多層 jump host 才能連上，但我又想要在自己電腦的瀏覽器上查看 grafana dashboard（一個資料視覺化的工具，有支援 prometheus）。此時可以透過 local port forwarding 將 local 的 9000 port forward 到 remote 的 9000 port，再將架設在 remote server 的 kubernetes cluster 中的 grafana port forward 到 remote server 的 9000 port，這樣一來所有連線請求送到我電腦的 9000 port 就會被 forward 到執行 grafana 的 container 上，因此就可以看到 grafana 的資料了！</p>
 <p>local port forwarding：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L 9000:localhost:9000 remoteServer</span><br></pre></td></tr></table></figure>
