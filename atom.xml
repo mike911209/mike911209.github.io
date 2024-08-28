@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2024-08-27T18:53:00.768Z</updated>
+  <updated>2024-08-28T13:08:09.164Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修課心得 - NTHU Compiler Design</title>
+    <link href="https://mike911209.github.io/2024/08/28/compiler/"/>
+    <id>https://mike911209.github.io/2024/08/28/compiler/</id>
+    <published>2024-08-28T10:02:38.000Z</published>
+    <updated>2024-08-28T13:08:09.164Z</updated>
+    
+    
+    <summary type="html">資工系 B 類選修，超級活佛課程，在課堂中會設計一個簡單的前端 compiler。</summary>
+    
+    
+    
+    <category term="Course" scheme="https://mike911209.github.io/categories/Course/"/>
+    
+    
+    <category term="Course" scheme="https://mike911209.github.io/tags/Course/"/>
+    
+    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
+    
+    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
+    
+  </entry>
   
   <entry>
     <title>修課心得 - NTHU 料理中的科學</title>
@@ -222,29 +245,6 @@
     <category term="Ramen" scheme="https://mike911209.github.io/tags/Ramen/"/>
     
     <category term="Kaohsiung" scheme="https://mike911209.github.io/tags/Kaohsiung/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>食記 - 辣辣叭麻辣干鍋</title>
-    <link href="https://mike911209.github.io/2024/08/07/lalapa/"/>
-    <id>https://mike911209.github.io/2024/08/07/lalapa/</id>
-    <published>2024-08-06T17:39:02.000Z</published>
-    <updated>2024-08-06T18:02:42.077Z</updated>
-    
-    
-    <summary type="html">一間價格嚇人，但非常好吃的麻辣乾鍋。</summary>
-    
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/categories/Food/"/>
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
-    
-    <category term="Kaohsiung" scheme="https://mike911209.github.io/tags/Kaohsiung/"/>
-    
-    <category term="Dry pot" scheme="https://mike911209.github.io/tags/Dry-pot/"/>
     
   </entry>
   

@@ -196,6 +196,58 @@
       </tags>
   </entry>
   <entry>
+    <title>修課心得 - NTHU Compiler Design</title>
+    <url>/2024/08/28/compiler/</url>
+    <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：編譯器設計 Compiler Design<br>科號：CS 340400<br>老師：李政崑<br>課本：教授自編講義<br>課別：資工系選修 B 類<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
+<h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>無，但如果有修過正規語言、計算理論在課程前中期會比較輕鬆。</p>
+<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>一開始簡介 Compiler，後來介紹 grammar 跟 parsing strategy，再介紹 Finite state machine 與 LL, LR parser。</p>
+<h2 id="教學進度如下"><a href="#教學進度如下" class="headerlink" title="教學進度如下"></a>教學進度如下</h2><ul>
+<li>Ch1 Introduction to Compilers</li>
+<li>Ch2 Grammar, Parsing</li>
+<li>Ch3 Finite State Machine</li>
+<li>Ch4 LL, LR parser</li>
+</ul>
+<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>實體授課，一開始覺得老師超ㄎ一ㄤ講課很跳慟，但習慣從中抓重點後就覺得上課還滿有趣的，而且老師超可愛，很像一隻大白熊。</p>
+<p>講義很亂，但該講的都有講到，不過如果是平常翹課，期望單純看講義期中期末就能高分的那無法，這堂課需要認真聽課，不然會跟不上。</p>
+<p>我主觀認為老師講的還滿清晰的，雖然很跳慟，但一個觀念點會時常複習（很常複習超過 2 次），所以上課聽過後大概就記住了，然後老師真的很可愛。</p>
+<p>上課聽不懂下課去問老師，老師也都很耐心的解惑直到學生理解為止，然後老師真的很可愛。</p>
+<p>老師教課進度非常緩慢，而且老師慣性遲到，上課前又會複習上次教的內容，中間又花了很大的篇幅講第三次作業，所以一個學期下來感覺學到的有限。</p>
+<h2 id="作業"><a href="#作業" class="headerlink" title="作業"></a>作業</h2><p>作業共分 3 次，內容如下：</p>
+<ol>
+<li>Lexer（用 lex）</li>
+<li>Parser（用 yacc）</li>
+<li>Compiler（Base on 前 2 次作業）</li>
+</ol>
+<p>第一次作業大概一個下午，照著 spec 刻 regular expression 就出來了。</p>
+<p>第二次作業大概 2 天，需要 handle 一些 conflict 稍微麻煩，準備好程式架構要花一點時間，實際寫 code 就沒很久，也是照著 spec 刻，spec 都講得很清楚。</p>
+<p>第三次作業要花大量時間，跟前 2 次作業沒得比，而且第二次作業的 grammar 可能需要不少修改，不知道未來能否避免需要再反複修改前面作業的情況，即使前面都滿分。<br>作業內容是實際寫出一個可以 gen code 的簡單 compiler，作業的測資全部公開，這點真的很佛心，不用去 handle 一些奇怪的語法真的很棒，可以感覺到完全沒有要刁難學生。甚至還有總分 5 分很好拿的加分。<br>我自己是花 3, 4 天左右，期間改了很多次前面作業的內容，雖然 spec 說明的還算清楚，但一開始真的會很無從下手。</p>
+<h2 id="考試"><a href="#考試" class="headerlink" title="考試"></a>考試</h2><p>考試共2次，期中與期末。</p>
+<p>期中考我覺得很簡單，我看不少人 100，我自己也 100。平均我大致估一下應該在 75 那邊，標準差 20 左右（實際平均要更高，有幾個很低分的拉低了），結果考完第一節課老師一進教室：”大家那個，我們期中加 10 分”，總之就是很佛。</p>
+<p>期末比期中再難一點點，但也是不難，總分甚至破百，因為期中加的 10 分會 overflow 到期末，所以我沒很認真準備，最後還是有快 100 分。</p>
+<p>考試內容基本上就上課講義讀熟，考古做一做，還有考試前一節課的洩題做好筆記，就沒啥問題了，佛心來著。</p>
+<h2 id="助教"><a href="#助教" class="headerlink" title="助教"></a>助教</h2><p>其他修課心得我都沒有特別把助教拉出來獨力一欄說明，但這堂課我覺得有這個必要。</p>
+<p>先講結論，這堂課的助教非常用心，修課體驗非常好。</p>
+<p>作業遇到任何問題向助教詢問助教都回覆非常快速，而且我的感受是助教並不是消極處理問題，而是會主動關心學生的情況，覺得助教很用心。</p>
+<p>聽到大家的意見後，第三次作業也有 2 次的 demo 時段，配合需要更多時間的人。</p>
+<p>真的要特別謝謝助教給這堂課一個很棒的修課體驗。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>平常完全沒有 loading 的課，考試前花個 2 天左右複習（或者跟別人借筆記），第三次作業準備多一點時間寫，很輕鬆就能 A+，佛心來著。</p>
+<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>作業 3 次 30% +<br>期中考 30% +<br>期末考 30% +<br>Class participation 10%（這個最後直接給滿） +<br>期中加分 3% +<br>第三次作業加分 5%<br>&#x3D; 108%</p>
+<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>老師超級可愛，很有耐心，走路慢慢的很像一隻大白熊，老師通常都會遲到 10 分鐘，不過老師很可愛。</p>
+<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>不清楚規定。</p>
+<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：99(A+) 1&#x2F;102 （破百的都給 99 而已）<br>T分數：59.72<br>成績分布：</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/compiler/0.png" loading="lazy">
+</figure>]]></content>
+      <categories>
+        <category>Course</category>
+      </categories>
+      <tags>
+        <tag>Course</tag>
+        <tag>NTHU</tag>
+        <tag>CS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修課心得 - NTHU Computer System Administration</title>
     <url>/2024/07/17/csa/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機系統管理 Computer System Administration<br>科號：CS 342700<br>老師：張君天<br>課本：教授自編講義<br>課別：資工系選修（非ABCD類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
@@ -908,6 +960,40 @@
       </tags>
   </entry>
   <entry>
+    <title>食記 - 沐嵐</title>
+    <url>/2024/07/17/moonlight/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/s2cuPqJGG39swnPt8">300新竹市東區西大路240號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><h4 id="火車站出發"><a href="#火車站出發" class="headerlink" title="火車站出發"></a>火車站出發</h4><p>面向火車站右手邊一直走，穿過竹蓮地下道後就在附近了。</p>
+<h4 id="清大出發"><a href="#清大出發" class="headerlink" title="清大出發"></a>清大出發</h4><p>搭 83 號公車，在西大路口下車，沐嵐就在旁邊。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>如果問我在新竹待了四年，最推薦的一間店，沐嵐會是其中一間，儘管需要排隊很久。</p>
+<p>營業後才來通常要等上一個小時，如果在開店前 30 分鐘提前抵達候位，可以第一批入內用餐，節省很多等待時間。</p>
+<p>餐點部分，餐前有湯，非常好喝，很難以敘述是怎樣的湯，但味道甘甜，每次都會續碗。</p>
+<figure class="blog-img-box">
+    <img src="/images/moonlight/5.png" loading="lazy">
+</figure>
+接著送上主餐，誇張的肉量平舖在咖哩上，視覺上極度震撼，更何況這樣的料理只要 $200 出頭。
+<figure class="blog-img-box">
+    <img src="/images/moonlight/4.png" loading="lazy">
+</figure>
+肉的料理方式多為舒肥，口感極嫩，肉也鮮甜好吃，肉量真的多到會吃到嘴巴痠。
+飯旁有一些生菜及其他副食，咖哩本身並不是很特別，沐嵐雖然說是賣咖哩，但更主要還是靠肉打出名氣。
+<figure class="blog-img-box">
+    <img src="/images/moonlight/2.png" loading="lazy">
+</figure>
+
+<p>在換了新店面後，環境變得很舒適，並不像以前一樣吃得滿身汗還會沾上油煙味。</p>
+<p>總體而言，沐嵐是一間以 CP 值來說還不錯的店（相比 3 年前漲價 $50，3 年前那個價格是真的划算），食物非常好吃，儘管需要排隊很久，但這正是因為他的美味使然，推薦。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Curry</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修課心得 - NTHU Machine Learning</title>
     <url>/2024/07/17/ml/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：機器學習概論 Introduction to Machine Learning<br>科號：CS 460200<br>老師：郭柏志<br>課本：教授自編講義<br>課別：資工系選修D類<br>學分：3<br>涼度：★~★★★（滿分五分，空心代表半分）<br>甜度：★★★（滿分五分，空心代表半分）</p>
@@ -959,40 +1045,6 @@
         <tag>CS</tag>
         <tag>ML</tag>
         <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>食記 - 沐嵐</title>
-    <url>/2024/07/17/moonlight/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/s2cuPqJGG39swnPt8">300新竹市東區西大路240號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><h4 id="火車站出發"><a href="#火車站出發" class="headerlink" title="火車站出發"></a>火車站出發</h4><p>面向火車站右手邊一直走，穿過竹蓮地下道後就在附近了。</p>
-<h4 id="清大出發"><a href="#清大出發" class="headerlink" title="清大出發"></a>清大出發</h4><p>搭 83 號公車，在西大路口下車，沐嵐就在旁邊。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>如果問我在新竹待了四年，最推薦的一間店，沐嵐會是其中一間，儘管需要排隊很久。</p>
-<p>營業後才來通常要等上一個小時，如果在開店前 30 分鐘提前抵達候位，可以第一批入內用餐，節省很多等待時間。</p>
-<p>餐點部分，餐前有湯，非常好喝，很難以敘述是怎樣的湯，但味道甘甜，每次都會續碗。</p>
-<figure class="blog-img-box">
-    <img src="/images/moonlight/5.png" loading="lazy">
-</figure>
-接著送上主餐，誇張的肉量平舖在咖哩上，視覺上極度震撼，更何況這樣的料理只要 $200 出頭。
-<figure class="blog-img-box">
-    <img src="/images/moonlight/4.png" loading="lazy">
-</figure>
-肉的料理方式多為舒肥，口感極嫩，肉也鮮甜好吃，肉量真的多到會吃到嘴巴痠。
-飯旁有一些生菜及其他副食，咖哩本身並不是很特別，沐嵐雖然說是賣咖哩，但更主要還是靠肉打出名氣。
-<figure class="blog-img-box">
-    <img src="/images/moonlight/2.png" loading="lazy">
-</figure>
-
-<p>在換了新店面後，環境變得很舒適，並不像以前一樣吃得滿身汗還會沾上油煙味。</p>
-<p>總體而言，沐嵐是一間以 CP 值來說還不錯的店（相比 3 年前漲價 $50，3 年前那個價格是真的划算），食物非常好吃，儘管需要排隊很久，但這正是因為他的美味使然，推薦。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Curry</tag>
       </tags>
   </entry>
   <entry>
@@ -1070,37 +1122,6 @@
         <tag>Food</tag>
         <tag>Hsinchu</tag>
         <tag>Drink</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>食記 - 波市多拿坡里披薩</title>
-    <url>/2024/08/07/posto/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/29vCbRkJuDVsKufR7">813高雄市左營區至聖路289號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>高雄捷運凹子底捷運站出來走 2, 3 分鐘就到了。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這是一間，我吃過最好吃的披薩店。</p>
-<p>店內裝潢滿漂亮，可以好好坐下來用餐輕鬆聊天，但有限制用餐時間，印象中是 90 分鐘，很夠。</p>
-<p>菜單選擇不多，但我想他們每樣都很好吃。</p>
-<p>今天點的是菠菜培根蛋黃披薩，披薩餅皮非常薄，薄到料會掉下來的那種。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/posto/0.png" loading="lazy">
-</figure>
-
-<p>味道上真的非常美味，菠菜培根我覺得好吃，但沒有到印象中辣味牛肉的驚艷，雖然辣味牛肉是約一年前吃的，但那個味道我還記得，真的很好吃。</p>
-<p>套餐 $100 含沙拉、紅茶、小菜。小菜的話我很推薦烤馬鈴薯，我覺得很好吃。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/posto/1.png" loading="lazy">
-</figure>
-
-<p>價格部分中規中矩，但披薩分量很多，如果 3 個人分 2 片披薩，這樣 CP 值就算不錯。</p>
-<p>很推薦，交通方便、味道美味，一定要來吃看看。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Kaohsiung</tag>
-        <tag>Pizza</tag>
       </tags>
   </entry>
   <entry>
@@ -1184,6 +1205,37 @@
       <tags>
         <tag>Food</tag>
         <tag>Hsinchu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>食記 - 波市多拿坡里披薩</title>
+    <url>/2024/08/07/posto/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/29vCbRkJuDVsKufR7">813高雄市左營區至聖路289號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>高雄捷運凹子底捷運站出來走 2, 3 分鐘就到了。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這是一間，我吃過最好吃的披薩店。</p>
+<p>店內裝潢滿漂亮，可以好好坐下來用餐輕鬆聊天，但有限制用餐時間，印象中是 90 分鐘，很夠。</p>
+<p>菜單選擇不多，但我想他們每樣都很好吃。</p>
+<p>今天點的是菠菜培根蛋黃披薩，披薩餅皮非常薄，薄到料會掉下來的那種。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/posto/0.png" loading="lazy">
+</figure>
+
+<p>味道上真的非常美味，菠菜培根我覺得好吃，但沒有到印象中辣味牛肉的驚艷，雖然辣味牛肉是約一年前吃的，但那個味道我還記得，真的很好吃。</p>
+<p>套餐 $100 含沙拉、紅茶、小菜。小菜的話我很推薦烤馬鈴薯，我覺得很好吃。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/posto/1.png" loading="lazy">
+</figure>
+
+<p>價格部分中規中矩，但披薩分量很多，如果 3 個人分 2 片披薩，這樣 CP 值就算不錯。</p>
+<p>很推薦，交通方便、味道美味，一定要來吃看看。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Kaohsiung</tag>
+        <tag>Pizza</tag>
       </tags>
   </entry>
   <entry>
