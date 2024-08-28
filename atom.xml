@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2024-08-28T15:16:48.974Z</updated>
+  <updated>2024-08-28T17:15:46.047Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修課心得 - NTHU Computer Graphics</title>
+    <link href="https://mike911209.github.io/2024/08/29/cg/"/>
+    <id>https://mike911209.github.io/2024/08/29/cg/</id>
+    <published>2024-08-28T16:10:41.000Z</published>
+    <updated>2024-08-28T17:15:46.047Z</updated>
+    
+    
+    <summary type="html">資工系研究所課程，超級甜涼好課。介紹計算機圖學，課程中會實作圖學的一些功能。</summary>
+    
+    
+    
+    
+    <category term="Course" scheme="https://mike911209.github.io/tags/Course/"/>
+    
+    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
+    
+    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
+    
+  </entry>
   
   <entry>
     <title>修課心得 - NTHU Compiler Design</title>
@@ -222,29 +243,6 @@
     <category term="Kaohsiung" scheme="https://mike911209.github.io/tags/Kaohsiung/"/>
     
     <category term="Pizza" scheme="https://mike911209.github.io/tags/Pizza/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>食記 - 村豚拉麵</title>
-    <link href="https://mike911209.github.io/2024/08/07/chunton/"/>
-    <id>https://mike911209.github.io/2024/08/07/chunton/</id>
-    <published>2024-08-06T18:01:08.000Z</published>
-    <updated>2024-08-06T18:18:02.457Z</updated>
-    
-    
-    <summary type="html">一間位在高級住宅大樓下的拉麵店，線上取號的設計很不錯。</summary>
-    
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/categories/Food/"/>
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
-    
-    <category term="Ramen" scheme="https://mike911209.github.io/tags/Ramen/"/>
-    
-    <category term="Kaohsiung" scheme="https://mike911209.github.io/tags/Kaohsiung/"/>
     
   </entry>
   

@@ -68,6 +68,59 @@
       </tags>
   </entry>
   <entry>
+    <title>修課心得 - NTHU Computer Graphics</title>
+    <url>/2024/08/29/cg/</url>
+    <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機圖學 Computer Graphics<br>科號：CS 550000<br>老師：李潤容<br>課本：教授自編講義<br>課別：資工系選修（非 ABCD 類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
+<h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>無，如果有寫過 OpenGL 的話作業會變簡單。</p>
+<h2 id="課程內容-簡介："><a href="#課程內容-簡介：" class="headerlink" title="課程內容&#x2F;簡介："></a>課程內容&#x2F;簡介：</h2><p>Note that 本課程為研究所課程。 </p>
+<p>介紹計算機圖學，此圖學不是演算法的圖，而是圖像的圖。課程前期教 object 的移動等等，課程中期教 lighting，課程後期教 texture。</p>
+<p>教學進度如下</p>
+<ul>
+<li>Ch1 About the Course</li>
+<li>Ch2 Introduction</li>
+<li>Ch3 Graphics Hardware</li>
+<li>Ch4 3D Graphics Pipeline</li>
+<li>Ch5 Introduction to OpenGL</li>
+<li>Ch6 Rasterization</li>
+<li>Ch7 Transformation I</li>
+<li>Ch8 Transformation II</li>
+<li>Ch9 Lighting</li>
+<li>Ch10 Hidden Surface Removal</li>
+<li>Ch11 Texture Mapping I</li>
+<li>Ch12 Texture Mapping II</li>
+<li>Ch13 Fragment Tests</li>
+<li>Ch14 Shader</li>
+<li>Ch15 Shadow</li>
+<li>Ch16 Modeling</li>
+<li>Ch17 Anti-aliasing</li>
+<li>Ch18 Global Illumination</li>
+</ul>
+<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>實體加線上授課，遠距採用 Teams，點名也不用實體出席。</p>
+<p>老師很用心，準備很多簡報，簡報內容滿清楚，老師上課也簡單易懂，會用一些很好理解的例子做講解。</p>
+<h2 id="作業"><a href="#作業" class="headerlink" title="作業"></a>作業</h2><p>作業共分 3 次，內容如下：</p>
+<ol>
+<li>Transformation</li>
+<li>Lighting</li>
+<li>Texture Mapping</li>
+</ol>
+<p>第一次作業較其他作業難（主觀），要先了解整個 template 的架構，做一些修改，讓 3D object 可以做 transformation。<br>作業內容就是透過鍵盤、滑鼠，讓 object  可以移動等等。基本上是寫 C++，需要 call library 的一些 function，所以如果有用過 OpenGL 寫起來會更輕鬆，但沒用過就是 Google 一下就好。</p>
+<p>第二次作業是做 Lighting，核心概念與第一次雷同，也是透過鍵盤、滑鼠的操作讓光影可以改變或移動，</p>
+<p>第三次作業非常簡單，就是 call 一 call api 就好。</p>
+<p>作業大概能在 1 ~ 2 天內完成，通常看上課簡報大概就知道怎麼寫，spec 要求清楚，只要照 spec 實作分數就不會少，基本上都能拿滿。</p>
+<h2 id="考試"><a href="#考試" class="headerlink" title="考試"></a>考試</h2><p>沒錯，你沒聽錯，本課程無考試。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>超級甜涼好課，就算上課都做自己的事，作業還是寫得出來，而且沒有考試成績，100% 都是作業，很好拿分的課。</p>
+<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>作業 3 次 90% +<br>出席 10%<br>&#x3D; 100%</p>
+<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>老師很有耐心，很為學生著想。還記得有位同學在討論區 po 文很久沒得到回覆，老師還在課堂上道歉說沒注意到，之後會多注意。老師也是少數會回討論區的老師，且都回得很用心跟到位，覺得老師很用心。</p>
+<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>因為教室修課人數，不開放加簽。</p>
+<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：94(A+) 1&#x2F;102 （因為有次作業出差錯，被打 8 折，一般來講都能拿 100）<br>T分數：52.42<br>成績分布：<br>本課程成績不公開</p>
+]]></content>
+      <tags>
+        <tag>Course</tag>
+        <tag>NTHU</tag>
+        <tag>CS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>食記 - 姜滿堂</title>
     <url>/2024/08/23/chan-man-tong/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/bAeJLC2LvEKeesGw7">300194新竹市東區中央路229號8樓</a></p>
@@ -298,6 +351,55 @@
       </tags>
   </entry>
   <entry>
+    <title>食記 - CURRY WU日式熟成濃咖哩專賣店</title>
+    <url>/2024/07/17/curry-wu/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/NER8KfbYatvDi8gd9">300新竹市北區興南街28號1樓</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在新竹大遠百旁邊，先到大遠百往旁邊巷子走就會到了。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一間隱身在巷子中的店，這條巷子令人意外的有很多吃的。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/5.png" loading="lazy">
+</figure>
+
+<p>我們提前 20 分鐘左右到場，當天到開店後都還有位置，但過一下子之後位置就滿了。</p>
+<p>店內空間比想像中的大，可以看得出老闆 &amp; 老闆娘的用心裝潢。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/4.png" loading="lazy">
+</figure>
+
+<p>我們是第一組，但到餐點送上還是等了約 10 分鐘，應該是人手比較少，所以動作比較慢。<br>點餐時老闆很熱情的介紹他們的咖哩與主食，跟老闆聊天很開心。</p>
+<p>我們點了唐揚雞咖哩定食跟牛奶豬排咖哩定食。</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/curry_wu/1.png" loading="lazy">
+                </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/curry_wu/3.png" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>老闆說他的唐揚雞是全新竹最嫩，不嫩退費。果然非常嫩，皮薄多汁，超級好吃。<br>豬排大得跟不用錢一樣，厲害的是即使吃到最後，皮跟肉也沒有分離，且完全不會有豬排的膩，真的很棒。<br>咖哩特別濃，濃到像是固體一樣，但完全不會膩，可以感覺到咖哩真的有下很大一番功夫，老闆說他去日本學了 6 年。<br>旁邊的配菜也很棒，很特別的味噌湯與好吃的海帶絲（？），天婦羅也是最頂的那種。<br>飯後居然還有冰淇淋，有種付了定食價格但多被招待了一份的感覺，冰淇淋的出現完全超出我的預料。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/0.png" loading="lazy">
+</figure>
+
+<p>總體而言，是一間很棒的店，而且不像沐嵐要排隊很久，害我打著打著又想吃了 na…</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Curry</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修課心得 - NTHU Introduction to Database Systems</title>
     <url>/2024/08/28/db/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：資料庫系統概論 Introduction to Database Systems<br>科號：CS 471000<br>老師：吳尚鴻<br>課本：教授自編講義<br>課別：資工系選修D類<br>學分：3<br>涼度：★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
@@ -368,55 +470,6 @@
         <tag>NTHU</tag>
         <tag>CS</tag>
         <tag>System</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>食記 - CURRY WU日式熟成濃咖哩專賣店</title>
-    <url>/2024/07/17/curry-wu/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/NER8KfbYatvDi8gd9">300新竹市北區興南街28號1樓</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在新竹大遠百旁邊，先到大遠百往旁邊巷子走就會到了。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一間隱身在巷子中的店，這條巷子令人意外的有很多吃的。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/5.png" loading="lazy">
-</figure>
-
-<p>我們提前 20 分鐘左右到場，當天到開店後都還有位置，但過一下子之後位置就滿了。</p>
-<p>店內空間比想像中的大，可以看得出老闆 &amp; 老闆娘的用心裝潢。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/4.png" loading="lazy">
-</figure>
-
-<p>我們是第一組，但到餐點送上還是等了約 10 分鐘，應該是人手比較少，所以動作比較慢。<br>點餐時老闆很熱情的介紹他們的咖哩與主食，跟老闆聊天很開心。</p>
-<p>我們點了唐揚雞咖哩定食跟牛奶豬排咖哩定食。</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/curry_wu/1.png" loading="lazy">
-                </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/curry_wu/3.png" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>老闆說他的唐揚雞是全新竹最嫩，不嫩退費。果然非常嫩，皮薄多汁，超級好吃。<br>豬排大得跟不用錢一樣，厲害的是即使吃到最後，皮跟肉也沒有分離，且完全不會有豬排的膩，真的很棒。<br>咖哩特別濃，濃到像是固體一樣，但完全不會膩，可以感覺到咖哩真的有下很大一番功夫，老闆說他去日本學了 6 年。<br>旁邊的配菜也很棒，很特別的味噌湯與好吃的海帶絲（？），天婦羅也是最頂的那種。<br>飯後居然還有冰淇淋，有種付了定食價格但多被招待了一份的感覺，冰淇淋的出現完全超出我的預料。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/0.png" loading="lazy">
-</figure>
-
-<p>總體而言，是一間很棒的店，而且不像沐嵐要排隊很久，害我打著打著又想吃了 na…</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Curry</tag>
       </tags>
   </entry>
   <entry>
