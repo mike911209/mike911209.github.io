@@ -176,18 +176,26 @@
   const $body = document.body
   const preloader = {
     endLoading: () => {
-      $body.style.overflow = ''
-      $loadingBox.classList.add('loaded')
+      document.body.style.overflow = 'auto';
+      document.getElementById('loading-box').style.transition = 'opacity 3s ease 0s'
+      document.getElementById('loading-box').style.opacity = '0'
+      setTimeout(function(){
+        document.getElementById('loading-box').classList.add("loaded")
+      }, 3000);
     },
     initLoading: () => {
-      $body.style.overflow = 'hidden'
-      $loadingBox.classList.remove('loaded')
+      document.body.style.overflow = '';
+      document.getElementById('loading-box').style.transition = '';
+      document.getElementById('loading-box').style.opacity = '1'
+      document.getElementById('loading-box').classList.remove("loaded")
+
     }
   }
 
   preloader.initLoading()
   window.addEventListener('load',() => { preloader.endLoading() })
   setTimeout(function(){preloader.endLoading();}, 5000);
+  document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})
 
   if (false) {
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
