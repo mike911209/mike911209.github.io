@@ -200,7 +200,7 @@
     <url>/2024/08/28/compiler/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：編譯器設計 Compiler Design<br>科號：CS 340400<br>老師：李政崑<br>課本：教授自編講義<br>課別：資工系選修 B 類<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>無，但如果有修過正規語言、計算理論在課程前中期會比較輕鬆。</p>
-<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>一開始簡介 Compiler，後來介紹 grammar 跟 parsing strategy，再介紹 Finite state machine 與 LL, LR parser。</p>
+<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>一開始簡介 Compiler，後來介紹 grammar 跟 parsing strategy，再介紹 Finite state machine 與 LL, LR parser。<br>Focus 在前端編譯器，修完課後差不多知道一些 grammar 跟 parser，主要是在記名詞，不太有算法或者優化，給想修的人參考看看。</p>
 <p>教學進度如下：</p>
 <ul>
 <li>Ch1 Introduction to Compilers</li>
@@ -231,9 +231,9 @@
 <p>作業遇到任何問題向助教詢問助教都回覆非常快速，而且我的感受是助教並不是消極處理問題，而是會主動關心學生的情況，覺得助教很用心。</p>
 <p>聽到大家的意見後，第三次作業也有 2 次的 demo 時段，配合需要更多時間的人。</p>
 <p>真的要特別謝謝助教給這堂課一個很棒的修課體驗。</p>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>平常完全沒有 loading 的課，考試前花個 2 天左右複習（或者跟別人借筆記），第三次作業準備多一點時間寫，很輕鬆就能 A+，佛心來著。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>平常完全沒有 loading 的課，考試前花個 2 天左右複習（或者跟別人借筆記），第三次作業準備多一點時間寫，很輕鬆就能 A+，佛心來著。<br>不過同課程內容所述，這堂課主要是在前端編譯器，做 lexer, parser 等等，如果想要有更深入的了解，研究所還有一堂高等編譯器。</p>
 <h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>作業 3 次 30% +<br>期中考 30% +<br>期末考 30% +<br>Class participation 10%（這個最後直接給滿） +<br>期中加分 3% +<br>第三次作業加分 5%<br>&#x3D; 108%</p>
-<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>老師超級可愛，很有耐心，走路慢慢的很像一隻大白熊，老師通常都會遲到 10 分鐘，不過老師很可愛。</p>
+<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>老師超級可愛，很有耐心，走路慢慢的很像一隻大白熊，老師通常都會遲到 10 分鐘，不過老師很可愛。<br>老師似乎是編譯器界的權威。</p>
 <h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>不清楚規定。</p>
 <h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：99(A+) 1&#x2F;102 （破百的都給 99 而已）<br>T分數：59.72<br>成績分布：</p>
 <figure class="blog-img-box" data-testimonials-item>
@@ -246,55 +246,6 @@
         <tag>Course</tag>
         <tag>NTHU</tag>
         <tag>CS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>食記 - CURRY WU日式熟成濃咖哩專賣店</title>
-    <url>/2024/07/17/curry-wu/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/NER8KfbYatvDi8gd9">300新竹市北區興南街28號1樓</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在新竹大遠百旁邊，先到大遠百往旁邊巷子走就會到了。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一間隱身在巷子中的店，這條巷子令人意外的有很多吃的。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/5.png" loading="lazy">
-</figure>
-
-<p>我們提前 20 分鐘左右到場，當天到開店後都還有位置，但過一下子之後位置就滿了。</p>
-<p>店內空間比想像中的大，可以看得出老闆 &amp; 老闆娘的用心裝潢。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/4.png" loading="lazy">
-</figure>
-
-<p>我們是第一組，但到餐點送上還是等了約 10 分鐘，應該是人手比較少，所以動作比較慢。<br>點餐時老闆很熱情的介紹他們的咖哩與主食，跟老闆聊天很開心。</p>
-<p>我們點了唐揚雞咖哩定食跟牛奶豬排咖哩定食。</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/curry_wu/1.png" loading="lazy">
-                </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/curry_wu/3.png" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>老闆說他的唐揚雞是全新竹最嫩，不嫩退費。果然非常嫩，皮薄多汁，超級好吃。<br>豬排大得跟不用錢一樣，厲害的是即使吃到最後，皮跟肉也沒有分離，且完全不會有豬排的膩，真的很棒。<br>咖哩特別濃，濃到像是固體一樣，但完全不會膩，可以感覺到咖哩真的有下很大一番功夫，老闆說他去日本學了 6 年。<br>旁邊的配菜也很棒，很特別的味噌湯與好吃的海帶絲（？），天婦羅也是最頂的那種。<br>飯後居然還有冰淇淋，有種付了定食價格但多被招待了一份的感覺，冰淇淋的出現完全超出我的預料。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/0.png" loading="lazy">
-</figure>
-
-<p>總體而言，是一間很棒的店，而且不像沐嵐要排隊很久，害我打著打著又想吃了 na…</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Curry</tag>
       </tags>
   </entry>
   <entry>
@@ -417,6 +368,55 @@
         <tag>NTHU</tag>
         <tag>CS</tag>
         <tag>System</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>食記 - CURRY WU日式熟成濃咖哩專賣店</title>
+    <url>/2024/07/17/curry-wu/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/NER8KfbYatvDi8gd9">300新竹市北區興南街28號1樓</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在新竹大遠百旁邊，先到大遠百往旁邊巷子走就會到了。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一間隱身在巷子中的店，這條巷子令人意外的有很多吃的。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/5.png" loading="lazy">
+</figure>
+
+<p>我們提前 20 分鐘左右到場，當天到開店後都還有位置，但過一下子之後位置就滿了。</p>
+<p>店內空間比想像中的大，可以看得出老闆 &amp; 老闆娘的用心裝潢。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/4.png" loading="lazy">
+</figure>
+
+<p>我們是第一組，但到餐點送上還是等了約 10 分鐘，應該是人手比較少，所以動作比較慢。<br>點餐時老闆很熱情的介紹他們的咖哩與主食，跟老闆聊天很開心。</p>
+<p>我們點了唐揚雞咖哩定食跟牛奶豬排咖哩定食。</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/curry_wu/1.png" loading="lazy">
+                </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/curry_wu/3.png" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>老闆說他的唐揚雞是全新竹最嫩，不嫩退費。果然非常嫩，皮薄多汁，超級好吃。<br>豬排大得跟不用錢一樣，厲害的是即使吃到最後，皮跟肉也沒有分離，且完全不會有豬排的膩，真的很棒。<br>咖哩特別濃，濃到像是固體一樣，但完全不會膩，可以感覺到咖哩真的有下很大一番功夫，老闆說他去日本學了 6 年。<br>旁邊的配菜也很棒，很特別的味噌湯與好吃的海帶絲（？），天婦羅也是最頂的那種。<br>飯後居然還有冰淇淋，有種付了定食價格但多被招待了一份的感覺，冰淇淋的出現完全超出我的預料。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/0.png" loading="lazy">
+</figure>
+
+<p>總體而言，是一間很棒的店，而且不像沐嵐要排隊很久，害我打著打著又想吃了 na…</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Curry</tag>
       </tags>
   </entry>
   <entry>
@@ -618,6 +618,57 @@
         <tag>CS</tag>
         <tag>Learning</tag>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>食記 - 喜劇收場</title>
+    <url>/2024/07/17/happy-ending/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/z4SyeGDCKmju7A8a8">300新竹市東區三民路2巷5號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車 (藍1, 5608等等) 到東門國小下車，喜劇收場就在旁邊。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>位置很多，通常不需要等待，來吃之前可以去FB粉絲團確認有沒有休假</p>
+<p>漢堡麵包很有彈性，外表有光澤，麵味很香，就算只有漢堡皮我也可以吃得很開心，不是普通漢堡的麵包，這點真的很喜歡也覺得這才是漢堡應該有的樣子</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/happy_ending/happy_ending0.jpg" loading="lazy">
+                </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/happy_ending/happy_ending1.jpg" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>漢堡肉跟醬很搭，有很多種類的漢堡，目前吃5、6次左右每次都覺得很好吃，漢堡很有自己的特色。</p>
+<p>炸物酥脆剛好，非常好吃，非常推薦；飲料的話無糖綠不錯，緩解罪惡感</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/happy_ending/happy_ending2.jpg" loading="lazy">
+            </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/happy_ending/happy_ending3.jpg" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>環境很有自己的特色，很喜歡觀察老闆是怎麼佈置的，特別是廁所那隻狗，每次都能嚇到女友，我真的太喜歡那隻狗狗了</p>
+<p>CP值很高，200塊左右能吃到很好吃的漢堡跟炸物配飲料，非常推薦</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Burger</tag>
       </tags>
   </entry>
   <entry>
@@ -911,57 +962,6 @@
       </tags>
   </entry>
   <entry>
-    <title>食記 - 喜劇收場</title>
-    <url>/2024/07/17/happy-ending/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/z4SyeGDCKmju7A8a8">300新竹市東區三民路2巷5號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車 (藍1, 5608等等) 到東門國小下車，喜劇收場就在旁邊。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>位置很多，通常不需要等待，來吃之前可以去FB粉絲團確認有沒有休假</p>
-<p>漢堡麵包很有彈性，外表有光澤，麵味很香，就算只有漢堡皮我也可以吃得很開心，不是普通漢堡的麵包，這點真的很喜歡也覺得這才是漢堡應該有的樣子</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/happy_ending/happy_ending0.jpg" loading="lazy">
-                </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/happy_ending/happy_ending1.jpg" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>漢堡肉跟醬很搭，有很多種類的漢堡，目前吃5、6次左右每次都覺得很好吃，漢堡很有自己的特色。</p>
-<p>炸物酥脆剛好，非常好吃，非常推薦；飲料的話無糖綠不錯，緩解罪惡感</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/happy_ending/happy_ending2.jpg" loading="lazy">
-            </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/happy_ending/happy_ending3.jpg" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>環境很有自己的特色，很喜歡觀察老闆是怎麼佈置的，特別是廁所那隻狗，每次都能嚇到女友，我真的太喜歡那隻狗狗了</p>
-<p>CP值很高，200塊左右能吃到很好吃的漢堡跟炸物配飲料，非常推薦</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Burger</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>修課心得 - NTHU Machine Learning</title>
     <url>/2024/07/17/ml/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：機器學習概論 Introduction to Machine Learning<br>科號：CS 460200<br>老師：郭柏志<br>課本：教授自編講義<br>課別：資工系選修D類<br>學分：3<br>涼度：★~★★★（滿分五分，空心代表半分）<br>甜度：★★★（滿分五分，空心代表半分）</p>
@@ -1163,7 +1163,7 @@
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：Python語言程式入門<br>科號：EECS 121000<br>老師：周百祥<br>課本：教授自編講義<br>課別：資工系選修<br>學分：3<br>涼度：★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>程式基礎（會比較好拿分）</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>前面會教一點計算機架構，之後開始教Python基礎語法，最後面會教一些Library。</p>
-<p>教學進度如下</p>
+<p>教學進度如下：</p>
 <ol>
 <li>Introduction, CLI</li>
 <li>Quick Tour</li>
