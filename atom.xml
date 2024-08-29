@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2024-08-28T17:15:46.047Z</updated>
+  <updated>2024-08-29T04:11:46.756Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -15,6 +15,92 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>遊記 - 十分</title>
+    <link href="https://mike911209.github.io/2024/08/29/10thern/"/>
+    <id>https://mike911209.github.io/2024/08/29/10thern/</id>
+    <published>2024-08-28T19:07:33.000Z</published>
+    <updated>2024-08-29T04:11:46.756Z</updated>
+    
+    
+    <summary type="html">九份、平溪行的最後一站，我們來到了十分。</summary>
+    
+    
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
+    
+    <category term="Train" scheme="https://mike911209.github.io/tags/Train/"/>
+    
+    <category term="Lantern" scheme="https://mike911209.github.io/tags/Lantern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遊記 - 菁桐</title>
+    <link href="https://mike911209.github.io/2024/08/29/jingtone/"/>
+    <id>https://mike911209.github.io/2024/08/29/jingtone/</id>
+    <published>2024-08-28T18:55:55.000Z</published>
+    <updated>2024-08-28T19:01:36.965Z</updated>
+    
+    
+    <summary type="html">九份、平溪行的第二天，我們前往菁桐，迎接本次旅程的重點 - 天燈節。</summary>
+    
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
+    
+    <category term="Train" scheme="https://mike911209.github.io/tags/Train/"/>
+    
+    <category term="Lanterm" scheme="https://mike911209.github.io/tags/Lanterm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遊記 - 侯硐</title>
+    <link href="https://mike911209.github.io/2024/08/29/monkey-tong/"/>
+    <id>https://mike911209.github.io/2024/08/29/monkey-tong/</id>
+    <published>2024-08-28T18:52:05.000Z</published>
+    <updated>2024-08-28T19:00:04.495Z</updated>
+    
+    
+    <summary type="html">九份、平溪行的第二天，我們到了侯硐貓村。</summary>
+    
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
+    
+    <category term="Train" scheme="https://mike911209.github.io/tags/Train/"/>
+    
+    <category term="Cat" scheme="https://mike911209.github.io/tags/Cat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遊記 - 九份</title>
+    <link href="https://mike911209.github.io/2024/08/29/9thern/"/>
+    <id>https://mike911209.github.io/2024/08/29/9thern/</id>
+    <published>2024-08-28T18:47:27.000Z</published>
+    <updated>2024-08-28T19:09:03.965Z</updated>
+    
+    
+    <summary type="html">九份、平溪行的第一天，我們的行程從九份拉開序幕。</summary>
+    
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
+    
+  </entry>
   
   <entry>
     <title>修課心得 - NTHU Computer Graphics</title>
@@ -149,100 +235,6 @@
     <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
     
     <category term="Hsinchu" scheme="https://mike911209.github.io/tags/Hsinchu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>學記 - SSH Tunneling</title>
-    <link href="https://mike911209.github.io/2024/08/20/ssh-tunneling/"/>
-    <id>https://mike911209.github.io/2024/08/20/ssh-tunneling/</id>
-    <published>2024-08-20T09:37:24.000Z</published>
-    <updated>2024-08-28T04:09:06.197Z</updated>
-    
-    
-    <summary type="html">CS 界的潛盾機 - ssh，透過本學記了解 ssh tunneling 的使用情境以及如何使用。</summary>
-    
-    
-    
-    <category term="Learning" scheme="https://mike911209.github.io/categories/Learning/"/>
-    
-    
-    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
-    
-    <category term="Learning" scheme="https://mike911209.github.io/tags/Learning/"/>
-    
-    <category term="SSH" scheme="https://mike911209.github.io/tags/SSH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>學記 - 使用 Docker 建立執行環境</title>
-    <link href="https://mike911209.github.io/2024/08/11/docker-env/"/>
-    <id>https://mike911209.github.io/2024/08/11/docker-env/</id>
-    <published>2024-08-11T13:53:12.000Z</published>
-    <updated>2024-08-20T09:41:56.396Z</updated>
-    
-    
-    <summary type="html">透過 Docker 為本地的 code 創造任意的執行環境</summary>
-    
-    
-    
-    <category term="Learning" scheme="https://mike911209.github.io/categories/Learning/"/>
-    
-    
-    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
-    
-    <category term="Virtual" scheme="https://mike911209.github.io/tags/Virtual/"/>
-    
-    <category term="Learning" scheme="https://mike911209.github.io/tags/Learning/"/>
-    
-    <category term="Docker" scheme="https://mike911209.github.io/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>食記 - Dor,留手工義大利麵</title>
-    <link href="https://mike911209.github.io/2024/08/10/dorliu/"/>
-    <id>https://mike911209.github.io/2024/08/10/dorliu/</id>
-    <published>2024-08-10T15:28:22.000Z</published>
-    <updated>2024-08-10T17:01:38.476Z</updated>
-    
-    
-    <summary type="html">從小吃到大的手工義大利麵店，口感特別、味道美味，很值得一試。</summary>
-    
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/categories/Food/"/>
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
-    
-    <category term="Pasta" scheme="https://mike911209.github.io/tags/Pasta/"/>
-    
-    <category term="Kauhsiung" scheme="https://mike911209.github.io/tags/Kauhsiung/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>食記 - 波市多拿坡里披薩</title>
-    <link href="https://mike911209.github.io/2024/08/07/posto/"/>
-    <id>https://mike911209.github.io/2024/08/07/posto/</id>
-    <published>2024-08-06T18:21:41.000Z</published>
-    <updated>2024-08-10T16:04:00.336Z</updated>
-    
-    
-    <summary type="html">這是一間，我吃過最好吃的披薩店。</summary>
-    
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/categories/Food/"/>
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
-    
-    <category term="Kaohsiung" scheme="https://mike911209.github.io/tags/Kaohsiung/"/>
-    
-    <category term="Pizza" scheme="https://mike911209.github.io/tags/Pizza/"/>
     
   </entry>
   
