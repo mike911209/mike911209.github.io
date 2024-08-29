@@ -46,7 +46,7 @@
     <img src="/images/10thern/5.png" loading="lazy">
 </figure>
 
-<p>我們受邀前往了在菁桐住的民宿的小幫手在打工的咖啡店，平交道咖啡。</p>
+<p>我們受邀前往了在菁桐住的民宿的小幫手在打工的咖啡店 - 平交道咖啡。</p>
 <p>這間咖啡店很特別，坐落於平交道旁，在吃飯時能直接看到火車從旁經過。</p>
 <section class="testimonials">
     <ul class="testimonials-list has-scrollbar">
@@ -822,8 +822,8 @@
       </categories>
       <tags>
         <tag>CS</tag>
-        <tag>Virtual</tag>
         <tag>Learning</tag>
+        <tag>Virtual</tag>
         <tag>Docker</tag>
       </tags>
   </entry>
