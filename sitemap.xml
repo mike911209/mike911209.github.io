@@ -20,18 +20,18 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/2024/08/29/9thern/</loc>
+    <loc>https://mike911209.github.io/2024/08/29/jingtone/</loc>
     
-    <lastmod>2024-08-28</lastmod>
+    <lastmod>2024-08-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/2024/08/29/jingtone/</loc>
+    <loc>https://mike911209.github.io/2024/08/29/9thern/</loc>
     
-    <lastmod>2024-08-28</lastmod>
+    <lastmod>2024-08-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,7 @@
   <url>
     <loc>https://mike911209.github.io/2024/08/29/monkey-tong/</loc>
     
-    <lastmod>2024-08-28</lastmod>
+    <lastmod>2024-08-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -386,6 +386,13 @@
   </url>
   
   <url>
+    <loc>https://mike911209.github.io/tags/New-Taipei/</loc>
+    <lastmod>2024-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mike911209.github.io/tags/Course/</loc>
     <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -520,13 +527,6 @@
   
   <url>
     <loc>https://mike911209.github.io/tags/Cat/</loc>
-    <lastmod>2024-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Taipei/</loc>
     <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
