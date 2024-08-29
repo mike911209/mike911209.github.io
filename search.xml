@@ -117,6 +117,9 @@
 <p>回到十分車站後，我們跳上火車，回到新竹。充飽了電後，準備迎接開學更多的挑戰！</p>
 <p>這是一趟非常難忘的旅程，過程中我們經歷了各式各樣的事情，僅此紀錄。</p>
 ]]></content>
+      <categories>
+        <category>Travel</category>
+      </categories>
       <tags>
         <tag>Travel</tag>
         <tag>Train</tag>
@@ -822,8 +825,8 @@
       </categories>
       <tags>
         <tag>CS</tag>
-        <tag>Learning</tag>
         <tag>Virtual</tag>
+        <tag>Learning</tag>
         <tag>Docker</tag>
       </tags>
   </entry>
