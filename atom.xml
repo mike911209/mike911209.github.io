@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2024-08-29T04:46:40.465Z</updated>
+  <updated>2024-10-24T16:35:19.422Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024 梅竹黑客松參賽心得</title>
+    <link href="https://mike911209.github.io/2024/10/24/meichu-hackathon/"/>
+    <id>https://mike911209.github.io/2024/10/24/meichu-hackathon/</id>
+    <published>2024-10-24T13:21:08.000Z</published>
+    <updated>2024-10-24T16:35:19.422Z</updated>
+    
+    
+    <summary type="html">今年的黑客松對我而言是充滿了驚喜的一屆，從去年的做不完到今年的梅竹大獎第二名，我看到了我在這一年中的進步。</summary>
+    
+    
+    
+    <category term="Review" scheme="https://mike911209.github.io/categories/Review/"/>
+    
+    
+    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
+    
+    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
+    
+    <category term="Hackathon" scheme="https://mike911209.github.io/tags/Hackathon/"/>
+    
+  </entry>
   
   <entry>
     <title>遊記 - 十分</title>
@@ -224,27 +247,6 @@
     <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
     
     <category term="System" scheme="https://mike911209.github.io/tags/System/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>食記 - 姜滿堂</title>
-    <link href="https://mike911209.github.io/2024/08/23/chan-man-tong/"/>
-    <id>https://mike911209.github.io/2024/08/23/chan-man-tong/</id>
-    <published>2024-08-23T12:43:31.000Z</published>
-    <updated>2024-08-23T17:28:13.328Z</updated>
-    
-    
-    <summary type="html">姜滿堂是一間非常令人驚艷的燒肉店，雖然價格不低，但肉質非常好且穩定，食物也很美味。</summary>
-    
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/categories/Food/"/>
-    
-    
-    <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
-    
-    <category term="Hsinchu" scheme="https://mike911209.github.io/tags/Hsinchu/"/>
     
   </entry>
   
