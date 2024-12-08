@@ -801,7 +801,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Computer Graphics</title>
+    <title>【修課心得】計算機圖學</title>
     <url>/2024/08/29/cg/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機圖學 Computer Graphics<br>科號：CS 550000<br>老師：李潤容<br>課本：教授自編講義<br>課別：資工系選修（非 ABCD 類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>無，如果有寫過 OpenGL 的話作業會變簡單。</p>
@@ -847,6 +847,9 @@
 <h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>因為教室修課人數，不開放加簽。</p>
 <h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：94(A+) 1&#x2F;102 （因為有次作業出差錯，被打 8 折，一般來講都能拿 100）<br>T分數：52.42<br>成績分布：<br>本課程成績不公開</p>
 ]]></content>
+      <categories>
+        <category>Course</category>
+      </categories>
       <tags>
         <tag>Course</tag>
         <tag>NTHU</tag>
@@ -854,7 +857,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Compiler Design</title>
+    <title>【修課心得】編譯器設計</title>
     <url>/2024/08/28/compiler/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：編譯器設計 Compiler Design<br>科號：CS 340400<br>老師：李政崑<br>課本：教授自編講義<br>課別：資工系選修 B 類<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>無，但如果有修過正規語言、計算理論在課程前中期會比較輕鬆。</p>
@@ -907,7 +910,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU 料理中的科學</title>
+    <title>【修課心得】料理中的科學</title>
     <url>/2024/08/28/science-of-cooking/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：料理中的科學 Science of Cooking<br>科號：GE 191200<br>老師：張蓉<br>課本：教授自編講義<br>課別：一般通識，自然科學領域<br>學分：2<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>同課名教料理中的科學，用科學的角度看烹飪的過程，會介紹烹飪的介質、手法、以及食材衍伸料理還有咖啡，會涉及一點點高中物理化學，但都很基礎。<br>上課內容非常有趣，可以清晰易懂地了解烹飪過程中發生的所有原理，有種「哇喔原來是這樣」的感覺。</p>
@@ -949,7 +952,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU 中國神話故事選讀</title>
+    <title>【修課心得】中國神話故事選讀</title>
     <url>/2024/08/28/chinese-myth/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：中國神話故事選讀 Selective Readings for “The Chinese Mythology”<br>科號：11220 GE 132800<br>老師：陳燕梅<br>課本：教授自編講義<br>課別：一般通識，人文學領域<br>學分：2<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>同課名，講解、分析中國神話故事，像是后羿射日、女媧造人等等，並從中分析神話的起源以及為政者為何塑造該神話。</p>
@@ -978,7 +981,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Introduction to Database Systems</title>
+    <title>【修課心得】資料庫系統概論</title>
     <url>/2024/08/28/db/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：資料庫系統概論 Introduction to Database Systems<br>科號：CS 471000<br>老師：吳尚鴻<br>課本：教授自編講義<br>課別：資工系選修D類<br>學分：3<br>涼度：★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>作業系統</p>
@@ -1686,7 +1689,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Software Studio</title>
+    <title>【修課心得】軟體設計與實驗</title>
     <url>/2024/07/17/ss/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：軟體設計與實驗<br>科號：CS 241001<br>老師：吳尚鴻<br>課本：教授自編講義<br>課別：資工系系定必修<br>學分：3<br>涼度：★（滿分五分，空心代表半分）<br>甜度：★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>計算機程式設計</p>
@@ -1733,7 +1736,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Python 語言程式入門</title>
+    <title>【修課心得】Python 語言程式入門</title>
     <url>/2024/07/17/python/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：Python語言程式入門<br>科號：EECS 121000<br>老師：周百祥<br>課本：教授自編講義<br>課別：資工系選修<br>學分：3<br>涼度：★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>程式基礎（會比較好拿分）</p>
@@ -1781,7 +1784,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Computer System Administration</title>
+    <title>【修課心得】計算機系統管理</title>
     <url>/2024/07/17/csa/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機系統管理 Computer System Administration<br>科號：CS 342700<br>老師：張君天<br>課本：教授自編講義<br>課別：資工系選修（非ABCD類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>管理計算機系統，作業系統使用freeBSD，對於coomand line interface不熟的修這堂課會對Unix系統有初步的認識，非常推薦資工系大三來修。<br>課程前期教學網路架設，牽涉到一些計網概的知識，中期會教Apache server，讓學生自己架DNS等等，課程後期會教一些硬碟的管理。</p>
@@ -1830,7 +1833,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Machine Learning</title>
+    <title>【修課心得】機器學習概論</title>
     <url>/2024/07/17/ml/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：機器學習概論 Introduction to Machine Learning<br>科號：CS 460200<br>老師：郭柏志<br>課本：教授自編講義<br>課別：資工系選修D類<br>學分：3<br>涼度：★~★★★（滿分五分，空心代表半分）<br>甜度：★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>計算機程式設計、python基本語法</p>
@@ -1884,7 +1887,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Computer Architecture</title>
+    <title>【修課心得】計算機結構</title>
     <url>/2024/07/17/ca/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機結構 Computer Architecture<br>科號：11120 CS 410001<br>老師：王廷基<br>課本：教授自編講義<br>課別：資工系系定核心必修<br>學分：3<br>涼度：★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>邏輯設計</p>
@@ -1922,7 +1925,7 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】NTHU Operating System</title>
+    <title>【修課心得】作業系統</title>
     <url>/2024/07/17/os/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：作業系統 Operating Systems<br>科號：CS 342301<br>老師：周志遠<br>課本：教授自編講義<br>課別：資工系必修<br>學分：3<br>涼度：★★（滿分五分，空心代表半分）<br>甜度：★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>計算機結構、計算機程式設計、資料結構。</p>

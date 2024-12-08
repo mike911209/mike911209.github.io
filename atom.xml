@@ -197,16 +197,18 @@
   </entry>
   
   <entry>
-    <title>【修課心得】NTHU Computer Graphics</title>
+    <title>【修課心得】計算機圖學</title>
     <link href="https://mike911209.github.io/2024/08/29/cg/"/>
     <id>https://mike911209.github.io/2024/08/29/cg/</id>
     <published>2024-08-28T16:10:41.000Z</published>
-    <updated>2024-12-07T18:26:00.986Z</updated>
+    <updated>2024-12-08T01:52:47.980Z</updated>
     
     
     <summary type="html">資工系研究所課程，超級甜涼好課。介紹計算機圖學，課程中會實作圖學的一些功能。</summary>
     
     
+    
+    <category term="Course" scheme="https://mike911209.github.io/categories/Course/"/>
     
     
     <category term="Course" scheme="https://mike911209.github.io/tags/Course/"/>
@@ -218,11 +220,11 @@
   </entry>
   
   <entry>
-    <title>【修課心得】NTHU Compiler Design</title>
+    <title>【修課心得】編譯器設計</title>
     <link href="https://mike911209.github.io/2024/08/28/compiler/"/>
     <id>https://mike911209.github.io/2024/08/28/compiler/</id>
     <published>2024-08-28T10:02:38.000Z</published>
-    <updated>2024-12-07T18:26:00.988Z</updated>
+    <updated>2024-12-08T01:53:25.059Z</updated>
     
     
     <summary type="html">資工系 B 類選修，超級活佛課程，在課堂中會設計一個簡單的前端 compiler。</summary>
