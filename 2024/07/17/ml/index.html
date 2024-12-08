@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>【修課心得】NTHU Machine Learning | Mike's space</title><meta name="author" content="Bin-Lun Li"><meta name="copyright" content="Bin-Lun Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="近年火紅的名詞，講解模型運作原理以及實際上手實作。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【修課心得】NTHU Machine Learning">
+<meta property="og:url" content="https://mike911209.github.io/2024/07/17/ml/index.html">
+<meta property="og:site_name" content="Mike&#39;s space">
+<meta property="og:description" content="近年火紅的名詞，講解模型運作原理以及實際上手實作。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mike911209.github.io/images/ml/0.png">
+<meta property="article:published_time" content="2024-07-17T09:20:12.000Z">
+<meta property="article:modified_time" content="2024-12-07T18:26:00.992Z">
+<meta property="article:author" content="Bin-Lun Li">
+<meta property="article:tag" content="Course">
+<meta property="article:tag" content="NTHU">
+<meta property="article:tag" content="CS">
+<meta property="article:tag" content="ML">
+<meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mike911209.github.io/images/ml/0.png"><link rel="shortcut icon" href="/img/profile.jpg"><link rel="canonical" href="https://mike911209.github.io/2024/07/17/ml/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【修課心得】NTHU Machine Learning',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-12-08 02:26:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Mike's space" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="scarecrow"><div class="scarecrow__hat"><div class="scarecrow__ribbon"></div></div><div class="scarecrow__head"><div class="scarecrow__eye"></div><div class="scarecrow__eye"></div><div class="scarecrow__mouth"></div><div class="scarecrow__pipe"></div></div><div class="scarecrow__body"><div class="scarecrow__glove scarecrow__glove--l"></div><div class="scarecrow__sleeve scarecrow__sleeve--l"></div><div class="scarecrow__bow"></div><div class="scarecrow__shirt"></div><div class="scarecrow__coat"></div><div class="scarecrow__waistcoat"></div><div class="scarecrow__sleeve scarecrow__sleeve--r"></div><div class="scarecrow__glove scarecrow__glove--r"></div><div class="scarecrow__coattails"></div><div class="scarecrow__pants"></div></div><div class="scarecrow__arms"></div><div class="scarecrow__leg">  </div></div></div><script async="async">(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loading-box').style.transition = 'opacity 2s ease 0s'
+      document.getElementById('loading-box').style.opacity = '0'
+      setTimeout(function(){
+        document.getElementById('loading-box').classList.add("loaded")
+      }, 2000);
+    },
+    initLoading: () => {
+      document.body.style.overflow = '';
+      document.getElementById('loading-box').style.transition = '';
+      document.getElementById('loading-box').style.opacity = '1'
+      document.getElementById('loading-box').classList.remove("loaded")
+
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+  setTimeout(function(){preloader.endLoading();}, 3000);
+  document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/profile.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">36</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/ml/0.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Mike's space"><span class="site-name">Mike's space</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【修課心得】NTHU Machine Learning</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">Created</span><time datetime="2024-07-17T09:20:12.000Z" title="Created 2024-07-17 17:20:12">2024-07-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Course/">Course</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：機器學習概論 Introduction to Machine Learning<br>科號：CS 460200<br>老師：郭柏志<br>課本：教授自編講義<br>課別：資工系選修D類<br>學分：3<br>涼度：★~★★★（滿分五分，空心代表半分）<br>甜度：★★★（滿分五分，空心代表半分）</p>
+<h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>計算機程式設計、python基本語法</p>
+<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>前期教學傳統 ML 方法，後期會教到部分深度學習內容。</p>
+<p>教學進度如下：</p>
+<ul>
+<li>L1 Introduction</li>
+<li>L2 Regression</li>
+<li>L3 Bayesian Classifier</li>
+<li>L4 Decision Tree</li>
+<li>L5 Linear Classifiers</li>
+<li>L6 Neural Network</li>
+<li>L7 Deep Learning</li>
+<li>L8 Convolutional Neural Network</li>
+<li>L9 Clustering</li>
+<li>L10 Dimension Reduction</li>
+</ul>
+<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>學期初為實體無錄影，學期中因為教室出問題改成線上，將近學期末時改回實體有錄影。</p>
+<p>全英文上課，上課時老師會講解簡報，通常簡報中的內容都是口頭快速帶過，但其實考試會考而且考很細，所以需要認真聽老師講課，下課有問題就去問。</p>
+<p>講義中有複雜的數學公式，老師通常快速帶過但考試通常都會考，看到最複雜的那種不用懷疑，一定考。建議沒聽懂就下課問老師搞懂，老師很有耐心，問了通常就能被教會。</p>
+<p>老師的英文卡卡的沒有到說非常順，我覺得老師的教學功力被英文封印一半，下課問老師用中文時就聽得很清楚，上課聽英文的時候真的都聽不太懂。</p>
+<p>簡報內容過少，再複習的時候很常會無法 recall 老師的上課內容，會希望簡報可以有更多資訊。</p>
+<h2 id="作業"><a href="#作業" class="headerlink" title="作業"></a>作業</h2><p>作業評分由 testcase、f1-score、ranking、report組成，f1-score 要超過一定分數才能拿到成績，低一點點該項就會0分。<br>ranking 的比重很高，我個人會覺得 ranking 可以算是 bonus 的成績，而不是算在作業的100分成績內，或者至少不要佔這麼重的比例。有時侯 ranking 真的是靠運氣，做很多優化不一定就會比沒有優化的好。</p>
+<p>作業1、2是傳統　ML 要 train model，可以較快解決，大約3天，內容也算簡單，ranking 我個人覺得是能分出高下的。作業3要寫一個神經網路，作業量是作業1、2的好幾倍，要花上約一個禮拜完成，並且要花非常多時間 train，很多人最後重新 train 一次時間不夠就遲交了。</p>
+<p>作業4的內容不難，但 template 像是助教沒有自己執行過，一堆問題，不斷更新，一天1、2更，剛開始的時候連 import module 都會有問題，最基本的 bug 都能存在，我想這是一個很嚴重的失誤，也嚴重的影響到了我期末的行程安排。</p>
+<p>總而言之作業有很多缺點，但在寫的過程中很有趣，撇除作業4不談，從0生出一個 model 的過程讓我有很多收穫，也能真正理解 Machine learning 的運作原理。不過作業還是有很多需要打磨的部分，評分、template 等等，希望明年能有所改善。</p>
+<h2 id="考試"><a href="#考試" class="headerlink" title="考試"></a>考試</h2><p>考試共4次，約2~3個禮拜一次。</p>
+<p>用 google 表單考試，時間一個小時，前2次考試時間非常不夠，很常寫不完，考試的過程中就是一直一直在 google，有沒有讀書可能對成績影響不大。後面的考試有稍微改善，但還是很容易有時間不夠的問題。</p>
+<p>因為是用 google 表單，沒有計算過程，所以只要答案錯就會全錯，又因為題目不多，常常計算錯就是少10分，考試又佔很重的成績，我的感受是覺得考試有點偏離考試的初衷，也沒有真正測試到學生是否理解，反而是在考驗 google 的能力。</p>
+<p>如果有寫考古可以先準備好計算用的程式，考試當下會省更多時間。</p>
+<p>我會覺得這樣的考試很沒辦法測驗到學生是否理解上課內容，鑑別度不高。</p>
+<h2 id="Final-project"><a href="#Final-project" class="headerlink" title="Final project"></a>Final project</h2><p>一組約6人，幾乎沒有整組是資工系的。<br>不能自行分組，只能填寫志願，但如果糾幾個人一起填志願分到同組的機率還是不低。起初我覺得這樣的安排不合理，與老師討論過後得知老師的期望是讓大家可以熟悉 team works，並不用每個人都要打 code。</p>
+<p>Project 題目老師與助教會準備，如果想要自己提也可以。老師與助教準備的題目多半為助教自己研究過的題目，因此每組都會有一位助教擔任 mentor，我們這組的助教非常認真，但似乎有組別的助教是直接放生。<br>老師的 Lab 有許多題目著重在醫學相關，所以其中有不少題目牽涉到醫學影像等等，導致題目的難度參差不齊，有些只需要做好物件辨識，但有些組別還需要研究醫學影像，翻找論文如何做 data preprocess。我們這組的題目很難，我一個禮拜花了一半的時間在做 ML，最後成果還是不好，分數也與其他題目相對簡單的組別差不多，所以這部分還是看人品，分配到甚麼題目。</p>
+<p>最後有資工系熟悉的互評環節，聽聞有組別上演後宮甄環傳，有組別是助教開放表單讓大家填寫，這部分挺亂，但互評又大量影響到 Project 的最後成績，希望明年能統一由助教開放表單，才不會一直心結大會。</p>
+<p>如上所述，我會覺得 Project 的給分吝嗇，而且這不叫 Final Project，我們從10月就開始做直到1月中，這已經是 Semester Project 了。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>修起來難以言喻的課，有令人開心的地方，也有令人無法理解的部分，要把這些感覺統整起來比較像是覺得可惜吧，老師跟助教都很用心，但或許是課程剛開設不久，還有許多地方需要打磨，但我是喜歡這堂課的，也推薦學弟妹來修，但要做好修的過程中可能會不太快樂的心理準備。</p>
+<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>Exam 4次 30% +<br>Assignment 4次 40% +<br>Term Project 30%<br>&#x3D; 100%<br>完成 Nvidia 的作業可以加作業分好像1.2分，期末報告時提問可以加 Term Project 成績。</p>
+<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>老師很帥很溫柔，上課幽默，能感受到老師對教學的熱忱以及用心，非常尊重以及關心學生，是我資工系最喜歡的老師之一。</p>
+<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>好像是全簽。</p>
+<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：93(A+) 1&#x2F;217<br>T分數：60.27<br>成績分布：<br>本課程成績不公開</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Course/">Course</a><a class="post-meta__tags" href="/tags/NTHU/">NTHU</a><a class="post-meta__tags" href="/tags/CS/">CS</a><a class="post-meta__tags" href="/tags/ML/">ML</a><a class="post-meta__tags" href="/tags/AI/">AI</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/07/17/ca/" title="【修課心得】NTHU Computer Architecture"><img class="cover" src="/images/ca/0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">【修課心得】NTHU Computer Architecture</div></div></a></div><div class="next-post pull-right"><a href="/2024/07/17/csa/" title="【修課心得】NTHU Computer System Administration"><img class="cover" src="/images/csa/0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">【修課心得】NTHU Computer System Administration</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2024/08/29/cg/" title="【修課心得】NTHU Computer Graphics"><img class="cover" src="/images/cg/0.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-29</div><div class="title">【修課心得】NTHU Computer Graphics</div></div></a></div><div><a href="/2024/08/28/compiler/" title="【修課心得】NTHU Compiler Design"><img class="cover" src="/images/compiler/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-28</div><div class="title">【修課心得】NTHU Compiler Design</div></div></a></div><div><a href="/2024/08/28/db/" title="【修課心得】NTHU Introduction to Database Systems"><img class="cover" src="/images/db/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-28</div><div class="title">【修課心得】NTHU Introduction to Database Systems</div></div></a></div><div><a href="/2024/07/17/ss/" title="【修課心得】NTHU Software Studio"><img class="cover" src="/images/ss/0.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-17</div><div class="title">【修課心得】NTHU Software Studio</div></div></a></div><div><a href="/2024/07/17/python/" title="【修課心得】NTHU Python 語言程式入門"><img class="cover" src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-17</div><div class="title">【修課心得】NTHU Python 語言程式入門</div></div></a></div><div><a href="/2024/07/17/csa/" title="【修課心得】NTHU Computer System Administration"><img class="cover" src="/images/csa/0.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-17</div><div class="title">【修課心得】NTHU Computer System Administration</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/profile.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Bin-Lun Li</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">36</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/mike911209" target="_blank" title="Github"><i class="fab fa-github" style="color: #4a7dbe;"></i></a><a class="social-icon" href="mailto:mike911209@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.facebook.com/profile.php?id=100004572665108" target="_blank" title="Facebook"><i class="fab fa-facebook" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E7%9B%B8%E9%97%9C"><span class="toc-number">1.</span> <span class="toc-text">課程相關</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E8%AD%B0%E5%85%88%E4%BF%AE%E8%AA%B2%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">建議先修課程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E5%85%A7%E5%AE%B9-%E7%B0%A1%E4%BB%8B"><span class="toc-number">3.</span> <span class="toc-text">課程內容&#x2F;簡介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%AA%B2%E6%96%B9%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">上課方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E6%A5%AD"><span class="toc-number">5.</span> <span class="toc-text">作業</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%83%E8%A9%A6"><span class="toc-number">6.</span> <span class="toc-text">考試</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Final-project"><span class="toc-number">7.</span> <span class="toc-text">Final project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B5%90%E8%AB%96"><span class="toc-number">8.</span> <span class="toc-text">結論</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B5%A6%E5%88%86"><span class="toc-number">9.</span> <span class="toc-text">給分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%81%E5%B8%AB%E7%9A%84%E5%96%9C%E5%A5%BD%E3%80%81%E5%80%8B%E6%80%A7"><span class="toc-number">10.</span> <span class="toc-text">老師的喜好、個性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E7%B0%BD"><span class="toc-number">11.</span> <span class="toc-text">加簽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E7%B8%BE"><span class="toc-number">12.</span> <span class="toc-text">成績</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/12/08/3mountain/" title="【食記】三山燒肉"><img src="/images/3mountain/0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【食記】三山燒肉"/></a><div class="content"><a class="title" href="/2024/12/08/3mountain/" title="【食記】三山燒肉">【食記】三山燒肉</a><time datetime="2024-12-07T18:50:51.000Z" title="Created 2024-12-08 02:50:51">2024-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/15/isa/" title="【心得】114 清大資工所推甄"><img src="/images/isa/image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【心得】114 清大資工所推甄"/></a><div class="content"><a class="title" href="/2024/11/15/isa/" title="【心得】114 清大資工所推甄">【心得】114 清大資工所推甄</a><time datetime="2024-11-14T20:27:15.000Z" title="Created 2024-11-15 04:27:15">2024-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/03/makefile/" title="【學記】Makefile 語法與變數示範"><img src="/images/makefile/makefile_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【學記】Makefile 語法與變數示範"/></a><div class="content"><a class="title" href="/2024/11/03/makefile/" title="【學記】Makefile 語法與變數示範">【學記】Makefile 語法與變數示範</a><time datetime="2024-11-03T14:41:41.000Z" title="Created 2024-11-03 22:41:41">2024-11-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/24/meichu-hackathon/" title="【心得】2024 梅竹黑客松"><img src="/images/meichu-hackathon/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【心得】2024 梅竹黑客松"/></a><div class="content"><a class="title" href="/2024/10/24/meichu-hackathon/" title="【心得】2024 梅竹黑客松">【心得】2024 梅竹黑客松</a><time datetime="2024-10-24T13:21:08.000Z" title="Created 2024-10-24 21:21:08">2024-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/29/10thern/" title="【遊記】十分"><img src="/images/10thern/2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【遊記】十分"/></a><div class="content"><a class="title" href="/2024/08/29/10thern/" title="【遊記】十分">【遊記】十分</a><time datetime="2024-08-28T19:07:33.000Z" title="Created 2024-08-29 03:07:33">2024-08-29</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/banner.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2024 By Bin-Lun Li</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: 'Ov23liiueezKfIHYzpgF',
+      clientSecret: '9ac0fdaee83671f40b71b4557860987edd766f1d',
+      repo: 'mike911209.github.io',
+      owner: 'mike911209',
+      admin: ['mike911209'],
+      id: 'e873b0b9ad701609cc3f9e9ed34bc30c',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !true) {
+    if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>

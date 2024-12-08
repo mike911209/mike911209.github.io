@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mike&#39;s space</title>
+  
+  
+  <link href="https://mike911209.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://mike911209.github.io/"/>
+  <updated>2024-12-08T00:38:13.561Z</updated>
+  <id>https://mike911209.github.io/</id>
+  
+  <author>
+    <name>Bin-Lun Li</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【食記】三山燒肉</title>
+    <link href="https://mike911209.github.io/2024/12/08/3mountain/"/>
+    <id>https://mike911209.github.io/2024/12/08/3mountain/</id>
+    <published>2024-12-07T18:50:51.000Z</published>
+    <updated>2024-12-08T00:38:13.561Z</updated>
+    
+    
+    <summary type="html">一間價位同茶六、屋馬的燒肉店，但我覺得三山更好吃。</summary>
+    
+    
+    
+    <category term="Food" scheme="https://mike911209.github.io/categories/Food/"/>
+    
+    
+    <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【心得】114 清大資工所推甄</title>
+    <link href="https://mike911209.github.io/2024/11/15/isa/"/>
+    <id>https://mike911209.github.io/2024/11/15/isa/</id>
+    <published>2024-11-14T20:27:15.000Z</published>
+    <updated>2024-12-07T18:26:00.991Z</updated>
+    
+    
+    <summary type="html">很幸運的資應所正取，雖然資甲落榜，但還是來分享一下我準備的過程。</summary>
+    
+    
+    
+    <category term="Review" scheme="https://mike911209.github.io/categories/Review/"/>
+    
+    
+    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
+    
+    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
+    
+    <category term="Review" scheme="https://mike911209.github.io/tags/Review/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【學記】Makefile 語法與變數示範</title>
+    <link href="https://mike911209.github.io/2024/11/03/makefile/"/>
+    <id>https://mike911209.github.io/2024/11/03/makefile/</id>
+    <published>2024-11-03T14:41:41.000Z</published>
+    <updated>2024-12-07T18:26:00.987Z</updated>
+    
+    
+    <summary type="html">Makefile 中有許多變數及語法，本文介紹許多使用範例。</summary>
+    
+    
+    
+    <category term="Learning" scheme="https://mike911209.github.io/categories/Learning/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【心得】2024 梅竹黑客松</title>
+    <link href="https://mike911209.github.io/2024/10/24/meichu-hackathon/"/>
+    <id>https://mike911209.github.io/2024/10/24/meichu-hackathon/</id>
+    <published>2024-10-24T13:21:08.000Z</published>
+    <updated>2024-12-07T18:26:00.990Z</updated>
+    
+    
+    <summary type="html">今年的黑客松對我而言是充滿了驚喜的一屆，從去年的做不完到今年的梅竹大獎第二名，我看到了我在這一年中的進步。</summary>
+    
+    
+    
+    <category term="Review" scheme="https://mike911209.github.io/categories/Review/"/>
+    
+    
+    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
+    
+    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
+    
+    <category term="Review" scheme="https://mike911209.github.io/tags/Review/"/>
+    
+    <category term="Hackathon" scheme="https://mike911209.github.io/tags/Hackathon/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【遊記】十分</title>
+    <link href="https://mike911209.github.io/2024/08/29/10thern/"/>
+    <id>https://mike911209.github.io/2024/08/29/10thern/</id>
+    <published>2024-08-28T19:07:33.000Z</published>
+    <updated>2024-12-07T18:26:00.989Z</updated>
+    
+    
+    <summary type="html">九份、平溪行的最後一站，我們來到了十分。</summary>
+    
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
+    
+    <category term="Train" scheme="https://mike911209.github.io/tags/Train/"/>
+    
+    <category term="Lantern" scheme="https://mike911209.github.io/tags/Lantern/"/>
+    
+    <category term="New Taipei" scheme="https://mike911209.github.io/tags/New-Taipei/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【遊記】菁桐</title>
+    <link href="https://mike911209.github.io/2024/08/29/jingtone/"/>
+    <id>https://mike911209.github.io/2024/08/29/jingtone/</id>
+    <published>2024-08-28T18:55:55.000Z</published>
+    <updated>2024-12-07T18:26:00.989Z</updated>
+    
+    
+    <summary type="html">九份、平溪行的第二天，我們前往菁桐，迎接本次旅程的重點 - 天燈節。</summary>
+    
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
+    
+    <category term="Train" scheme="https://mike911209.github.io/tags/Train/"/>
+    
+    <category term="New Taipei" scheme="https://mike911209.github.io/tags/New-Taipei/"/>
+    
+    <category term="Lanterm" scheme="https://mike911209.github.io/tags/Lanterm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【遊記】侯硐</title>
+    <link href="https://mike911209.github.io/2024/08/29/monkey-tong/"/>
+    <id>https://mike911209.github.io/2024/08/29/monkey-tong/</id>
+    <published>2024-08-28T18:52:05.000Z</published>
+    <updated>2024-12-07T18:26:00.988Z</updated>
+    
+    
+    <summary type="html">九份、平溪行的第二天，我們到了侯硐貓村。</summary>
+    
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
+    
+    <category term="Train" scheme="https://mike911209.github.io/tags/Train/"/>
+    
+    <category term="New Taipei" scheme="https://mike911209.github.io/tags/New-Taipei/"/>
+    
+    <category term="Cat" scheme="https://mike911209.github.io/tags/Cat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【遊記】九份</title>
+    <link href="https://mike911209.github.io/2024/08/29/9thern/"/>
+    <id>https://mike911209.github.io/2024/08/29/9thern/</id>
+    <published>2024-08-28T18:47:27.000Z</published>
+    <updated>2024-12-07T18:26:00.988Z</updated>
+    
+    
+    <summary type="html">九份、平溪行的第一天，我們的行程從九份拉開序幕。</summary>
+    
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
+    
+    
+    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
+    
+    <category term="New Taipei" scheme="https://mike911209.github.io/tags/New-Taipei/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【修課心得】NTHU Computer Graphics</title>
+    <link href="https://mike911209.github.io/2024/08/29/cg/"/>
+    <id>https://mike911209.github.io/2024/08/29/cg/</id>
+    <published>2024-08-28T16:10:41.000Z</published>
+    <updated>2024-12-07T18:26:00.986Z</updated>
+    
+    
+    <summary type="html">資工系研究所課程，超級甜涼好課。介紹計算機圖學，課程中會實作圖學的一些功能。</summary>
+    
+    
+    
+    
+    <category term="Course" scheme="https://mike911209.github.io/tags/Course/"/>
+    
+    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
+    
+    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【修課心得】NTHU Compiler Design</title>
+    <link href="https://mike911209.github.io/2024/08/28/compiler/"/>
+    <id>https://mike911209.github.io/2024/08/28/compiler/</id>
+    <published>2024-08-28T10:02:38.000Z</published>
+    <updated>2024-12-07T18:26:00.988Z</updated>
+    
+    
+    <summary type="html">資工系 B 類選修，超級活佛課程，在課堂中會設計一個簡單的前端 compiler。</summary>
+    
+    
+    
+    <category term="Course" scheme="https://mike911209.github.io/categories/Course/"/>
+    
+    
+    <category term="Course" scheme="https://mike911209.github.io/tags/Course/"/>
+    
+    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
+    
+    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
+    
+  </entry>
+  
+</feed>
