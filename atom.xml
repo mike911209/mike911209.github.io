@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2024-12-08T01:46:18.829Z</updated>
+  <updated>2024-12-08T02:09:55.387Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【食記】丁滷味</title>
+    <link href="https://mike911209.github.io/2024/12/08/dinlooway/"/>
+    <id>https://mike911209.github.io/2024/12/08/dinlooway/</id>
+    <published>2024-12-08T01:58:26.000Z</published>
+    <updated>2024-12-08T02:09:55.387Z</updated>
+    
+    
+    <summary type="html">從小吃到大的滷味店，以為是很正常的口味，直到長大後吃了其他間，才知道這間的味道有多厲害。</summary>
+    
+    
+    
+    <category term="Food" scheme="https://mike911209.github.io/categories/Food/"/>
+    
+    
+    <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
+    
+    <category term="Kaohsiung" scheme="https://mike911209.github.io/tags/Kaohsiung/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【食記】三山燒肉</title>
     <link href="https://mike911209.github.io/2024/12/08/3mountain/"/>
     <id>https://mike911209.github.io/2024/12/08/3mountain/</id>
     <published>2024-12-07T18:50:51.000Z</published>
-    <updated>2024-12-08T01:46:18.829Z</updated>
+    <updated>2024-12-08T01:59:10.630Z</updated>
     
     
     <summary type="html">一間價位同茶六、屋馬的燒肉店，但我覺得三山更好吃。</summary>
@@ -32,6 +53,8 @@
     
     
     <category term="Food" scheme="https://mike911209.github.io/tags/Food/"/>
+    
+    <category term="Kaohsiung" scheme="https://mike911209.github.io/tags/Kaohsiung/"/>
     
   </entry>
   
@@ -205,29 +228,6 @@
     
     
     <summary type="html">資工系研究所課程，超級甜涼好課。介紹計算機圖學，課程中會實作圖學的一些功能。</summary>
-    
-    
-    
-    <category term="Course" scheme="https://mike911209.github.io/categories/Course/"/>
-    
-    
-    <category term="Course" scheme="https://mike911209.github.io/tags/Course/"/>
-    
-    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
-    
-    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【修課心得】編譯器設計</title>
-    <link href="https://mike911209.github.io/2024/08/28/compiler/"/>
-    <id>https://mike911209.github.io/2024/08/28/compiler/</id>
-    <published>2024-08-28T10:02:38.000Z</published>
-    <updated>2024-12-08T01:53:25.059Z</updated>
-    
-    
-    <summary type="html">資工系 B 類選修，超級活佛課程，在課堂中會設計一個簡單的前端 compiler。</summary>
     
     
     
