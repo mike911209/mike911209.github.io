@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2024-12-08T02:09:55.387Z</updated>
+  <updated>2025-01-04T15:17:08.969Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【心得】雷泰光電實習 - 面試篇</title>
+    <link href="https://mike911209.github.io/2025/01/04/lasertec-intern-1/"/>
+    <id>https://mike911209.github.io/2025/01/04/lasertec-intern-1/</id>
+    <published>2025-01-04T10:22:28.000Z</published>
+    <updated>2025-01-04T15:17:08.969Z</updated>
+    
+    
+    <summary type="html">透過梅竹黑客松獲得的實習機會，這次來分享面試的過程。</summary>
+    
+    
+    
+    <category term="Review" scheme="https://mike911209.github.io/categories/Review/"/>
+    
+    
+    <category term="Intern" scheme="https://mike911209.github.io/tags/Intern/"/>
+    
+  </entry>
   
   <entry>
     <title>【食記】丁滷味</title>
@@ -216,29 +235,6 @@
     <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
     
     <category term="New Taipei" scheme="https://mike911209.github.io/tags/New-Taipei/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【修課心得】計算機圖學</title>
-    <link href="https://mike911209.github.io/2024/08/29/cg/"/>
-    <id>https://mike911209.github.io/2024/08/29/cg/</id>
-    <published>2024-08-28T16:10:41.000Z</published>
-    <updated>2024-12-08T01:52:47.980Z</updated>
-    
-    
-    <summary type="html">資工系研究所課程，超級甜涼好課。介紹計算機圖學，課程中會實作圖學的一些功能。</summary>
-    
-    
-    
-    <category term="Course" scheme="https://mike911209.github.io/categories/Course/"/>
-    
-    
-    <category term="Course" scheme="https://mike911209.github.io/tags/Course/"/>
-    
-    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
-    
-    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
     
   </entry>
   

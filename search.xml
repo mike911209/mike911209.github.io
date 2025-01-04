@@ -41,6 +41,55 @@
       </tags>
   </entry>
   <entry>
+    <title>【心得】雷泰光電實習 - 面試篇</title>
+    <url>/2025/01/04/lasertec-intern-1/</url>
+    <content><![CDATA[<p>在 <a href="https://mike911209.github.io/2024/10/24/meichu-hackathon/">梅竹黑客松</a> 後，有幸受到評審詢問要不要到他們公司實習，回答好之後就收到面試邀請。</p>
+<h2 id="線上一面"><a href="#線上一面" class="headerlink" title="線上一面"></a>線上一面</h2><p>面試職位如下：</p>
+<ul>
+<li>職位：Machine Learning Engineer Intern</li>
+<li>內容：<ul>
+<li>Build industry-oriented software on the GPU cluster.</li>
+<li>Identify runtime bottlenecks and optimize the runtime through parallel and GPU programming.</li>
+<li>Implement morphological operation via CUDA programming.</li>
+</ul>
+</li>
+<li>技能：<ul>
+<li>Proficient in Python or C++</li>
+<li>Proficient in PyTorch or similar frameworks such as TensorFlow</li>
+<li>M.S., or B.S. degree in Computer Science or a related field</li>
+<li>Familiarity with parallel programming(MPI, OpenMP) and GPU programming(CUDA) is a plus.</li>
+<li>Experience in developing large-scale industry-oriented software is a plus.</li>
+</ul>
+</li>
+</ul>
+<p>簡而言之就是要會平行計算，透過平行計算加速 morphological operation。</p>
+<p>雖然我會 MPI, OpenMP, CUDA 這些 parallel computing 的 library，但其實對 morphological 或者 pytoch 等等完全不熟，所以我花了大概 2 周的時間在學習 torch，基本上是用 torch build 了一個簡單的 GPT，然後 train 起來看看，熟悉一下 torch。</p>
+<p>但其實現在已經開始工作後回來看，發現當時準備方向錯了哈哈哈，應該要先學 CV 等等的圖像處理，LLM 反而沒有用到，但 torch 確實是用很多，所以也不算方向全錯。</p>
+<p>另外我也啃了一下 CUDA 的 document，但不完全是為了面試，也有因為準備課程的緣故。</p>
+<p>一面是線上的，主管進會議室後跟我說等他個 15 mins。開始面試後他就叫我自我介紹個 10 分鐘，我心想烙賽，我都在準備技術，忘記準備自我介紹了，我就趁著打開履歷的時間想了一下，之後就照著履歷講，還有說一下最近寫過的平行計算的 project，還有前陣子用 torch build 了一個簡單的 GPT。</p>
+<p>介紹完後主管問我寫了什麼平行計算的 project，我就講了一下題目，結果他也寫過，我才知道原來他也是工程師，而且很厲害的那種。</p>
+<p>他又問我有沒有修過周志遠老師的平行程式，我剛好正在修，也就順便說我就是他的專題生，跟未來的碩士生，結果他聽到後好像就萬事 ok 了。</p>
+<p>？？？笑死我都還沒進到實驗室欸就開始享受實驗室名聲的福利了嗎。</p>
+<p>總之就大概這樣，準備了很多技術，但都沒被問到，沒有準備自我介紹所以講很爛，結果他聽到我是周志遠老師的學生好像就被錄取了。</p>
+<p>後面就簡單聊天了一下，還有確認入職時間，一面就這樣結束。</p>
+<h2 id="實體二面"><a href="#實體二面" class="headerlink" title="實體二面"></a>實體二面</h2><p>一面後過了非常非常久，HR 才聯絡我，那幾個禮拜其實我都在想是不是講太爛，他們沒有要收了笑死，結果二面的通知就來了。</p>
+<p>二面是實體，要到台北辦公室，我大概 8 點多出門搭車，差不多時間剛好到，結果面試我的就是梅竹黑客松的評審本人哈哈哈。</p>
+<p>面試過程滿輕鬆的，但我因為上次講太爛，這次還有特別準備簡報，想說來扳回一城，結果二面好像只是帶我看看環境，笑死。</p>
+<p>二面過程是純聊天，就跟評審亂聊，再次確認 on board 時間後就結束了。</p>
+<h2 id="Offer-get"><a href="#Offer-get" class="headerlink" title="Offer get"></a>Offer get</h2><p>二面過後又過了非常久，甚至說好 12&#x2F;23 上工，我 12&#x2F;16 都還沒收到回覆，某天下午就突然接到電話，再次確認我 12&#x2F;23 可不可以後，就掛斷，再來就是 12&#x2F;20 禮拜五的下午 16. 多，才寄報到通知給我，然後因為太趕，所以 HR 打電話跟我確認資訊。</p>
+<p>總而言之呢，是一個很奇妙的經驗，原本就有打算找實習，但沒想到是這樣的形式，而且內容還是我很有興趣的平行計算。</p>
+<p>面試過程滿好笑的，我覺得我表現很爛，結果實驗室紅利吃滿，直接就錄取了。</p>
+<p>最後 on board 確認的環節很躁，剩不到一個禮拜就要上工，結果都還沒聯絡我，我每封信都在 30 mins 內回，結果還是要拖到最後甚至要打電話跟我確認資訊。</p>
+<p>不過很開心，找到一個有興趣的實習，而且待遇也不錯，之後再來分享實習的心得。</p>
+]]></content>
+      <categories>
+        <category>Review</category>
+      </categories>
+      <tags>
+        <tag>Intern</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【食記】丁滷味</title>
     <url>/2024/12/08/dinlooway/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WbJPkvRXaSSXba8Y6">813高雄市左營區崇德路243號</a></p>
