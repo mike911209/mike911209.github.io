@@ -7,7 +7,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mike911209.github.io/images/lasertec/image.png">
 <meta property="article:published_time" content="2025-01-24T12:36:57.000Z">
-<meta property="article:modified_time" content="2025-01-24T13:41:59.051Z">
+<meta property="article:modified_time" content="2025-01-24T13:58:04.322Z">
 <meta property="article:author" content="Bin-Lun Li">
 <meta property="article:tag" content="Intern">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2025-01-24 21:41:59'
+  postUpdate: '2025-01-24 21:58:04'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -204,8 +204,8 @@
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
   }
 })()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/profile.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">37</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/lasertec/top.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Mike's space"><span class="site-name">Mike's space</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【心得】雷泰光電實習 - 技術分享篇</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">Created</span><time datetime="2025-01-24T12:36:57.000Z" title="Created 2025-01-24 20:36:57">2025-01-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Review/">Review</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>在 <a href="https://mike911209.github.io/2025/01/04/lasertec-intern-1/">面試</a> 後，開始實習，熟悉了一下 <a href="https://mike911209.github.io/2025/01/13/lasertec-intern-2/">環境</a> 後當然就要開始有生產力囉，所以這篇 focus 在技術的部份，若對實習生活有興趣可以到上一篇看看。</p>
-<h2 id="技術分享"><a href="#技術分享" class="headerlink" title="技術分享"></a>技術分享</h2><p>同面試那篇所說，我要透過平行計算加入 morphological operation，所以一開始有個 CPU version 讓我 trace，我的目標就是瘋狂加速他。</p>
-<p>CPU version 超難懂，基本上就是各種 CV 的操作，在沒有 CV 背景的情況下去看超級痛苦，雖然才可能 3, 400 行 code，但我硬是看了好幾天還是沒看懂，最後覺得其實我只要可以瘋狂加速，這些 operation 背後的原理跟原因我不用熟，只要知道在幹嘛就好，抱持著這樣的心態後就大致開始掌握節奏了。</p>
+<h2 id="技術分享"><a href="#技術分享" class="headerlink" title="技術分享"></a>技術分享</h2><p>同面試那篇所說，我要透過平行計算加速 morphological operation，所以一開始有個 CPU version 讓我 trace，我的目標就是瘋狂加速他。</p>
+<p>CPU version 超難懂，基本上就是各種 CV 的操作，在沒有 CV 背景的情況下去看超級痛苦，雖然可能才 3, 400 行 code，但我硬是看了好幾天還是沒看懂，最後覺得其實我只要可以瘋狂加速，這些 operation 背後的原理跟原因我不用熟，只要知道在幹嘛就好，抱持著這樣的心態後就大致開始掌握節奏了。</p>
 <p>原本的 CPU version 2048 張照片約處理 700 seconds，遠遠不及產線上的需求，產線產生資料的速度太快，所以需要很高的 throughput 才能撐起來，因此需要 GPU 加速。</p>
 <p>CPU version 是用 python 實作，要優化他的話我們首先分為以下幾步驟：</p>
 <ul>
@@ -213,8 +213,8 @@
 <li>Batch: Pytorch</li>
 <li>Optimized: Triton</li>
 </ul>
-<p>以下將針對各個 part 做敘述</p>
-<h2 id="Baseline-Pytorch"><a href="#Baseline-Pytorch" class="headerlink" title="Baseline - Pytorch"></a>Baseline - Pytorch</h2><p>所有事情都要先有個 baseline，所以我打算先用 Pytorch 做出一個基本的版本，再去 profile bottleneck 在哪再看怎麼進一步優化。</p>
+<p>以下將針對各個 part 做敘述。</p>
+<h2 id="Baseline-Pytorch"><a href="#Baseline-Pytorch" class="headerlink" title="Baseline - Pytorch"></a>Baseline - Pytorch</h2><p>所有事情都要先有個 baseline，所以我打算先用 Pytorch 做出一個基本的版本可以跑在 GPU 上，再去 profile bottleneck 在哪再看怎麼進一步優化。</p>
 <p>修改的過程中比較多的時間是在學 Pytorch，Pytorch 其實是一個 Deep learning framework，但我們要用他來做科學計算等等的操作，其實在很多地方上他沒有很直接的支援（至少不像 Deep learning 時直接就有一個 function 可以使用），所以很多時候其實是在看怎麼套 Pytorch 的 API。</p>
 <p>我們有 3 種算法，其中一種可以很直接的用 Pytorch 做完，但另外 2 種有較複雜的操作，Pytorch 超卡，要繞超大一圈才能做到，效能也變很差，所以就直接開始實作 Triton 的版本ㄌ。</p>
 <h2 id="Baseline-Pytorch-Triton"><a href="#Baseline-Pytorch-Triton" class="headerlink" title="Baseline - Pytorch + Triton"></a>Baseline - Pytorch + Triton</h2><h3 id="Before-Triton"><a href="#Before-Triton" class="headerlink" title="Before Triton"></a>Before Triton</h3><p>跟原先計畫不同，原本是預計 Pytorch 做完再看 Triton，結果 Pytorch 太難搞了，最後就直接來用 Triton。</p>
@@ -233,11 +233,11 @@
 <p>我在想因為 Triton 要讓 compiler 去做事，所以才有這個限制，但這樣其實滿搞的。總之後來的解法就是想辦法把資料 pad 到 2 的次方。</p>
 <p>再來的問題就是超級難 debug，CUDA 可以直接 print，但 Triton 的 print（tl.device_print） 會 print 出一堆東西來超難看懂，基本上可以當作沒有。</p>
 <p>雖然 Triton 有個 interpret mode，可以讓 Triton 跑在 CPU 上，print 出 intermediate data 做確認，但實際上這個方法有很多 bug，跑在 CPU 上會有一堆問題，很多運算結果都會錯誤，畢竟人家是設計跑在 GPU 上的。</p>
-<p>其中有個 bug 很靠北，我特別有印象，我有個 tensor 是用 as_strided 這個方法從另一個 tensor 取出來的，結果 copy 到 GPU 上後，他在 CPU 上的資料是用 stride 所以可能不連續，但 copy 到 GPU 上後是連續，但 stride 又沒有轉換，所以直接用這個 tensor 的 stride 去取資料會拿到錯的，超級靠北，我覺得這感覺是 Triton 跟 Pytorch 沒有結合好的問題，也有可能他們沒有預設到有人是用 as_strided 去取 tensor 吧。</p>
+<p>其中有個 bug 很靠北，我特別有印象，我有個 tensor 是用 as_strided 這個方法從另一個 tensor 取出來的，結果 copy 到 GPU 上後，他在 CPU 上的資料是用 stride 所以可能不連續，但 copy 到 GPU 上後是連續，但 stride 又沒有轉換，所以直接用這個 tensor 的 stride 去取資料會拿到錯的，超級靠北，我覺得這是 Triton 跟 Pytorch 沒有結合好的問題，也有可能他們沒有預設到有人是用 as_strided 去取 tensor 吧。</p>
 <p>總而言之，就是花了不少時間 debug，還有剛開始上手的時候花了好一陣子才搞懂 Triton 的運作原理，但上手後還是覺得挺不錯的，確實相比於 CUDA 而言有更短的開發週期，並且 portable。</p>
 <p>把 3 種算法完成後 profile 一下，大致快了 10 倍左右，到目前為止是一次跑一張照片的速度，但要知道 GPU 強得並不是一次一張照片，是一次幾十甚至幾百張照片。</p>
 <h2 id="Batching"><a href="#Batching" class="headerlink" title="Batching"></a>Batching</h2><p>沒錯，所以接著就來實作 Batching 的版本啦～</p>
-<p>一樣是用 Pytorch，Triton 的部份很好支援 Batching，Pytorch 的話老樣子，要去學怎麼用人家的 API，像是 convolution 的 dimension 的意思，怎麼一次對一張照片套多個 convolution kernel，或者對一個 batch 的照片套各自的 kernel 等等。</p>
+<p>一樣是用 Pytorch，Triton 的部份很好支援 Batching，Pytorch 的話老樣子，要去學怎麼用人家的 API，像是 convolution 中 tensor 的 dimension 的意思，怎麼一次對一張照片套多個 convolution kernel，或者對一個 batch 的照片套各自的 kernel 等等。</p>
 <p>實作完成後果然進步神速，這才是 GPU 的威力，到目前為止 2048 張照片只需要 10 秒左右，相比 CPU version 快了 60 倍。</p>
 <p>接著就是各種想辦法 optimize 了。</p>
 <h2 id="Optimize"><a href="#Optimize" class="headerlink" title="Optimize"></a>Optimize</h2><p>首先當然就是 profile bottleneck，發現了 2 個 bottleneck：</p>
@@ -252,7 +252,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensor[..., 16:-16, 16:-16]</span><br></pre></td></tr></table></figure>
 
 <h3 id="Other-optimizations"><a href="#Other-optimizations" class="headerlink" title="Other optimizations"></a>Other optimizations</h3><p>解決掉主要的 bottleneck 後，就開始各種小優化，像是想辦法把各種東西 fuse 起來 reuse share memory；或者其實有些東西的計算沒有必要，可以用一些操作跳過；最後當然還有 tune batch size。</p>
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p>透過上面全部的優化後，原先處理 2048 張照片 CPU 要 700 秒，現在 GPU 只要 2.34 秒，接近 300 倍的加速，超出我的預期非常多，所以也很有成就感。</p>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p>透過上面全部的優化後，原先處理 2048 張照片 CPU 要 700 秒，現在 GPU 只要 2.34 秒，<strong>接近 300 倍的加速</strong>，超出我的預期非常多，所以也很有成就感。</p>
 <p>以上～大概是全部寒假實習的內容分享，在實習的過程中學到了很多，Pytorch, Triton 還有 presentation 的方式，怎麼製作簡報等等。</p>
 <p>我也成功下學期繼續在這邊做 part time，甚至他們讓我可以 work from home，超爽（薪水還上漲嘿嘿），work from home 的意思就是公司請飲料的時候我會 on site，其他時候在家裡，哇哈哈。</p>
 <p>所以呢，說不定還會有下一篇，到時候再看看可以分享什麼～</p>
