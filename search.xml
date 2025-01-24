@@ -43,7 +43,7 @@
   <entry>
     <title>【心得】雷泰光電實習 - 技術分享篇</title>
     <url>/2025/01/24/lasertec-intern-3/</url>
-    <content><![CDATA[<p>在 <a href="https://mike911209.github.io/2025/01/04/lasertec-intern-1/">面試</a> 後，開始實習，熟悉了一下 <a href="https://mike911209.github.io/2025/01/13/lasertec-intern-2/">環境</a> 後當然就要開始有生產力囉，所以這篇 focus 在技術的部份，若對實習生活有興趣可以到上一篇看看。</p>
+    <content><![CDATA[<p>在 <a href="https://mike911209.github.io/2025/01/04/lasertec-intern-1/">面試</a> 後，開始實習，熟悉了一下環境後當然就要開始有生產力囉，所以這篇 focus 在技術的部份，若對實習生活有興趣可以到 <a href="https://mike911209.github.io/2025/01/13/lasertec-intern-2/">上一篇</a> 看看。</p>
 <h2 id="技術分享"><a href="#技術分享" class="headerlink" title="技術分享"></a>技術分享</h2><p>同面試那篇所說，我要透過平行計算加速 morphological operation，所以一開始有個 CPU version 讓我 trace，我的目標就是瘋狂加速他。</p>
 <p>CPU version 超難懂，基本上就是各種 CV 的操作，在沒有 CV 背景的情況下去看超級痛苦，雖然可能才 3, 400 行 code，但我硬是看了好幾天還是沒看懂，最後覺得其實我只要可以瘋狂加速，這些 operation 背後的原理跟原因我不用熟，只要知道在幹嘛就好，抱持著這樣的心態後就大致開始掌握節奏了。</p>
 <p>原本的 CPU version 2048 張照片約處理 700 seconds，遠遠不及產線上的需求，產線產生資料的速度太快，所以需要很高的 throughput 才能撐起來，因此需要 GPU 加速。</p>
@@ -107,7 +107,7 @@
   <entry>
     <title>【心得】雷泰光電實習 - 小李上工篇</title>
     <url>/2025/01/13/lasertec-intern-2/</url>
-    <content><![CDATA[<p>這篇比較 focus 在菜雞我上工的日常分享，想了解比較技術細節的可以到下一篇看看（work in progress）。</p>
+    <content><![CDATA[<p>這篇比較 focus 在菜雞我上工的日常分享，想了解比較技術細節的可以到 <a href="https://mike911209.github.io/2025/01/24/lasertec-intern-3/">下一篇</a> 看看。</p>
 <h2 id="小李周遊辦公室"><a href="#小李周遊辦公室" class="headerlink" title="小李周遊辦公室"></a>小李周遊辦公室</h2><p>接續 <a href="https://mike911209.github.io/2025/01/04/lasertec-intern-1/">前篇</a> 面試後，確定上工日期為 12&#x2F;23，我便在當天提前約 15mins 到現場，HR 接待我到會議室簽一些文件後就來到我的座位。</p>
 <figure class="blog-img-box">
     <img src="/images/lasertec/meeting.png" loading="lazy">
