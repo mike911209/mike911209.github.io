@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2025-01-13T14:53:35.078Z</updated>
+  <updated>2025-01-24T13:41:59.051Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【心得】雷泰光電實習 - 技術分享篇</title>
+    <link href="https://mike911209.github.io/2025/01/24/lasertec-intern-3/"/>
+    <id>https://mike911209.github.io/2025/01/24/lasertec-intern-3/</id>
+    <published>2025-01-24T12:36:57.000Z</published>
+    <updated>2025-01-24T13:41:59.051Z</updated>
+    
+    
+    <summary type="html">分享實習過程中用到的技術與我做了什麼，還有最後的成果。</summary>
+    
+    
+    
+    <category term="Review" scheme="https://mike911209.github.io/categories/Review/"/>
+    
+    
+    <category term="Intern" scheme="https://mike911209.github.io/tags/Intern/"/>
+    
+  </entry>
   
   <entry>
     <title>【心得】雷泰光電實習 - 小李上工篇</title>
@@ -208,31 +227,6 @@
     <category term="New Taipei" scheme="https://mike911209.github.io/tags/New-Taipei/"/>
     
     <category term="Lanterm" scheme="https://mike911209.github.io/tags/Lanterm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【遊記】侯硐</title>
-    <link href="https://mike911209.github.io/2024/08/29/monkey-tong/"/>
-    <id>https://mike911209.github.io/2024/08/29/monkey-tong/</id>
-    <published>2024-08-28T18:52:05.000Z</published>
-    <updated>2024-12-07T18:26:00.988Z</updated>
-    
-    
-    <summary type="html">九份、平溪行的第二天，我們到了侯硐貓村。</summary>
-    
-    
-    
-    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
-    
-    
-    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
-    
-    <category term="Train" scheme="https://mike911209.github.io/tags/Train/"/>
-    
-    <category term="New Taipei" scheme="https://mike911209.github.io/tags/New-Taipei/"/>
-    
-    <category term="Cat" scheme="https://mike911209.github.io/tags/Cat/"/>
     
   </entry>
   
