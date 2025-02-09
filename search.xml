@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>【遊記】九份、平溪行</title>
-    <url>/2024/07/17/lantern-traveling/</url>
+    <url>/2024/07/17/Travel/lantern-traveling/</url>
     <content><![CDATA[<p>這是一趟開學前的旅程，在旅途中，我們前往了：</p>
 <h1 id="九份"><a href="#九份" class="headerlink" title="九份"></a>九份</h1><p>在九份吃了許多美食，也淋成了落湯雞。</p>
 <div class="recent-posts" id="recent-posts">
@@ -42,7 +42,7 @@
   </entry>
   <entry>
     <title>【心得】雷泰光電實習 - 技術分享篇</title>
-    <url>/2025/01/24/lasertec-intern-3/</url>
+    <url>/2025/01/24/Review/lasertec-intern-3/</url>
     <content><![CDATA[<p>在 <a href="https://mike911209.github.io/2025/01/04/lasertec-intern-1/">面試</a> 後，開始實習，熟悉了一下環境後當然就要開始有生產力囉，所以這篇 focus 在技術的部份，若對實習生活有興趣可以到 <a href="https://mike911209.github.io/2025/01/13/lasertec-intern-2/">上一篇</a> 看看。</p>
 <h2 id="技術分享"><a href="#技術分享" class="headerlink" title="技術分享"></a>技術分享</h2><p>同面試那篇所說，我要透過平行計算加速 morphological operation，所以一開始有個 CPU version 讓我 trace，我的目標就是瘋狂加速他。</p>
 <p>CPU version 超難懂，基本上就是各種 CV 的操作，在沒有 CV 背景的情況下去看超級痛苦，雖然可能才 3, 400 行 code，但我硬是看了好幾天還是沒看懂，最後覺得其實我只要可以瘋狂加速，這些 operation 背後的原理跟原因我不用熟，只要知道在幹嘛就好，抱持著這樣的心態後就大致開始掌握節奏了。</p>
@@ -106,7 +106,7 @@
   </entry>
   <entry>
     <title>【心得】雷泰光電實習 - 小李上工篇</title>
-    <url>/2025/01/13/lasertec-intern-2/</url>
+    <url>/2025/01/13/Review/lasertec-intern-2/</url>
     <content><![CDATA[<p>這篇比較 focus 在菜雞我上工的日常分享，想了解比較技術細節的可以到 <a href="https://mike911209.github.io/2025/01/24/lasertec-intern-3/">下一篇</a> 看看。</p>
 <h2 id="小李周遊辦公室"><a href="#小李周遊辦公室" class="headerlink" title="小李周遊辦公室"></a>小李周遊辦公室</h2><p>接續 <a href="https://mike911209.github.io/2025/01/04/lasertec-intern-1/">前篇</a> 面試後，確定上工日期為 12&#x2F;23，我便在當天提前約 15mins 到現場，HR 接待我到會議室簽一些文件後就來到我的座位。</p>
 <figure class="blog-img-box">
@@ -191,7 +191,7 @@
   </entry>
   <entry>
     <title>【心得】雷泰光電實習 - 面試篇</title>
-    <url>/2025/01/04/lasertec-intern-1/</url>
+    <url>/2025/01/04/Review/lasertec-intern-1/</url>
     <content><![CDATA[<p>在 <a href="https://mike911209.github.io/2024/10/24/meichu-hackathon/">梅竹黑客松</a> 後，有幸受到評審詢問要不要到他們公司實習，回答好之後就收到面試邀請。</p>
 <h2 id="線上一面"><a href="#線上一面" class="headerlink" title="線上一面"></a>線上一面</h2><p>面試職位如下：</p>
 <ul>
@@ -240,7 +240,7 @@
   </entry>
   <entry>
     <title>【食記】丁滷味</title>
-    <url>/2024/12/08/dinlooway/</url>
+    <url>/2024/12/08/Food/dinlooway/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WbJPkvRXaSSXba8Y6">813高雄市左營區崇德路243號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>捷運生態園區站走路 7 分鐘可到</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從小吃到大的滷味店，以為是很正常的口味，直到長大後吃了其他間，才知道這間的味道有多厲害。</p>
@@ -264,7 +264,7 @@
   </entry>
   <entry>
     <title>【食記】三山燒肉</title>
-    <url>/2024/12/08/3mountain/</url>
+    <url>/2024/12/08/Food/3mountain/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kVtSPDEHB3bWat22A">804高雄市鼓山區博愛二路337號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><ul>
 <li>捷運：巨蛋站下車後走 5 分鐘，或者凹子底也可以到</li>
@@ -342,7 +342,7 @@
   </entry>
   <entry>
     <title>【心得】114 清大資工所推甄</title>
-    <url>/2024/11/15/isa/</url>
+    <url>/2024/11/15/Review/isa/</url>
     <content><![CDATA[<p>很幸運的資應所正取，雖然資甲落榜，但還是來分享一下我準備的過程以及我的成績、資料等等，希望能讓學弟妹準備備審可以更順利。</p>
 <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h2 id="學經歷"><a href="#學經歷" class="headerlink" title="學經歷"></a>學經歷</h2><p>國立清華大學資訊工程學系 大學部四年級（應屆生）</p>
 <ul>
@@ -500,7 +500,7 @@
   </entry>
   <entry>
     <title>【學記】Makefile 語法與變數示範</title>
-    <url>/2024/11/03/makefile/</url>
+    <url>/2024/11/03/Learning/makefile/</url>
     <content><![CDATA[<h1 id="What-is-Makefile"><a href="#What-is-Makefile" class="headerlink" title="What is Makefile?"></a>What is Makefile?</h1><p>甚麼是 Makefile 呢？</p>
 <p>舉例而言，像是在這份 <a href="https://github.com/smilingweixiao/ChatVerse">Project</a> 中，可以透過 make 指令編譯前端與開啟後端，在下達 make 指令時 make 就會去查找一個叫 Makefile（或者 makefile）的檔案，從其中定義的規則去執行相對應的命令。</p>
 <h1 id="Benefits-of-Makefile"><a href="#Benefits-of-Makefile" class="headerlink" title="Benefits of Makefile?"></a>Benefits of Makefile?</h1><p>使用 Makefile 有許多的好處：</p>
@@ -602,7 +602,7 @@
   </entry>
   <entry>
     <title>【心得】2024 梅竹黑客松</title>
-    <url>/2024/10/24/meichu-hackathon/</url>
+    <url>/2024/10/24/Review/meichu-hackathon/</url>
     <content><![CDATA[<p>今年的黑客松對我而言是充滿了驚喜的一屆。</p>
 <p>從去年的做不完到今年的梅竹大獎第二名，我看到了我在這一年中的進步，也很感謝隊友的給力，讓我們在整個過程中都各司其職，效率非常高，在沒有偷卷的情況下，我們是真正意義上的黑客松，還能得到第二名，真的非常開心，現在回想起來還會覺得像是在作夢一樣。</p>
 <figure class="blog-img-box" data-testimonials-item>
@@ -674,7 +674,7 @@
   </entry>
   <entry>
     <title>【遊記】十分</title>
-    <url>/2024/08/29/10thern/</url>
+    <url>/2024/08/29/Travel/10thern/</url>
     <content><![CDATA[<p>離開 <a href="/2024/8/29/jingtone/index.html">菁桐</a> 後，旅程的最後一站，我們來到了十分。</p>
 <figure class="blog-img-box" data-testimonials-item>
     <img src="/images/10thern/5.png" loading="lazy">
@@ -763,7 +763,7 @@
   </entry>
   <entry>
     <title>【遊記】菁桐</title>
-    <url>/2024/08/29/jingtone/</url>
+    <url>/2024/08/29/Travel/jingtone/</url>
     <content><![CDATA[<p>離開 <a href="/2024/8/29/monkey-tong/index.html">侯硐</a> 後，我們往今天的下一站 - 菁桐邁進。</p>
 <p>菁桐是平溪線上較不為人所知的地方，在平溪線的最尾站，這裡沒有很多的景點，但卻是整條平溪線上最能接觸鐵道與大自然的地方，相較平溪與十分的擁擠，菁桐有著獨特的美與生活步調。</p>
 <p>前往菁桐需要搭乘約半小時的火車，沿線的風景非常漂亮，但可惜當天是天燈節人超級多，沒有拍照的位置。推薦搭乘平溪線的時候一定要找個靠窗的位置好好欣賞。</p>
@@ -855,7 +855,7 @@
   </entry>
   <entry>
     <title>【遊記】侯硐</title>
-    <url>/2024/08/29/monkey-tong/</url>
+    <url>/2024/08/29/Travel/monkey-tong/</url>
     <content><![CDATA[<p>書接上回 Day 1 的 <a href="/2024/08/29/9thern/index.html">九份行</a></p>
 <p>由於抵達瑞芳的時間尚早，我們決定先到猴硐晃晃。</p>
 <figure class="blog-img-box" data-testimonials-item>
@@ -964,7 +964,7 @@
   </entry>
   <entry>
     <title>【遊記】九份</title>
-    <url>/2024/08/29/9thern/</url>
+    <url>/2024/08/29/Travel/9thern/</url>
     <content><![CDATA[<p>在經過約 2 小時的車程後，我們從新竹到了九份。</p>
 <p>一下車，便是大雨旁陀，我跟女友共撐一把小傘，到了公車站旁的基山觀海亭，聽說可以看到很漂亮的海景，但當天霧氣實在太濃，我們看到的僅有一片霧茫茫的霧景。</p>
 <figure class="blog-img-box" data-testimonials-item>
@@ -1025,7 +1025,7 @@
   </entry>
   <entry>
     <title>【修課心得】計算機圖學</title>
-    <url>/2024/08/29/cg/</url>
+    <url>/2024/08/29/Course/cg/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機圖學 Computer Graphics<br>科號：CS 550000<br>老師：李潤容<br>課本：教授自編講義<br>課別：資工系選修（非 ABCD 類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>無，如果有寫過 OpenGL 的話作業會變簡單。</p>
 <h2 id="課程內容-簡介："><a href="#課程內容-簡介：" class="headerlink" title="課程內容&#x2F;簡介："></a>課程內容&#x2F;簡介：</h2><p>Note that 本課程為研究所課程。 </p>
@@ -1081,7 +1081,7 @@
   </entry>
   <entry>
     <title>【修課心得】編譯器設計</title>
-    <url>/2024/08/28/compiler/</url>
+    <url>/2024/08/28/Course/compiler/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：編譯器設計 Compiler Design<br>科號：CS 340400<br>老師：李政崑<br>課本：教授自編講義<br>課別：資工系選修 B 類<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>無，但如果有修過正規語言、計算理論在課程前中期會比較輕鬆。</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>一開始簡介 Compiler，後來介紹 grammar 跟 parsing strategy，再介紹 Finite state machine 與 LL, LR parser。<br>Focus 在前端編譯器，修完課後差不多知道一些 grammar 跟 parser，主要是在記名詞，不太有算法或者優化，給想修的人參考看看。</p>
@@ -1134,7 +1134,7 @@
   </entry>
   <entry>
     <title>【修課心得】料理中的科學</title>
-    <url>/2024/08/28/science-of-cooking/</url>
+    <url>/2024/08/28/Course/science-of-cooking/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：料理中的科學 Science of Cooking<br>科號：GE 191200<br>老師：張蓉<br>課本：教授自編講義<br>課別：一般通識，自然科學領域<br>學分：2<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>同課名教料理中的科學，用科學的角度看烹飪的過程，會介紹烹飪的介質、手法、以及食材衍伸料理還有咖啡，會涉及一點點高中物理化學，但都很基礎。<br>上課內容非常有趣，可以清晰易懂地了解烹飪過程中發生的所有原理，有種「哇喔原來是這樣」的感覺。</p>
 <p>教學進度如下：</p>
@@ -1176,7 +1176,7 @@
   </entry>
   <entry>
     <title>【修課心得】中國神話故事選讀</title>
-    <url>/2024/08/28/chinese-myth/</url>
+    <url>/2024/08/28/Course/chinese-myth/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：中國神話故事選讀 Selective Readings for “The Chinese Mythology”<br>科號：11220 GE 132800<br>老師：陳燕梅<br>課本：教授自編講義<br>課別：一般通識，人文學領域<br>學分：2<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>同課名，講解、分析中國神話故事，像是后羿射日、女媧造人等等，並從中分析神話的起源以及為政者為何塑造該神話。</p>
 <p>老師第一堂課就說她主打的是一個又甜又涼，只要有半點的不夠甜涼，老師就會覺得對不起她的良心。</p>
@@ -1205,7 +1205,7 @@
   </entry>
   <entry>
     <title>【修課心得】資料庫系統概論</title>
-    <url>/2024/08/28/db/</url>
+    <url>/2024/08/28/Course/db/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：資料庫系統概論 Introduction to Database Systems<br>科號：CS 471000<br>老師：吳尚鴻<br>課本：教授自編講義<br>課別：資工系選修D類<br>學分：3<br>涼度：★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>作業系統</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>一開始教如何使用 DB，後面主要在講普遍 DB 內的架構。期中考後為補充內容，介紹像是分散式資料庫、NoSQL資料庫、Vector search等等。</p>
@@ -1278,7 +1278,7 @@
   </entry>
   <entry>
     <title>【食記】姜滿堂</title>
-    <url>/2024/08/23/chan-man-tong/</url>
+    <url>/2024/08/23/Food/chan-man-tong/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/bAeJLC2LvEKeesGw7">300194新竹市東區中央路229號8樓</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>巨城 8 樓，公車在東門國小下車可以到，火車站也有接駁車。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>姜滿堂是一間非常令人驚艷的燒肉店，雖然價格不低（每人約 $800 ~ $1000），但肉質非常好，食物也很美味。</p>
@@ -1325,7 +1325,7 @@
   </entry>
   <entry>
     <title>【學記】SSH Tunneling</title>
-    <url>/2024/08/20/ssh-tunneling/</url>
+    <url>/2024/08/20/Learning/ssh-tunneling/</url>
     <content><![CDATA[<h2 id="What-is-SSH-Tunneling"><a href="#What-is-SSH-Tunneling" class="headerlink" title="What is SSH Tunneling?"></a>What is SSH Tunneling?</h2><p>網路的連線由 2 個端點組成，而連線中經常會經過 untrusted networks（例如 internet），其中的資料傳輸就不安全，可能會有被偷窺，甚至收到錯誤資料的風險，tunneling 技術就是為此而生。</p>
 <p>Tunneling 指的是將網路上的 2 個端點用某種方式連接起來，形成一個隧道，而 SSH tunneling 就是用 SSH protocol 建立隧道，不但能加密通訊，即便中間有設下防火牆或者要連上在別的內網的機器，SSH tunneling 都能建立連線。</p>
 <p><img src="/images/ssh_tunneling/0.png"></p>
@@ -1406,7 +1406,7 @@
   </entry>
   <entry>
     <title>【學記】使用 Docker 建立執行環境</title>
-    <url>/2024/08/11/docker-env/</url>
+    <url>/2024/08/11/Learning/docker-env/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我們時常會遇到一份 project 需要執行在與本機不同的環境下，舉例而言：</p>
 <blockquote>
 <p>NachOS 是一份教學用 OS 軟體，需要執行在 32 bits system 上，而本機環境是 64 bits architecture。<br>我們需要一份可以跑 NachOS 的環境，且 run 在該環境的 NachOS 要與本地的同步，以方便之後交作業。</p>
@@ -1469,7 +1469,7 @@
   </entry>
   <entry>
     <title>【食記】Dor,留手工義大利麵</title>
-    <url>/2024/08/10/dorliu/</url>
+    <url>/2024/08/10/Food/dorliu/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kPL7NB7W4rKA9mmr9">813高雄市左營區新莊一路133號1樓</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><ul>
 <li>捷運：高雄捷運巨蛋站下車後騎 Ubike 可以到</li>
@@ -1522,7 +1522,7 @@
   </entry>
   <entry>
     <title>【食記】波市多拿坡里披薩</title>
-    <url>/2024/08/07/posto/</url>
+    <url>/2024/08/07/Food/posto/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/29vCbRkJuDVsKufR7">813高雄市左營區至聖路289號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>高雄捷運凹子底捷運站出來走 2, 3 分鐘就到了。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這是一間，我吃過最好吃的披薩店。</p>
@@ -1553,7 +1553,7 @@
   </entry>
   <entry>
     <title>【食記】村豚拉麵</title>
-    <url>/2024/08/07/chunton/</url>
+    <url>/2024/08/07/Food/chunton/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/Pw8Yz8GzzogmdPn1A">830高雄市鳳山區五權南路226號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>高雄捷運橘線鳳山站下車可以到。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>很少看到可以線上抽號碼牌的拉麵店，我覺得這個設計很不錯，可惜線上無法知道候位進度。</p>
@@ -1579,7 +1579,7 @@
   </entry>
   <entry>
     <title>【食記】辣辣叭麻辣干鍋</title>
-    <url>/2024/08/07/lalapa/</url>
+    <url>/2024/08/07/Food/lalapa/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/rFT52x3ZK31BWY5S6">807高雄市三民區大順二路816號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在輕軌大順民族跟灣仔內站中間，下輕軌後只需要走一下就到了。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>直接說重點，口味非常棒，但價格太貴，因此評價的話我只會給到 3.5 ~ 4 星。</p>
@@ -1610,7 +1610,7 @@
   </entry>
   <entry>
     <title>【食記】隱川居酒屋</title>
-    <url>/2024/07/31/inchu/</url>
+    <url>/2024/07/31/Food/inchu/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kURxJz9X4Bgpququ8">300新竹市東區中正路86號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在東門市場對面，公車一下車就是了。</p>
 <p>5608, 藍 1, 20, 2 號公車等等都可以到。</p>
@@ -1658,7 +1658,7 @@
   </entry>
   <entry>
     <title>【學記】git stash</title>
-    <url>/2024/07/21/git-stash/</url>
+    <url>/2024/07/21/Learning/git-stash/</url>
     <content><![CDATA[<p><code>git stash</code> 的使用情境為何？讓我們先看一個例子：</p>
 <p>當修改了 working directory 後，目前的 working directory 會成為 dirty 的。<br>而有時候會需要在 dirty 的情況下查看之前的 commit 或 pull，此時有以下 2 種作法：</p>
 <ol>
@@ -1743,7 +1743,7 @@
   </entry>
   <entry>
     <title>【食記】QQ 圓</title>
-    <url>/2024/07/20/qqdumpling/</url>
+    <url>/2024/07/20/Food/qqdumpling/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/AhSwifYeNhkNZKaj9">300新竹市東區光復路二段378號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在清大正對面。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一碗 $35 很划算，QQ 圓口味有分：</p>
@@ -1778,7 +1778,7 @@
   </entry>
   <entry>
     <title>【食記】100 種味道</title>
-    <url>/2024/07/20/100-taste/</url>
+    <url>/2024/07/20/Food/100-taste/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/KCAXkX54B8N8S7yX9">300新竹市東區三民路35號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在巨城旁邊，可以搭車到東門過小後沿著 <a href="https://maps.app.goo.gl/XbxUASJbF2fGPJxf7">隆恩圳親水公園</a> 走就會到了</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>久聞盛名，每次經過都想進去吃，進去後才發現要提前訂位才能內用，不過拿著甜點到旁邊親水公園吃也是不錯的選擇。</p>
@@ -1807,7 +1807,7 @@
   </entry>
   <entry>
     <title>【食記】老陳海南雞飯</title>
-    <url>/2024/07/20/chen-hainen/</url>
+    <url>/2024/07/20/Food/chen-hainen/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/UHy77i9QNpE1iVcu8">402台中市南區復興路三段300號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>我們那天從火車站走過去走很久，後來騎腳踏車回去就很快。</p>
 <p>所以建議可以騎腳踏車沿建國路的腳踏車道騎，海南雞店斜對面有 Ubike 停車站。</p>
@@ -1833,7 +1833,7 @@
   </entry>
   <entry>
     <title>【食記】CURRY WU日式熟成濃咖哩專賣店</title>
-    <url>/2024/07/17/curry-wu/</url>
+    <url>/2024/07/17/Food/curry-wu/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/NER8KfbYatvDi8gd9">300新竹市北區興南街28號1樓</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在新竹大遠百旁邊，先到大遠百往旁邊巷子走就會到了。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一間隱身在巷子中的店，這條巷子令人意外的有很多吃的。</p>
@@ -1882,7 +1882,7 @@
   </entry>
   <entry>
     <title>【食記】斜角古早味綿綿冰</title>
-    <url>/2024/07/17/tilt-corner/</url>
+    <url>/2024/07/17/Food/tilt-corner/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WkjiZiGo47XRph2t9">300新竹市東區南大路393號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在南大路上，可以從清大校本部搭 83 號公車或南大校車，再走一下下就到了。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>走進這間店是一個意外的行程，卻帶給了我非常難忘的收穫。</p>
@@ -1913,7 +1913,7 @@
   </entry>
   <entry>
     <title>【修課心得】軟體設計與實驗</title>
-    <url>/2024/07/17/ss/</url>
+    <url>/2024/07/17/Course/ss/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：軟體設計與實驗<br>科號：CS 241001<br>老師：吳尚鴻<br>課本：教授自編講義<br>課別：資工系系定必修<br>學分：3<br>涼度：★（滿分五分，空心代表半分）<br>甜度：★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>計算機程式設計</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>教學軟體設計以及UI&#x2F;UX design時的一些想法，還有做interview跟usability test等等。技術部分則是先教學基本的HTML&#x2F;CSS，教Javascript，後面開始React跟backend，最後面會帶到一點intelligence。</p>
@@ -1960,7 +1960,7 @@
   </entry>
   <entry>
     <title>【修課心得】Python 語言程式入門</title>
-    <url>/2024/07/17/python/</url>
+    <url>/2024/07/17/Course/python/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：Python語言程式入門<br>科號：EECS 121000<br>老師：周百祥<br>課本：教授自編講義<br>課別：資工系選修<br>學分：3<br>涼度：★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>程式基礎（會比較好拿分）</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>前面會教一點計算機架構，之後開始教Python基礎語法，最後面會教一些Library。</p>
@@ -2008,7 +2008,7 @@
   </entry>
   <entry>
     <title>【修課心得】計算機系統管理</title>
-    <url>/2024/07/17/csa/</url>
+    <url>/2024/07/17/Course/csa/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機系統管理 Computer System Administration<br>科號：CS 342700<br>老師：張君天<br>課本：教授自編講義<br>課別：資工系選修（非ABCD類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>管理計算機系統，作業系統使用freeBSD，對於coomand line interface不熟的修這堂課會對Unix系統有初步的認識，非常推薦資工系大三來修。<br>課程前期教學網路架設，牽涉到一些計網概的知識，中期會教Apache server，讓學生自己架DNS等等，課程後期會教一些硬碟的管理。</p>
 <p>教學進度如下：</p>
@@ -2057,7 +2057,7 @@
   </entry>
   <entry>
     <title>【修課心得】機器學習概論</title>
-    <url>/2024/07/17/ml/</url>
+    <url>/2024/07/17/Course/ml/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：機器學習概論 Introduction to Machine Learning<br>科號：CS 460200<br>老師：郭柏志<br>課本：教授自編講義<br>課別：資工系選修D類<br>學分：3<br>涼度：★~★★★（滿分五分，空心代表半分）<br>甜度：★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>計算機程式設計、python基本語法</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>前期教學傳統 ML 方法，後期會教到部分深度學習內容。</p>
@@ -2111,7 +2111,7 @@
   </entry>
   <entry>
     <title>【修課心得】計算機結構</title>
-    <url>/2024/07/17/ca/</url>
+    <url>/2024/07/17/Course/ca/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機結構 Computer Architecture<br>科號：11120 CS 410001<br>老師：王廷基<br>課本：教授自編講義<br>課別：資工系系定核心必修<br>學分：3<br>涼度：★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>邏輯設計</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>期中前主要是教RISC-V，ALU的架構，後半教pipeline，memory hierachy</p>
@@ -2149,7 +2149,7 @@
   </entry>
   <entry>
     <title>【修課心得】作業系統</title>
-    <url>/2024/07/17/os/</url>
+    <url>/2024/07/17/Course/os/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：作業系統 Operating Systems<br>科號：CS 342301<br>老師：周志遠<br>課本：教授自編講義<br>課別：資工系必修<br>學分：3<br>涼度：★★（滿分五分，空心代表半分）<br>甜度：★★★★（滿分五分，空心代表半分）</p>
 <h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>計算機結構、計算機程式設計、資料結構。</p>
 <h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>資工系3大必修之一，介紹作業系統的基本知識，主要講作業系統的基本概念，課程中有實作內容，會在一個很基本的作業系統程式（NachOS）上添加一些功能。</p>
@@ -2201,7 +2201,7 @@
   </entry>
   <entry>
     <title>【食記】沐嵐</title>
-    <url>/2024/07/17/moonlight/</url>
+    <url>/2024/07/17/Food/moonlight/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/s2cuPqJGG39swnPt8">300新竹市東區西大路240號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><h4 id="火車站出發"><a href="#火車站出發" class="headerlink" title="火車站出發"></a>火車站出發</h4><p>面向火車站右手邊一直走，穿過竹蓮地下道後就在附近了。</p>
 <h4 id="清大出發"><a href="#清大出發" class="headerlink" title="清大出發"></a>清大出發</h4><p>搭 83 號公車，在西大路口下車，沐嵐就在旁邊。</p>
@@ -2235,7 +2235,7 @@
   </entry>
   <entry>
     <title>【食記】來杯果豬</title>
-    <url>/2024/07/17/piggy-drink/</url>
+    <url>/2024/07/17/Food/piggy-drink/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/oLAVp6w3ZyxkyHqy7">30045新竹市東區建新路7號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在清大機車塔對面，走路過去即可。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從裝潢就可以感覺到老闆跟老闆娘的用心，小小間但很溫馨。</p>
@@ -2260,7 +2260,7 @@
   </entry>
   <entry>
     <title>【食記】喜劇收場</title>
-    <url>/2024/07/17/happy-ending/</url>
+    <url>/2024/07/17/Food/happy-ending/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/z4SyeGDCKmju7A8a8">300新竹市東區三民路2巷5號</a></p>
 <h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車 (藍1, 5608等等) 到東門國小下車，喜劇收場就在旁邊。</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>位置很多，通常不需要等待，來吃之前可以去FB粉絲團確認有沒有休假</p>
