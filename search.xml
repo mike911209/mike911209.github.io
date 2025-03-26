@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【修課心得】計算機結構</title>
-    <url>/2024/07/17/Course/ca/</url>
-    <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機結構 Computer Architecture<br>科號：11120 CS 410001<br>老師：王廷基<br>課本：教授自編講義<br>課別：資工系系定核心必修<br>學分：3<br>涼度：★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
-<h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>邏輯設計</p>
-<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>期中前主要是教RISC-V，ALU的架構，後半教pipeline，memory hierachy</p>
-<p>教學進度如下：</p>
-<ol>
-<li>Computer abstractions and technology</li>
-<li>The role of performance</li>
-<li>Instructions: language of the machine</li>
-<li>Arithmetic for computers</li>
-<li>The processor: datapath and control</li>
-<li>Enhancing performance with pipelining</li>
-<li>Large and fast: exploiting memory hierarchy</li>
-</ol>
-<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>實體上課，但有錄影，所以常常只有一節的那堂課到的不到20人，教授有時候會小抱怨一下，不知道明年還會不會有錄影哈哈哈。<br>上課簡報淺顯易懂，沒聽懂也可以回去看當天的上課影片，影片聲音也都很清楚。<br>教授會在重要的觀念點重複強調，基本上我上課認真聽就直接聽懂，回去之後就是複習而已，不懂的地方下課問教授也都很樂意回答，覺得教授的教學功力很好。</p>
-<h2 id="考試-作業"><a href="#考試-作業" class="headerlink" title="考試 &amp;&amp; 作業"></a>考試 &amp;&amp; 作業</h2><p>小考總共考了4次，時間約20~30分鐘，內容很簡單也都與歷屆雷同，本人寫大概3、4年歷屆小考都穩100。</p>
-<p>作業有6份，占比 50% 超級重，陷阱題很多而且每份都要花超過整整一天，非常花時間，但個人覺得作業滿有趣的，可以更理解上課內容，也有很多很🆒的軟體可以玩。<br>作業一定要去TA time，可以問助教自己寫得對不對，一開始沒去前2次作業只有約80分，差點沒辦法A+，後面有認真去就都100了。</p>
-<p>期中期末各一次，可以帶雙面A4大抄 ( 單面的話可以用莫比烏斯環嗎 )，但個人覺得完全用不到，考了2次大抄都沒時間看，而且東西都直接背起來了所以也不需要。<br>考前教授會發歷屆，但不會有答案，助教也不能詢問歷屆題目。<br>期中滿難的，Assembly code在寫的時候很容易粗心，只有76分。<br>期末考得時候感覺超難，但不知道為什麼居然有85分。<br>考試內容很多地方容易粗心而且時間不算夠，所以不要卡一題卡太久。</p>
-<p>另外要說明，下學期計算機結構資工系有開3個班，上課、作業內容與期中期末考內容完全一致，教授們很注重公平，我覺得這樣滿棒的可以大幅降低不同老師成績不同的疑慮。</p>
-<p>順帶一提，助教跟教授都超有耐心人超nice，雖然作業很難但感受得到助教的用心，而且助教還很強，所以不會賭爛，規劃很好的一堂課。</p>
-<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>作業 50% +<br>小考 10% +<br>期中 20% +<br>期末 20% +<br>&#x3D; 100%<br>最後有加總分2分</p>
-<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>資工系主任，很耐心解惑而且也會關心學生，很喜歡這位教授，上課也教得很清楚，但每次看到老師都會想到藍色小精靈，老師好可愛。<br>因為是系主任有時候要開會等等所以會調課，偶爾會有一個禮拜四堂課但另一個禮拜都沒上課的時候。</p>
-<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>給，似乎是先搶先贏，沒選到也沒關係，總共有3個班，其他老師聽說也教得很好，上學期也有其他老師有開課。</p>
-<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：A+    1&#x2F;110<br>T分數：57.97<br>成績分布：<br>所有人都四捨五入後再加2分</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/ca/1.png" loading="lazy">
-</figure>]]></content>
-      <categories>
-        <category>Course</category>
-      </categories>
-      <tags>
-        <tag>Course</tag>
-        <tag>NTHU</tag>
-        <tag>CS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【修課心得】計算機圖學</title>
     <url>/2024/08/29/Course/cg/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機圖學 Computer Graphics<br>科號：CS 550000<br>老師：李潤容<br>課本：教授自編講義<br>課別：資工系選修（非 ABCD 類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
@@ -95,35 +57,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】中國神話故事選讀</title>
-    <url>/2024/08/28/Course/chinese-myth/</url>
-    <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：中國神話故事選讀 Selective Readings for “The Chinese Mythology”<br>科號：11220 GE 132800<br>老師：陳燕梅<br>課本：教授自編講義<br>課別：一般通識，人文學領域<br>學分：2<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
-<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>同課名，講解、分析中國神話故事，像是后羿射日、女媧造人等等，並從中分析神話的起源以及為政者為何塑造該神話。</p>
-<p>老師第一堂課就說她主打的是一個又甜又涼，只要有半點的不夠甜涼，老師就會覺得對不起她的良心。</p>
-<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>實體上課，每堂課都會點名。</p>
-<p>上課時老師會用精美的簡報跟引人入勝的敘事方式帶大家欣賞中國神話，老師超級瘋上課超好笑，可以感覺到老師是用生命在上課，字字句句皆發自肺腑，深深地感受到老師的熱情與投入。<br>上課時會搭配影片講解，很有小時候聽故事的感覺，我覺得非常有趣。我一開始上課時只打算做自己的事，但上課內容實在是非常有趣，常常被吸引走注意力。</p>
-<h2 id="點名與其餘加分"><a href="#點名與其餘加分" class="headerlink" title="點名與其餘加分"></a>點名與其餘加分</h2><p>一學期可以無條件翹課2次不問理由，打遊戲、睡過頭皆可，也不用寄信跟老師說，可以直接翹課。</p>
-<p>上課時每講一句話就能加總分 0.1 分，老師說如果能不斷的反駁老師的意見跟老師辯論她會非常開心，會瘋狂幫學生加分。</p>
-<p>期末考前一堂課有筆記加分時間，可以給老師看上課時做的筆記，或者也可以將神話故事人物等等的畫出，也可以加分。</p>
-<h2 id="期中-期末"><a href="#期中-期末" class="headerlink" title="期中 &amp;&amp; 期末"></a>期中 &amp;&amp; 期末</h2><p>與其說是期中考不如說期初考，時間在開學後的第二堂課。考試內容為默背一個表格，大概 50 格左右全部背起來就好，非常簡單。老師一開始是填空考法，直到前幾年有學長反映可能會寫錯字，還不夠甜，老師覺得有道理，所以後來改成選填。<br>期中考占比學期成績 80%，也就是說這堂課只要默背一個表格，在第二堂課的時候就能達到 A- 的成績。</p>
-<p>期末考為申論題，占比學期成績 20%，老師在課堂間會一直一直提示考點在哪，甚至是條列式的列出來讓大家知道，而考試內容也確實如上課時所提，不過要結合一點末世論等等提出辯解及申論，並非像期中考那樣背起來就好。<br>分數方面老師說有擦到邊就會給分，而我最後出來的成績好像很低，但老師沒有公布，因此不知道詳細給分如何。</p>
-<p>值得一提的是，如果考完期中覺得 A- 已經滿足了就沒來考期末的話，期中期末的占比會對調，也就是期中 20%、期末 80%。</p>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>上課有趣又好笑，我認為可以當聽故事增廣見聞。而這堂課也確實如老師一開始所述，超甜超涼，除了期中默背跟期末的申論需要小小複習以外，都沒有花到課餘時間。而就甜度來講這麼說好了，最後公布成績的時候老師是公布那些沒有 A+ 的人的成績，僅僅 12 個，A+ 的有 41 個。</p>
-<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>期中 80% +<br>期末 20% +<br>舉手發言次數 * 0.1% +<br>筆記加分（加多少不清楚）<br>&#x3D; 100%</p>
-<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>第一印象就是老師講話超瘋超好笑，上課活潑生動，會很想聽老師一直說故事。老師的課都是主打又甜又涼，希望之後有機會可以修老師的詩經。</p>
-<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>不給加簽。</p>
-<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：A+ 1&#x2F;53<br>T分數：52.98（送總成績，我的成績排 28&#x2F;53，不知道我總成績多少）<br>成績分布：<br>本課程成績不公開</p>
-]]></content>
-      <categories>
-        <category>Course</category>
-      </categories>
-      <tags>
-        <tag>Course</tag>
-        <tag>NTHU</tag>
-        <tag>General Course</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【修課心得】編譯器設計</title>
     <url>/2024/08/28/Course/compiler/</url>
     <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：編譯器設計 Compiler Design<br>科號：CS 340400<br>老師：李政崑<br>課本：教授自編講義<br>課別：資工系選修 B 類<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
@@ -177,43 +110,24 @@
       </tags>
   </entry>
   <entry>
-    <title>【修課心得】計算機系統管理</title>
-    <url>/2024/07/17/Course/csa/</url>
-    <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機系統管理 Computer System Administration<br>科號：CS 342700<br>老師：張君天<br>課本：教授自編講義<br>課別：資工系選修（非ABCD類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
-<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>管理計算機系統，作業系統使用freeBSD，對於coomand line interface不熟的修這堂課會對Unix系統有初步的認識，非常推薦資工系大三來修。<br>課程前期教學網路架設，牽涉到一些計網概的知識，中期會教Apache server，讓學生自己架DNS等等，課程後期會教一些硬碟的管理。</p>
-<p>教學進度如下：</p>
-<ol>
-<li>virtual machine</li>
-<li>IP setting</li>
-<li>User administration</li>
-<li>Firewall</li>
-<li>SSH</li>
-<li>Apache</li>
-<li>cgi</li>
-<li>DNS</li>
-<li>process management</li>
-<li>SSL</li>
-</ol>
-<p>以上是課程前中期的內容，後期的因為老師的課程網頁目前已關閉，我沒有記錄到，就不列出。</p>
-<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>第一堂上課時老師問大家想學什麼，許多人舉手，老師評估之後如果與這堂課相關就會納入課綱。<br>16周課程，實體加線上，會錄影但不公開，僅做教學紀錄。錯過一堂課將可能會導致後面相關的課程直接跟不上，建議整學期出席並跟上上課進度。<br>上課教材與課綱都在老師架設的課程網頁內，上課教材比較像是老師的筆記，不會有很詳細的操作指示。<br>與一般課程不同，上課期間完全是實作，老師會帶大家設定虛擬機、安裝package、調整設定等等，非常基礎的計算機系統管理。老師的期望是大家之後進到公司面對一台真正的機器時可以知道怎麼設定。<br>老師上課時會操作虛擬機投影到大家的螢幕上，學生要自己跟上老師的教學內容，老師打指令非常快，一旦錯過可能就會直接跟不上，要適時舉手跟老師詢問，或者如果旁邊有個超強的linux超算大神那就沒問題。<br>老師很耐心，在課堂中間跟不上只要舉手跟老師說老師都會願意重講，但如果沒人舉手老師default的設定就是大家都有跟上，但實際底下可能哀鴻遍野。<br>在課堂中間時常會遇到各式各樣的問題，老師會直接現場解決，非常厲害，可以觀摩大神怎麼觀察、搜尋、解決問題的。</p>
-<h2 id="作業"><a href="#作業" class="headerlink" title="作業"></a>作業</h2><p>有6還7項作業，都是當天上課期間可以直接完成，也不難，如果不會的話直接向老師求助老師也會一步步帶學生完成。作業期限通常給2周非常夠，沒有甚麼特別狀況都可以拿100分。</p>
-<p>作業憑我印象大致如下：</p>
-<ol>
-<li>設定ssh連線</li>
-<li>架設apache web server</li>
-<li>取得憑證</li>
-<li>架設mail server</li>
-<li>好像cgi還是DNS</li>
-<li>忘了</li>
-</ol>
-<h2 id="考試-期末報告"><a href="#考試-期末報告" class="headerlink" title="考試 &amp;&amp; 期末報告"></a>考試 &amp;&amp; 期末報告</h2><p>期中、期末各佔40%</p>
-<p>期中分術科與學科，共90分鐘吧好像，考試期間可以上網搜尋，術科搜尋沒有幫助，學科可以靠google拿滿。<br>術科考上課計算機系統管理的內容，會給一點情境，跟學生說明現在虛擬機的狀況，讓我們將虛擬機的網路復原或者將架到一半的DNS server架好等等。術科考試內容我個人覺得很困難，建議花2天左右的時間研究術科考古，在考試期間會輕鬆非常多，但如果你是超強的linux超算大神那就完全沒問題，穩穩的100。<br>學科主要是考指令的功用跟一些非常基礎的東西，共33題，非常簡單。<br>總而言之，術科有練習考古的話期中總分應該可以拿到80左右</p>
-<p>期末老師讓大家投票考試還是報告，最後是報告，老師偷偷跟我說考試的話他要架環境，其實比我們還累。<br>期末報告自己一組，選擇一個freeBSD中的package介紹。老師會在課程結束前約4周提醒大家，選好要報告的主題後跟老師說就可以，但如果主題太簡單老師會指定要做的內容。<br>報告當天實體或者google meet出席皆可，準備簡報以及虛擬機，在報告期間展示以及介紹package，老師分數都給很高，我一整排看下來都有個8、90。</p>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>對command line interface不熟的非常推薦來修這堂課，修完後會有很好的Unix基礎。也很推薦資工大三來修，這個時期通常是對計算機架構了解但又沒有實際管理操作過，修完後至少能會一些command line跟環境架設。我自己在修完後有感覺到對於問題的處理以及環境架設等等有變更熟悉，不會像以前一樣感到很頭痛。<br>課程期間要跟上老師的節奏偏累，但課程外都不用花任何時間，是非常划算又能學到東西的一門課，甜涼好課推推。</p>
-<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>作業 20% +<br>期中 40% +<br>期末 40% +<br>&#x3D; 100%<br>老師最後有來個大調分，很多在接近A+邊緣的同學都被老師送上去，佛心公司。</p>
-<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>外號張天神，什麼都會，什麼都懂，似乎是資工系計中的老大。人非常好，在虛擬機中遇到任何問題向老師詢問，老師可能會直接到座位旁邊幫忙看，現場將問題車過去，像是1+1一樣簡單。</p>
-<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>給，似乎是全簽，在第一、二堂課過後很多人沒跟上就會退掉，殊不知這堂課又涼又甜，所以如果沒簽上也沒關係可以等加退選再加。</p>
-<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：94(A+) 1&#x2F;24<br>T分數：55.65（看T分數就能知道有多甜）<br>成績分布：<br>本課程成績不公開</p>
+    <title>【修課心得】中國神話故事選讀</title>
+    <url>/2024/08/28/Course/chinese-myth/</url>
+    <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：中國神話故事選讀 Selective Readings for “The Chinese Mythology”<br>科號：11220 GE 132800<br>老師：陳燕梅<br>課本：教授自編講義<br>課別：一般通識，人文學領域<br>學分：2<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
+<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>同課名，講解、分析中國神話故事，像是后羿射日、女媧造人等等，並從中分析神話的起源以及為政者為何塑造該神話。</p>
+<p>老師第一堂課就說她主打的是一個又甜又涼，只要有半點的不夠甜涼，老師就會覺得對不起她的良心。</p>
+<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>實體上課，每堂課都會點名。</p>
+<p>上課時老師會用精美的簡報跟引人入勝的敘事方式帶大家欣賞中國神話，老師超級瘋上課超好笑，可以感覺到老師是用生命在上課，字字句句皆發自肺腑，深深地感受到老師的熱情與投入。<br>上課時會搭配影片講解，很有小時候聽故事的感覺，我覺得非常有趣。我一開始上課時只打算做自己的事，但上課內容實在是非常有趣，常常被吸引走注意力。</p>
+<h2 id="點名與其餘加分"><a href="#點名與其餘加分" class="headerlink" title="點名與其餘加分"></a>點名與其餘加分</h2><p>一學期可以無條件翹課2次不問理由，打遊戲、睡過頭皆可，也不用寄信跟老師說，可以直接翹課。</p>
+<p>上課時每講一句話就能加總分 0.1 分，老師說如果能不斷的反駁老師的意見跟老師辯論她會非常開心，會瘋狂幫學生加分。</p>
+<p>期末考前一堂課有筆記加分時間，可以給老師看上課時做的筆記，或者也可以將神話故事人物等等的畫出，也可以加分。</p>
+<h2 id="期中-期末"><a href="#期中-期末" class="headerlink" title="期中 &amp;&amp; 期末"></a>期中 &amp;&amp; 期末</h2><p>與其說是期中考不如說期初考，時間在開學後的第二堂課。考試內容為默背一個表格，大概 50 格左右全部背起來就好，非常簡單。老師一開始是填空考法，直到前幾年有學長反映可能會寫錯字，還不夠甜，老師覺得有道理，所以後來改成選填。<br>期中考占比學期成績 80%，也就是說這堂課只要默背一個表格，在第二堂課的時候就能達到 A- 的成績。</p>
+<p>期末考為申論題，占比學期成績 20%，老師在課堂間會一直一直提示考點在哪，甚至是條列式的列出來讓大家知道，而考試內容也確實如上課時所提，不過要結合一點末世論等等提出辯解及申論，並非像期中考那樣背起來就好。<br>分數方面老師說有擦到邊就會給分，而我最後出來的成績好像很低，但老師沒有公布，因此不知道詳細給分如何。</p>
+<p>值得一提的是，如果考完期中覺得 A- 已經滿足了就沒來考期末的話，期中期末的占比會對調，也就是期中 20%、期末 80%。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>上課有趣又好笑，我認為可以當聽故事增廣見聞。而這堂課也確實如老師一開始所述，超甜超涼，除了期中默背跟期末的申論需要小小複習以外，都沒有花到課餘時間。而就甜度來講這麼說好了，最後公布成績的時候老師是公布那些沒有 A+ 的人的成績，僅僅 12 個，A+ 的有 41 個。</p>
+<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>期中 80% +<br>期末 20% +<br>舉手發言次數 * 0.1% +<br>筆記加分（加多少不清楚）<br>&#x3D; 100%</p>
+<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>第一印象就是老師講話超瘋超好笑，上課活潑生動，會很想聽老師一直說故事。老師的課都是主打又甜又涼，希望之後有機會可以修老師的詩經。</p>
+<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>不給加簽。</p>
+<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：A+ 1&#x2F;53<br>T分數：52.98（送總成績，我的成績排 28&#x2F;53，不知道我總成績多少）<br>成績分布：<br>本課程成績不公開</p>
 ]]></content>
       <categories>
         <category>Course</category>
@@ -221,8 +135,7 @@
       <tags>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
-        <tag>System</tag>
+        <tag>General Course</tag>
       </tags>
   </entry>
   <entry>
@@ -296,6 +209,93 @@
         <tag>NTHU</tag>
         <tag>CS</tag>
         <tag>System</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【修課心得】計算機系統管理</title>
+    <url>/2024/07/17/Course/csa/</url>
+    <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機系統管理 Computer System Administration<br>科號：CS 342700<br>老師：張君天<br>課本：教授自編講義<br>課別：資工系選修（非ABCD類）<br>學分：3<br>涼度：★★★★★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
+<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>管理計算機系統，作業系統使用freeBSD，對於coomand line interface不熟的修這堂課會對Unix系統有初步的認識，非常推薦資工系大三來修。<br>課程前期教學網路架設，牽涉到一些計網概的知識，中期會教Apache server，讓學生自己架DNS等等，課程後期會教一些硬碟的管理。</p>
+<p>教學進度如下：</p>
+<ol>
+<li>virtual machine</li>
+<li>IP setting</li>
+<li>User administration</li>
+<li>Firewall</li>
+<li>SSH</li>
+<li>Apache</li>
+<li>cgi</li>
+<li>DNS</li>
+<li>process management</li>
+<li>SSL</li>
+</ol>
+<p>以上是課程前中期的內容，後期的因為老師的課程網頁目前已關閉，我沒有記錄到，就不列出。</p>
+<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>第一堂上課時老師問大家想學什麼，許多人舉手，老師評估之後如果與這堂課相關就會納入課綱。<br>16周課程，實體加線上，會錄影但不公開，僅做教學紀錄。錯過一堂課將可能會導致後面相關的課程直接跟不上，建議整學期出席並跟上上課進度。<br>上課教材與課綱都在老師架設的課程網頁內，上課教材比較像是老師的筆記，不會有很詳細的操作指示。<br>與一般課程不同，上課期間完全是實作，老師會帶大家設定虛擬機、安裝package、調整設定等等，非常基礎的計算機系統管理。老師的期望是大家之後進到公司面對一台真正的機器時可以知道怎麼設定。<br>老師上課時會操作虛擬機投影到大家的螢幕上，學生要自己跟上老師的教學內容，老師打指令非常快，一旦錯過可能就會直接跟不上，要適時舉手跟老師詢問，或者如果旁邊有個超強的linux超算大神那就沒問題。<br>老師很耐心，在課堂中間跟不上只要舉手跟老師說老師都會願意重講，但如果沒人舉手老師default的設定就是大家都有跟上，但實際底下可能哀鴻遍野。<br>在課堂中間時常會遇到各式各樣的問題，老師會直接現場解決，非常厲害，可以觀摩大神怎麼觀察、搜尋、解決問題的。</p>
+<h2 id="作業"><a href="#作業" class="headerlink" title="作業"></a>作業</h2><p>有6還7項作業，都是當天上課期間可以直接完成，也不難，如果不會的話直接向老師求助老師也會一步步帶學生完成。作業期限通常給2周非常夠，沒有甚麼特別狀況都可以拿100分。</p>
+<p>作業憑我印象大致如下：</p>
+<ol>
+<li>設定ssh連線</li>
+<li>架設apache web server</li>
+<li>取得憑證</li>
+<li>架設mail server</li>
+<li>好像cgi還是DNS</li>
+<li>忘了</li>
+</ol>
+<h2 id="考試-期末報告"><a href="#考試-期末報告" class="headerlink" title="考試 &amp;&amp; 期末報告"></a>考試 &amp;&amp; 期末報告</h2><p>期中、期末各佔40%</p>
+<p>期中分術科與學科，共90分鐘吧好像，考試期間可以上網搜尋，術科搜尋沒有幫助，學科可以靠google拿滿。<br>術科考上課計算機系統管理的內容，會給一點情境，跟學生說明現在虛擬機的狀況，讓我們將虛擬機的網路復原或者將架到一半的DNS server架好等等。術科考試內容我個人覺得很困難，建議花2天左右的時間研究術科考古，在考試期間會輕鬆非常多，但如果你是超強的linux超算大神那就完全沒問題，穩穩的100。<br>學科主要是考指令的功用跟一些非常基礎的東西，共33題，非常簡單。<br>總而言之，術科有練習考古的話期中總分應該可以拿到80左右</p>
+<p>期末老師讓大家投票考試還是報告，最後是報告，老師偷偷跟我說考試的話他要架環境，其實比我們還累。<br>期末報告自己一組，選擇一個freeBSD中的package介紹。老師會在課程結束前約4周提醒大家，選好要報告的主題後跟老師說就可以，但如果主題太簡單老師會指定要做的內容。<br>報告當天實體或者google meet出席皆可，準備簡報以及虛擬機，在報告期間展示以及介紹package，老師分數都給很高，我一整排看下來都有個8、90。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>對command line interface不熟的非常推薦來修這堂課，修完後會有很好的Unix基礎。也很推薦資工大三來修，這個時期通常是對計算機架構了解但又沒有實際管理操作過，修完後至少能會一些command line跟環境架設。我自己在修完後有感覺到對於問題的處理以及環境架設等等有變更熟悉，不會像以前一樣感到很頭痛。<br>課程期間要跟上老師的節奏偏累，但課程外都不用花任何時間，是非常划算又能學到東西的一門課，甜涼好課推推。</p>
+<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>作業 20% +<br>期中 40% +<br>期末 40% +<br>&#x3D; 100%<br>老師最後有來個大調分，很多在接近A+邊緣的同學都被老師送上去，佛心公司。</p>
+<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>外號張天神，什麼都會，什麼都懂，似乎是資工系計中的老大。人非常好，在虛擬機中遇到任何問題向老師詢問，老師可能會直接到座位旁邊幫忙看，現場將問題車過去，像是1+1一樣簡單。</p>
+<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>給，似乎是全簽，在第一、二堂課過後很多人沒跟上就會退掉，殊不知這堂課又涼又甜，所以如果沒簽上也沒關係可以等加退選再加。</p>
+<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：94(A+) 1&#x2F;24<br>T分數：55.65（看T分數就能知道有多甜）<br>成績分布：<br>本課程成績不公開</p>
+]]></content>
+      <categories>
+        <category>Course</category>
+      </categories>
+      <tags>
+        <tag>Course</tag>
+        <tag>NTHU</tag>
+        <tag>CS</tag>
+        <tag>System</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【修課心得】計算機結構</title>
+    <url>/2024/07/17/Course/ca/</url>
+    <content><![CDATA[<h2 id="課程相關"><a href="#課程相關" class="headerlink" title="課程相關"></a>課程相關</h2><p>課名：計算機結構 Computer Architecture<br>科號：11120 CS 410001<br>老師：王廷基<br>課本：教授自編講義<br>課別：資工系系定核心必修<br>學分：3<br>涼度：★（滿分五分，空心代表半分）<br>甜度：★★★★★（滿分五分，空心代表半分）</p>
+<h2 id="建議先修課程"><a href="#建議先修課程" class="headerlink" title="建議先修課程"></a>建議先修課程</h2><p>邏輯設計</p>
+<h2 id="課程內容-簡介"><a href="#課程內容-簡介" class="headerlink" title="課程內容&#x2F;簡介"></a>課程內容&#x2F;簡介</h2><p>期中前主要是教RISC-V，ALU的架構，後半教pipeline，memory hierachy</p>
+<p>教學進度如下：</p>
+<ol>
+<li>Computer abstractions and technology</li>
+<li>The role of performance</li>
+<li>Instructions: language of the machine</li>
+<li>Arithmetic for computers</li>
+<li>The processor: datapath and control</li>
+<li>Enhancing performance with pipelining</li>
+<li>Large and fast: exploiting memory hierarchy</li>
+</ol>
+<h2 id="上課方式"><a href="#上課方式" class="headerlink" title="上課方式"></a>上課方式</h2><p>實體上課，但有錄影，所以常常只有一節的那堂課到的不到20人，教授有時候會小抱怨一下，不知道明年還會不會有錄影哈哈哈。<br>上課簡報淺顯易懂，沒聽懂也可以回去看當天的上課影片，影片聲音也都很清楚。<br>教授會在重要的觀念點重複強調，基本上我上課認真聽就直接聽懂，回去之後就是複習而已，不懂的地方下課問教授也都很樂意回答，覺得教授的教學功力很好。</p>
+<h2 id="考試-作業"><a href="#考試-作業" class="headerlink" title="考試 &amp;&amp; 作業"></a>考試 &amp;&amp; 作業</h2><p>小考總共考了4次，時間約20~30分鐘，內容很簡單也都與歷屆雷同，本人寫大概3、4年歷屆小考都穩100。</p>
+<p>作業有6份，占比 50% 超級重，陷阱題很多而且每份都要花超過整整一天，非常花時間，但個人覺得作業滿有趣的，可以更理解上課內容，也有很多很🆒的軟體可以玩。<br>作業一定要去TA time，可以問助教自己寫得對不對，一開始沒去前2次作業只有約80分，差點沒辦法A+，後面有認真去就都100了。</p>
+<p>期中期末各一次，可以帶雙面A4大抄 ( 單面的話可以用莫比烏斯環嗎 )，但個人覺得完全用不到，考了2次大抄都沒時間看，而且東西都直接背起來了所以也不需要。<br>考前教授會發歷屆，但不會有答案，助教也不能詢問歷屆題目。<br>期中滿難的，Assembly code在寫的時候很容易粗心，只有76分。<br>期末考得時候感覺超難，但不知道為什麼居然有85分。<br>考試內容很多地方容易粗心而且時間不算夠，所以不要卡一題卡太久。</p>
+<p>另外要說明，下學期計算機結構資工系有開3個班，上課、作業內容與期中期末考內容完全一致，教授們很注重公平，我覺得這樣滿棒的可以大幅降低不同老師成績不同的疑慮。</p>
+<p>順帶一提，助教跟教授都超有耐心人超nice，雖然作業很難但感受得到助教的用心，而且助教還很強，所以不會賭爛，規劃很好的一堂課。</p>
+<h2 id="給分"><a href="#給分" class="headerlink" title="給分"></a>給分</h2><p>作業 50% +<br>小考 10% +<br>期中 20% +<br>期末 20% +<br>&#x3D; 100%<br>最後有加總分2分</p>
+<h2 id="老師的喜好、個性"><a href="#老師的喜好、個性" class="headerlink" title="老師的喜好、個性"></a>老師的喜好、個性</h2><p>資工系主任，很耐心解惑而且也會關心學生，很喜歡這位教授，上課也教得很清楚，但每次看到老師都會想到藍色小精靈，老師好可愛。<br>因為是系主任有時候要開會等等所以會調課，偶爾會有一個禮拜四堂課但另一個禮拜都沒上課的時候。</p>
+<h2 id="加簽"><a href="#加簽" class="headerlink" title="加簽"></a>加簽</h2><p>給，似乎是先搶先贏，沒選到也沒關係，總共有3個班，其他老師聽說也教得很好，上學期也有其他老師有開課。</p>
+<h2 id="成績"><a href="#成績" class="headerlink" title="成績"></a>成績</h2><p>總成績&#x2F;班上排名：A+    1&#x2F;110<br>T分數：57.97<br>成績分布：<br>所有人都四捨五入後再加2分</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/ca/1.png" loading="lazy">
+</figure>]]></content>
+      <categories>
+        <category>Course</category>
+      </categories>
+      <tags>
+        <tag>Course</tag>
+        <tag>NTHU</tag>
+        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -571,6 +571,44 @@
       </tags>
   </entry>
   <entry>
+    <title>【食記】九添福牛肉麵</title>
+    <url>/2025/03/25/Food/9tainfu/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/APu5Mg97tMVpCewN9">300新竹市北區西大路436號1樓</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車到東門市場再走大約 10 分鐘，或者直接騎車去，騎樓有位置可以停。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>我一進到店內就感受到老闆一定有很嚴重的潔癖，我還真的沒有看過一間這麼乾淨的牛肉麵店。</p>
+<p>看到評論推薦牛腩麵，就點一份來看看。也順手夾了一些滷味。</p>
+<p>滷味先上菜，熱騰的食物淋上蒜蓉醬油，散發出的光澤光看著就感覺很好吃（看起來太好吃了，來不及拍照就開動了哈哈哈）。食材本身滷得剛好，有些滷味的蘿蔔就沒有軟，或者其他食材的熟度控制不好，但這間的都恰到好處。</p>
+<figure class="blog-img-box">
+    <img src="/images/9tainfu/1.png" loading="lazy">
+</figure>
+
+
+<p>他們的蒜蓉醬非常特別，原本滷味可能是中上水準，但醬油加上去後晉升到我會很想再來吃的程度。</p>
+<p>接著是今天的重點－牛腩麵。牛肉非常多，原本覺得 $230 很貴，但以這個肉量來講的話，我會覺得算適中的價格，但老闆有沒有考慮肉少一點，價格也便宜一點阿&#x3D;&#x3D;</p>
+<figure class="blog-img-box">
+    <img src="/images/9tainfu/0.png" loading="lazy">
+</figure>
+
+<p>牛腩很多吃起來很爽，有些很軟嫩，有些會需要嚼比較久，但吃起來還是很爽，不過總體而言並沒有說到很好咀嚼，吃多的話嘴巴可能會痠。</p>
+<p>麵體中規中矩，湯頭甘甜好喝，重點是完全不油，如果不喜歡那種很油的牛肉麵的人，很推薦來這間吃。</p>
+<p>另外還有紅燒牛油可以自行添加，我加了一些後湯頭變得更甘與香。</p>
+<p>另外，google map 5 星評論會送蒜泥白肉，我本來以為只是一小盤敷衍，結果來一大盤，真有誠意。</p>
+<figure class="blog-img-box">
+    <img src="/images/9tainfu/2.png" loading="lazy">
+</figure>
+
+<p>總體而言，這是一間非常乾淨的牛肉麵店，桌子乾淨到我願意上去躺的程度，牛肉麵本身不油膩，如果想吃甘甜但又負擔不重的牛肉麵，這間會是很棒的選擇，滷味也很好吃，推薦。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Beef Noodle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【食記】三山燒肉</title>
     <url>/2024/12/08/Food/3mountain/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kVtSPDEHB3bWat22A">804高雄市鼓山區博愛二路337號</a></p>
@@ -646,44 +684,6 @@
       <tags>
         <tag>Food</tag>
         <tag>Kaohsiung</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】九添福牛肉麵</title>
-    <url>/2025/03/25/Food/9tainfu/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/APu5Mg97tMVpCewN9">300新竹市北區西大路436號1樓</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車到東門市場再走大約 10 分鐘，或者直接騎車去，騎樓有位置可以停。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>我一進到店內就感受到老闆一定有很嚴重的潔癖，我還真的沒有看過一間這麼乾淨的牛肉麵店。</p>
-<p>看到評論推薦牛腩麵，就點一份來看看。也順手夾了一些滷味。</p>
-<p>滷味先上菜，熱騰的食物淋上蒜蓉醬油，散發出的光澤光看著就感覺很好吃（看起來太好吃了，來不及拍照就開動了哈哈哈）。食材本身滷得剛好，有些滷味的蘿蔔就沒有軟，或者其他食材的熟度控制不好，但這間的都恰到好處。</p>
-<figure class="blog-img-box">
-    <img src="/images/9tainfu/1.png" loading="lazy">
-</figure>
-
-
-<p>他們的蒜蓉醬非常特別，原本滷味可能是中上水準，但醬油加上去後晉升到我會很想再來吃的程度。</p>
-<p>接著是今天的重點－牛腩麵。牛肉非常多，原本覺得 $230 很貴，但以這個肉量來講的話，我會覺得算適中的價格，但老闆有沒有考慮肉少一點，價格也便宜一點阿&#x3D;&#x3D;</p>
-<figure class="blog-img-box">
-    <img src="/images/9tainfu/0.png" loading="lazy">
-</figure>
-
-<p>牛腩很多吃起來很爽，有些很軟嫩，有些會需要嚼比較久，但吃起來還是很爽，不過總體而言並沒有說到很好咀嚼，吃多的話嘴巴可能會痠。</p>
-<p>麵體中規中矩，湯頭甘甜好喝，重點是完全不油，如果不喜歡那種很油的牛肉麵的人，很推薦來這間吃。</p>
-<p>另外還有紅燒牛油可以自行添加，我加了一些後湯頭變得更甘與香。</p>
-<p>另外，google map 5 星評論會送蒜泥白肉，我本來以為只是一小盤敷衍，結果來一大盤，真有誠意。</p>
-<figure class="blog-img-box">
-    <img src="/images/9tainfu/2.png" loading="lazy">
-</figure>
-
-<p>總體而言，這是一間非常乾淨的牛肉麵店，桌子乾淨到我願意上去躺的程度，牛肉麵本身不油膩，如果想吃甘甜但又負擔不重的牛肉麵，這間會是很棒的選擇，滷味也很好吃，推薦。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Beef Noodle</tag>
       </tags>
   </entry>
   <entry>
@@ -786,6 +786,30 @@
       </tags>
   </entry>
   <entry>
+    <title>【食記】丁滷味</title>
+    <url>/2024/12/08/Food/dinlooway/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WbJPkvRXaSSXba8Y6">813高雄市左營區崇德路243號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>捷運生態園區站走路 7 分鐘可到</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從小吃到大的滷味店，以為是很正常的口味，直到長大後吃了其他間，才知道這間的味道有多厲害。</p>
+<figure class="blog-img-box">
+    <img src="/images/dinlooway/0.png" loading="lazy">
+</figure>
+
+<p>滷得超級入味，滷汁掛在料上，超級好吃，不是只有滷表面的那種。</p>
+<p>所有食材都煮得很用心，需要不同烹飪時間的會分批下鍋，像是豬肉就不會太老，滷得很嫩，很厲害。</p>
+<p>特別要提一下他們的滷蘿蔔，其他間滷味店都是放酸菜之類的，只有這間我吃到是放蘿蔔，他們的滷蘿蔔超厲害，每次我都請他們加多一點。</p>
+<p>我覺得所有食物都很好吃，最近發現他們開始賣熱炒，看評價是說很好吃，下次去吃看看。</p>
+<p>最後，要再特別提他們的滷科學麵，很鹹香超好吃，真的超讚，必點。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Kaohsiung</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【食記】CURRY WU日式熟成濃咖哩專賣店</title>
     <url>/2024/07/17/Food/curry-wu/</url>
     <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/NER8KfbYatvDi8gd9">300新竹市北區興南街28號1樓</a></p>
@@ -832,30 +856,6 @@
         <tag>Food</tag>
         <tag>Hsinchu</tag>
         <tag>Curry</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】丁滷味</title>
-    <url>/2024/12/08/Food/dinlooway/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WbJPkvRXaSSXba8Y6">813高雄市左營區崇德路243號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>捷運生態園區站走路 7 分鐘可到</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從小吃到大的滷味店，以為是很正常的口味，直到長大後吃了其他間，才知道這間的味道有多厲害。</p>
-<figure class="blog-img-box">
-    <img src="/images/dinlooway/0.png" loading="lazy">
-</figure>
-
-<p>滷得超級入味，滷汁掛在料上，超級好吃，不是只有滷表面的那種。</p>
-<p>所有食材都煮得很用心，需要不同烹飪時間的會分批下鍋，像是豬肉就不會太老，滷得很嫩，很厲害。</p>
-<p>特別要提一下他們的滷蘿蔔，其他間滷味店都是放酸菜之類的，只有這間我吃到是放蘿蔔，他們的滷蘿蔔超厲害，每次我都請他們加多一點。</p>
-<p>我覺得所有食物都很好吃，最近發現他們開始賣熱炒，看評價是說很好吃，下次去吃看看。</p>
-<p>最後，要再特別提他們的滷科學麵，很鹹香超好吃，真的超讚，必點。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Kaohsiung</tag>
       </tags>
   </entry>
   <entry>
