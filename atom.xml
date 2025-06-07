@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2025-03-25T08:05:26.702Z</updated>
+  <updated>2025-06-07T13:56:22.719Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【心得】汽車駕照</title>
+    <link href="https://mike911209.github.io/2025/06/07/driver-license/"/>
+    <id>https://mike911209.github.io/2025/06/07/driver-license/</id>
+    <published>2025-06-07T13:12:06.000Z</published>
+    <updated>2025-06-07T13:56:22.719Z</updated>
+    
+    
+    <summary type="html">學期中考汽車駕照的心得，包含報名需要的資料、駕訓班都在做什麼、以及考試當天的流程。</summary>
+    
+    
+    
+    <category term="Review" scheme="https://mike911209.github.io/categories/Review/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>【食記】九添福牛肉麵</title>
@@ -200,31 +217,6 @@
     <category term="Review" scheme="https://mike911209.github.io/tags/Review/"/>
     
     <category term="Hackathon" scheme="https://mike911209.github.io/tags/Hackathon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【遊記】十分</title>
-    <link href="https://mike911209.github.io/2024/08/29/Travel/10thern/"/>
-    <id>https://mike911209.github.io/2024/08/29/Travel/10thern/</id>
-    <published>2024-08-28T19:07:33.000Z</published>
-    <updated>2024-12-07T18:26:00.989Z</updated>
-    
-    
-    <summary type="html">九份、平溪行的最後一站，我們來到了十分。</summary>
-    
-    
-    
-    <category term="Travel" scheme="https://mike911209.github.io/categories/Travel/"/>
-    
-    
-    <category term="Travel" scheme="https://mike911209.github.io/tags/Travel/"/>
-    
-    <category term="Train" scheme="https://mike911209.github.io/tags/Train/"/>
-    
-    <category term="Lantern" scheme="https://mike911209.github.io/tags/Lantern/"/>
-    
-    <category term="New Taipei" scheme="https://mike911209.github.io/tags/New-Taipei/"/>
     
   </entry>
   
