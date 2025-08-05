@@ -6,7 +6,7 @@
   <link href="https://mike911209.github.io/atom.xml" rel="self"/>
   
   <link href="https://mike911209.github.io/"/>
-  <updated>2025-08-01T06:23:32.928Z</updated>
+  <updated>2025-08-05T09:27:04.196Z</updated>
   <id>https://mike911209.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【心得】雷泰光電實習 - 學期實習篇</title>
+    <link href="https://mike911209.github.io/2025/08/05/Review/lasertec-intern-4/"/>
+    <id>https://mike911209.github.io/2025/08/05/Review/lasertec-intern-4/</id>
+    <published>2025-08-05T09:16:43.000Z</published>
+    <updated>2025-08-05T09:27:04.196Z</updated>
+    
+    
+    <summary type="html">分享學期間實習需要考量的點。</summary>
+    
+    
+    
+    <category term="Review" scheme="https://mike911209.github.io/categories/Review/"/>
+    
+    
+    <category term="Intern" scheme="https://mike911209.github.io/tags/Intern/"/>
+    
+  </entry>
   
   <entry>
     <title>【心得】汽車駕照</title>
@@ -192,31 +211,6 @@
     
     <category term="Learning" scheme="https://mike911209.github.io/categories/Learning/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>【心得】2024 梅竹黑客松</title>
-    <link href="https://mike911209.github.io/2024/10/24/Review/meichu-hackathon/"/>
-    <id>https://mike911209.github.io/2024/10/24/Review/meichu-hackathon/</id>
-    <published>2024-10-24T13:21:08.000Z</published>
-    <updated>2024-12-07T10:26:00.000Z</updated>
-    
-    
-    <summary type="html">今年的黑客松對我而言是充滿了驚喜的一屆，從去年的做不完到今年的梅竹大獎第二名，我看到了我在這一年中的進步。</summary>
-    
-    
-    
-    <category term="Review" scheme="https://mike911209.github.io/categories/Review/"/>
-    
-    
-    <category term="NTHU" scheme="https://mike911209.github.io/tags/NTHU/"/>
-    
-    <category term="CS" scheme="https://mike911209.github.io/tags/CS/"/>
-    
-    <category term="Review" scheme="https://mike911209.github.io/tags/Review/"/>
-    
-    <category term="Hackathon" scheme="https://mike911209.github.io/tags/Hackathon/"/>
     
   </entry>
   
