@@ -542,6 +542,993 @@
       </tags>
   </entry>
   <entry>
+    <title>【學記】使用 Docker 建立執行環境</title>
+    <url>/2024/08/11/Learning/docker-env/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我們時常會遇到一份 project 需要執行在與本機不同的環境下，舉例而言：</p>
+<blockquote>
+<p>NachOS 是一份教學用 OS 軟體，需要執行在 32 bits system 上，而本機環境是 64 bits architecture。<br>我們需要一份可以跑 NachOS 的環境，且 run 在該環境的 NachOS 要與本地的同步，以方便之後交作業。</p>
+</blockquote>
+<p>若想要在本地架設 NachOS 執行環境的話，會需要以下：</p>
+<ul>
+<li>開啟支援 32 bits 的功能</li>
+<li>clone 下程式碼</li>
+</ul>
+<p>等等操作，其中可能會導致本地環境變亂，或者影響其他 project 的環境。</p>
+<p>此時，若使用 Docker，我們可以為某份 project 創造專門的執行環境。</p>
+<h3 id="Start-Container"><a href="#Start-Container" class="headerlink" title="Start Container"></a>Start Container</h3><p>要創建一個執行環境，我們需要透過 Docker create 一個 container。</p>
+<blockquote>
+<p>可以將 container 看成輕量化的虛擬機。</p>
+</blockquote>
+<p>如果要從 0 開始 build 一個 container，可以參考網路上的<a href="https://philipzheng.gitbook.io/docker_practice">其他教學</a>，但這裡我們從 <a href="https://hub.docker.com/search">Docker Hub</a> 使用現成的，這也是 Docker 的一大好處。</p>
+<p>這裡以執行 NachOS 為例，<a href="https://philipzheng.gitbook.io/docker_practice">nwtgck&#x2F;nachos-build</a> 是一份別人 build 好的 Docker image，我們可以透過以下指令建立起一個新的 container。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it nwtgck/nachos-build</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note: </p>
+<ul>
+<li>Docker image 可以看成 container 的藍圖，每個 container 會基於 image 建立，而建立後成為一個獨立的 instance，後續的操作就與 images 無關。</li>
+<li>-it 的 flag 代表的是互動模式，說明在 container 建立後連線進去該 container 的 terminal。</li>
+</ul>
+</blockquote>
+<p>執行後我們可以看到環境的改變如下，代表我們已經進到這個 container 裡面。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">user@localMachine:/$ docker run -it nwtgck/nachos-build</span><br><span class="line">root@6db3b1879ebf:/#</span><br></pre></td></tr></table></figure>
+
+<p>成功建立起 container 後，在 container 內的任何操作都不會影響到本地的環境。</p>
+<p>但是，要怎麼將 code 帶進 container，還有在 container 內做的修改，要怎麼帶出 container 呢？</p>
+<p>此時，我們要用到 Docker 的 mount volume。</p>
+<h3 id="Mount-Volume"><a href="#Mount-Volume" class="headerlink" title="Mount Volume"></a>Mount Volume</h3><blockquote>
+<p>請注意 mount 要在 container stop 的情況下執行，因此若要 mount 進上面 create 的 container，請先 logout 再執行下面的指令。</p>
+</blockquote>
+<p>透過以下指令我們 run 一個新的 container 並將 NachOS mount 進該 container 內：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it -v ./nachos-4.0:/root/nachos-4.0 -w /root/nachos-4.0 nwtgck/nachos-build</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<ul>
+<li>-v flag 代表 mount volume，冒號前為 source dir；冒號後為 destination dir。</li>
+<li>-w flag 代表 working directory，連線進 container 後會直接進入該 dir。</li>
+</ul>
+</blockquote>
+<p>此時，NachOS 就在 container 內且與本機同步，我們可以透過 touch 與 ls 實驗：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root@6db3b1879ebf:/root/nachos-4.0# ls</span><br><span class="line">COPYRIGHT  README-3.4  README-4.0  c++example  code  nachos-4.0  nachos.ps</span><br><span class="line"></span><br><span class="line">root@6db3b1879ebf:/root/nachos-4.0# touch test.txt</span><br><span class="line">root@6db3b1879ebf:/root/nachos-4.0# exit</span><br><span class="line"></span><br><span class="line">user@localMachine:/$ ls ./nachos-4.0/test.txt</span><br><span class="line">./nachos-4.0/test.txt</span><br></pre></td></tr></table></figure>
+
+<p>因此，透過上述 2 項 Docker 的功能，我們實現了為本地的 code 創造任意的執行環境，且與此同時，可以在本機習慣的 IDE 進行操作。</p>
+]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>CS</tag>
+        <tag>Virtual</tag>
+        <tag>Learning</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【學記】git stash</title>
+    <url>/2024/07/21/Learning/git-stash/</url>
+    <content><![CDATA[<p><code>git stash</code> 的使用情境為何？讓我們先看一個例子：</p>
+<p>當修改了 working directory 後，目前的 working directory 會成為 dirty 的。<br>而有時候會需要在 dirty 的情況下查看之前的 commit 或 pull，此時有以下 2 種作法：</p>
+<ol>
+<li>將 working directory 的改動 commit 起來暫存</li>
+<li>使用 <code>git stash</code></li>
+</ol>
+<p>假設目前情境如下：</p>
+<blockquote>
+<p>When you are in the middle of something, your boss comes in and demands that you fix something immediately.<br>Traditionally, you would make a commit to a temporary branch to store your changes away, and return to your original branch to make the emergency fix.<br>- from git stash --help</p>
+</blockquote>
+<h3 id="Commit-的做法"><a href="#Commit-的做法" class="headerlink" title="Commit 的做法"></a>Commit 的做法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hack hack hack</span><br><span class="line">git switch -c &quot;my_wip&quot; // create new branch and switch</span><br><span class="line">git commit -a -m &quot;WIP&quot;</span><br><span class="line">git switch master</span><br><span class="line">...</span><br><span class="line">edit something</span><br><span class="line">...</span><br><span class="line">git commit -a -m &quot;Fix in a hurry&quot;</span><br><span class="line">git switch my_wip</span><br><span class="line">git reset --soft HEAD^</span><br><span class="line">... continue hacking ...</span><br></pre></td></tr></table></figure>
+
+<h3 id="Using-git-stash"><a href="#Using-git-stash" class="headerlink" title="Using git stash"></a>Using git stash</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hack hack hack</span><br><span class="line">git stash // actually git stash push</span><br><span class="line">...</span><br><span class="line">edit something</span><br><span class="line">...</span><br><span class="line">git commit -a -m &quot;Fix in a hurry&quot;</span><br><span class="line">git stash pop // explain later</span><br><span class="line">... continue hacking ...</span><br></pre></td></tr></table></figure>
+
+<p>從上面的例子可以看到 <code>git stash</code> 相比使用 commit 再 reset 要來得簡潔許多。</p>
+<p>由此可知，<code>git stash</code> 的用途就是將 local 的修改 stash（存放） 起來，之後可以拿出來使用，就像倉鼠一樣！</p>
+<h2 id="git-stash-的-command"><a href="#git-stash-的-command" class="headerlink" title="git stash 的 command"></a>git stash 的 command</h2><p>而 <code>git stash</code> 有哪些 command 呢？我們可以透過 <code>git stash --help</code> 查看。</p>
+<p>以下將介紹一些常用的 command。</p>
+<h3 id="git-stash-push"><a href="#git-stash-push" class="headerlink" title="git stash push"></a>git stash push</h3><p><code>git stash</code> command 實際上就是 <code>git stash push</code>，想不到吧！<code>git stash</code> 就像是縮寫一樣。</p>
+<p>而為什麼是叫做 push 呢？</p>
+<p>當我們把東西 stash 起來的時候，是存放到一個 list 的結構內，我們可以透過 <code>git stash list</code> 查看。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br><span class="line">stash@&#123;0&#125;: WIP on dog: 053fb21 add dog 2</span><br><span class="line">stash@&#123;1&#125;: WIP on cat: b174a5a add cat 2</span><br></pre></td></tr></table></figure>
+
+<p>所以如果要將東西放上這個 list，使用的是 push。</p>
+<blockquote>
+<p>git stash 只會將已經 tracked 的 files stash 起來，那些新 create 的 files 並不會被 stash。<br>如果要將 Untracked files stash 起來，需要多加一個 flag：<code>git stash push -u</code>，當然，只打 <code>git stash -u</code> 也可以。</p>
+</blockquote>
+<h3 id="git-stash-list"><a href="#git-stash-list" class="headerlink" title="git stash list"></a>git stash list</h3><p>同上所述，這個 command 會將目前的 stash list print 出來。</p>
+<p>形式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br><span class="line">stash@&#123;0&#125;: WIP on dog: 053fb21 add dog 2</span><br><span class="line">stash@&#123;1&#125;: WIP on cat: b174a5a add cat 2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>stash@{0} 是 stash 的代稱。</p>
+</blockquote>
+<h3 id="git-stash-pop"><a href="#git-stash-pop" class="headerlink" title="git stash pop"></a>git stash pop</h3><p>當我們將東西 stash 起來後，就像倉鼠一樣，將東西存放在頰囊內，是之後要拿出來吃的！</p>
+<p>這時候就可以用到 <code>git stash pop</code> 這個指令，會將 list 最上面的 stash pop 出來，放到目前的 branch 上。</p>
+<p>如果要指定某個要 pop 的 stash，可以在 <code>git stash pop</code> 後面加上 stash 的代稱，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash pop stash@&#123;0&#125;</span><br></pre></td></tr></table></figure>
+
+<p>指定 stash 做操作的 operation 同樣適用在其他類似的 command。</p>
+<h3 id="git-stash-apply"><a href="#git-stash-apply" class="headerlink" title="git stash apply"></a>git stash apply</h3><p>操作同 <code>git stash pop</code>，不過並不會將 stash 從 stash list 移除。</p>
+<h3 id="git-stash-drop"><a href="#git-stash-drop" class="headerlink" title="git stash drop"></a>git stash drop</h3><p>將 stash 從 list 上直接移除，如果沒有指定哪個 stash 的話，會移除最新的 stash，也就是 stash@{0}。</p>
+<h2 id="進階操作"><a href="#進階操作" class="headerlink" title="進階操作"></a>進階操作</h2><h3 id="stash-index"><a href="#stash-index" class="headerlink" title="stash index"></a>stash index</h3><p>如果在原本的 working directory 中，其中有些修改已經 staged 起來，這時候如果要使用 stash，可以透過 <code>git stash push --keep-index</code>。</p>
+<p>在 pop 出來的時候特別指定連 index 也要 restore 即可，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash push --keep-index</span><br><span class="line">git pop --index</span><br></pre></td></tr></table></figure>
+
+<h3 id="指定哪些要-stash"><a href="#指定哪些要-stash" class="headerlink" title="指定哪些要 stash"></a>指定哪些要 stash</h3><p>透過 push 的 --patch (or -p) flag，可以在後面指定要 stash 的 file 的路徑，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash push --patch /path/to/file</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>path 也可以用 regular expression 表示。<br>像是 <code>git stash push --patch **/to/**</code></p>
+</blockquote>
+<p>此時 git 會開啟 interactive 的模式，一一確認這個 hunk（這名詞後文有解釋） 是否要 stash，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">diff --git a/test b/test</span><br><span class="line">index acbd8ae..662d47a 100644</span><br><span class="line">--- a/test</span><br><span class="line">+++ b/test</span><br><span class="line">@@ -10,6 +10,7 @@ test</span><br><span class="line">(...)</span><br><span class="line">+    test</span><br><span class="line">(...)</span><br><span class="line">Stash this hunk [y,n,q,a,d,/,e,?]?</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>[y,n,q,a,d,&#x2F;,e,?] 解釋如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">y - stage this hunk</span><br><span class="line">n - do not stage this hunk</span><br><span class="line">q - quit; do not stage this hunk or any of the remaining ones</span><br><span class="line">a - stage this hunk and all later hunks in the file</span><br><span class="line">d - do not stage this hunk or any of the later hunks in the file</span><br><span class="line">g - select a hunk to go to</span><br><span class="line">/ - search for a hunk matching the given regex</span><br><span class="line">j - leave this hunk undecided, see next undecided hunk</span><br><span class="line">J - leave this hunk undecided, see next hunk</span><br><span class="line">k - leave this hunk undecided, see previous undecided hunk</span><br><span class="line">K - leave this hunk undecided, see previous hunk</span><br><span class="line">s - split the current hunk into smaller hunks</span><br><span class="line">e - manually edit the current hunk</span><br><span class="line">? - print help</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>hunk 是一個 files 中相對應的修改，可以透過 <code>git diff</code> 查看，一般顯示如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">diff --git a/example.txt b/example.txt</span><br><span class="line">index e69de29..d95f3ad 100644</span><br><span class="line">--- a/example.txt</span><br><span class="line">+++ b/example.txt</span><br><span class="line">@@ -1,5 +1,5 @@</span><br><span class="line"> line 1</span><br><span class="line">-line 2</span><br><span class="line">+line 2 modified</span><br><span class="line"> line 3</span><br><span class="line">-line 4</span><br><span class="line">+line 4 modified</span><br><span class="line"> line 5</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>而如果在 <code>git stash push --patch</code> 後面沒有指定路徑的話，git 將會針對所有的 hunk 詢問是否要 stash。</p>
+<p>如果想要省時間， -- 可以直接替代 --patch，用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash push -- /path/to/file</span><br></pre></td></tr></table></figure>
+<p>或者這樣也可以</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash -- /path/to/file</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果使用 -- 指定路徑，git 將會直接 stash 起來，而不會跳出 interactive 的詢問。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>CS</tag>
+        <tag>Learning</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【學記】SSH Tunneling</title>
+    <url>/2024/08/20/Learning/ssh-tunneling/</url>
+    <content><![CDATA[<h2 id="What-is-SSH-Tunneling"><a href="#What-is-SSH-Tunneling" class="headerlink" title="What is SSH Tunneling?"></a>What is SSH Tunneling?</h2><p>網路的連線由 2 個端點組成，而連線中經常會經過 untrusted networks（例如 internet），其中的資料傳輸就不安全，可能會有被偷窺，甚至收到錯誤資料的風險，tunneling 技術就是為此而生。</p>
+<p>Tunneling 指的是將網路上的 2 個端點用某種方式連接起來，形成一個隧道，而 SSH tunneling 就是用 SSH protocol 建立隧道，不但能加密通訊，即便中間有設下防火牆或者要連上在別的內網的機器，SSH tunneling 都能建立連線。</p>
+<p><img src="/images/ssh_tunneling/0.png"></p>
+<blockquote>
+<p>舉例而言，今天有個 web server 建立在 remote server 的 9000 port，而該 server 並沒有 external IP，而是需要透過 jump host 才能連上。<br>我們可以透過 SSH 的 port forwarding 來建立一個在自己的 machine 與 remote server 間的 tunnel，如此一來便能連上架設在 remote server 上的 web server</p>
+</blockquote>
+<h2 id="Type-of-port-forwarding"><a href="#Type-of-port-forwarding" class="headerlink" title="Type of port forwarding"></a>Type of port forwarding</h2><p>port forwarding 可以分為：</p>
+<ul>
+<li>Local port forwarding</li>
+<li>Remote port forwarding</li>
+<li>Dynamic port forwarding</li>
+</ul>
+<p>以下將分別介紹各個 port forwarding 的使用方式以及使用場景。</p>
+<h2 id="Local-port-forwarding"><a href="#Local-port-forwarding" class="headerlink" title="Local port forwarding"></a>Local port forwarding</h2><h3 id="command"><a href="#command" class="headerlink" title="command"></a>command</h3><p>Local port forwarding 的指令格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -L [bind_address:]local_port:host:remote_port user@remote-server</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意 host address 是對於 remote-server 的 address，因此若 host 為 localhost 則是指 remote-server 自己。</p>
+</blockquote>
+<p>假設我們要將 local 的 9090 port forward 到 remote server 的 8080 port，指令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -L 9090:localhost:8080 user@remote-server</span><br></pre></td></tr></table></figure>
+
+<p>即在 client 上開啟 9090 port 等待連線，當有人連上時，將所有的資料送到 remote-server:8080，也就是將 request 導向 server 上。</p>
+<h3 id="scenario"><a href="#scenario" class="headerlink" title="scenario"></a>scenario</h3><p>SSH local port forwarding 的使用情境為何？讓我們看一個例子。</p>
+<blockquote>
+<p>假設在 server 的 8080 port 架有一個 website，而該 server 需要透過 jump host 才能連上（也就是沒有 external IP），若我們想要在自己電腦的瀏覽器 access 該 website，可以怎麼做呢？</p>
+</blockquote>
+<p><img src="/images/ssh_tunneling/3.png"></p>
+<p>首先，設定 SSH 讓自己的電腦可以透過 SSH 連上 remote server，可以透過編輯 ~&#x2F;.ssh&#x2F;config 設定使用 jump host，而這並不是本篇學記的重點，因此不多著墨。</p>
+<p>目前的 ~&#x2F;.ssh&#x2F;config 如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host jumpHost</span><br><span class="line">    HostName 1.2.3.4</span><br><span class="line">    User mike</span><br><span class="line"></span><br><span class="line">Host remoteServer</span><br><span class="line">    HostName remote-server.com</span><br><span class="line">    User mike</span><br><span class="line">    ProxyJump jumpHost</span><br></pre></td></tr></table></figure>
+
+<p>測試連線：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh remoteServer</span><br></pre></td></tr></table></figure>
+
+<p>local port forwarding：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -L 9090:localhost:8080 remoteServer</span><br></pre></td></tr></table></figure>
+
+<p>此時當我們在瀏覽器打開 localhost:9090，會將瀏覽器的連線請求導向 remote server 的 8080 port，也就是該網頁架設的地點，如此一來我們便可以透過 ssh port forwarding 連上原本無法連上的服務。</p>
+<h2 id="Remote-port-forwarding"><a href="#Remote-port-forwarding" class="headerlink" title="Remote port forwarding"></a>Remote port forwarding</h2><p>Remote port forwarding 的指令、使用方法與場景跟 local port forwarding 類似。</p>
+<h3 id="command-1"><a href="#command-1" class="headerlink" title="command"></a>command</h3><p>Remote port forwarding 的指令格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -R [bind_address:]port:host:host_port user@remote-server</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意 host address 是對於 client 的 address，因此若 host 為 localhost 的話則是你的電腦自己。</p>
+</blockquote>
+<p>假設我們要將 remote server 的 8080 port forward 到自己的 9090 port，指令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -R 0.0.0.0:8080:localhost:9090 user@remote-server</span><br></pre></td></tr></table></figure>
+
+<p>即當有人連線到 remote server 的 8080 port，將所有的資料送到你電腦的 9090 port 上，此時若你的電腦有 web server 架設在 9090 port，便可以收到該資料。</p>
+<p>綜上，我們可以看出 remote 跟 local port forwarding 的差別在於 service 架設在哪裡，在自己的電腦要給別人連線（remote port forwarding）或是在 server 上，要用自己電腦的瀏覽器連線（local port forwarding）。</p>
+<h3 id="scenario-1"><a href="#scenario-1" class="headerlink" title="scenario"></a>scenario</h3><p>Remote port forwarding 的使用情境，我們看以下的例子。</p>
+<p>假設我要在自己的電腦上架設一個 web server（9090 port），而不想直接暴露自己的 IP，要求 user 透過 ssh server 連線，此時我們可以透過以下指令將 ssh server 的 8080 port forward 到我的 9090 port：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -R 8080:localho:9090 user@remote-server</span><br></pre></td></tr></table></figure>
+
+<p>此時當 user 連線上 remote server 的 8080 port，我架設在我電腦 9090 port 的 web service 便會收到 request，因為我透過 remote port forwarding 將 remote server 的 8080 port 上的所有資料送到我電腦上的 9090 port 了。</p>
+<p><img src="/images/ssh_tunneling/4.png"></p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p>我前幾天想要查看在 remote server 上的 prometheus 資料，該 server 需要透過多層 jump host 才能連上，但我又想要在自己電腦的瀏覽器上查看 grafana dashboard（一個資料視覺化的工具，有支援 prometheus）。此時可以透過 local port forwarding 將 local 的 9000 port forward 到 remote 的 9000 port，再將架設在 remote server 的 kubernetes cluster 中的 grafana port forward 到 remote server 的 9000 port，這樣一來所有連線請求送到我電腦的 9000 port 就會被 forward 到執行 grafana 的 container 上，因此就可以看到 grafana 的資料了！</p>
+<p>local port forwarding：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -L 9000:localhost:9000 remoteServer</span><br></pre></td></tr></table></figure>
+
+<p>kubernetes port forward：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">kubectl port-forward svc/prometheus-grafana 9000:90</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>90 port 是透過 kubectl get svc 查看得知。</p>
+</blockquote>
+<p>打開瀏覽器連線 localhost:9000：<br><img src="/images/ssh_tunneling/1.png"></p>
+]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>CS</tag>
+        <tag>Learning</tag>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】100 種味道</title>
+    <url>/2024/07/20/Food/100-taste/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/KCAXkX54B8N8S7yX9">300新竹市東區三民路35號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在巨城旁邊，可以搭車到東門過小後沿著 <a href="https://maps.app.goo.gl/XbxUASJbF2fGPJxf7">隆恩圳親水公園</a> 走就會到了</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>久聞盛名，每次經過都想進去吃，進去後才發現要提前訂位才能內用，不過拿著甜點到旁邊親水公園吃也是不錯的選擇。</p>
+<p>內用低消一杯飲料，很奇怪，明明是甜點店，所以加上甜點後一次用餐超過 $300。價值這種東西是看個人，總之我是覺得太貴了。</p>
+<figure class="blog-img-box">
+    <img src="/images/100_taste/1.png" loading="lazy">
+</figure>
+
+<p>有非常多種類的甜點提供選擇，當天我點了綠葡萄蜂蜜優格塔。</p>
+<figure class="blog-img-box">
+    <img src="/images/100_taste/0.png" loading="lazy">
+</figure>
+
+<p>甜點很好吃，水果新鮮大顆，蜂蜜優格跟綠葡萄真的很搭，就算三個月前吃的，嘴裡還依稀記得那個味道。</p>
+<p>飲料我點西西里檸檬氣泡咖啡，超級好喝，好喝到我之後還特別去 7-11 點一樣的喝。</p>
+<p>總而言之，是一間很棒的甜點店，氣氛很好，甜點好吃、飲料好喝，但內用的消費會很高，可以自己斟酌。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Dessert</tag>
+        <tag>Hsinchu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】三山燒肉</title>
+    <url>/2024/12/08/Food/3mountain/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kVtSPDEHB3bWat22A">804高雄市鼓山區博愛二路337號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><ul>
+<li>捷運：巨蛋站下車後走 5 分鐘，或者凹子底也可以到</li>
+<li>輕軌：愛河之心站下車後走 10 分鐘</li>
+</ul>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>外觀跟內裝都是全白，以燒肉店來說非常特別。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/1.png" loading="lazy">
+</figure>
+（此圖片來自網路，若有違權請告知，會撤除）
+
+<p></p>
+
+<p>使用 QRcode 點餐，有平板可以參考照片。</p>
+<p>當天我們四人用餐，點的是日美澳牛肉套餐，店員推薦說可以吃到各個國家的肉。套餐除了主餐一大盤牛肉外還有前餐雞腿肉、牛肉、松板豬如下圖。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/2.png" loading="lazy">
+</figure>
+
+<p>中間那層牛肉推薦是烤一烤後拿起來放一分鐘，剪完再下去考一次，滿驚豔的，以前對這種肉印象滿差，因為通常都會很難嚼也不太好吃，但這次的吃起來很夠味，而且很 juicy。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/2-5.png" loading="lazy">
+</figure>
+
+<p>另外還有送上蔬果盤，沾醬還滿好吃的。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/3.png" loading="lazy">
+</figure>
+
+<p>在吃前餐的同時，牛肉湯也送上了，除了牛肉以外還有蔥、洋蔥、薑等等的料。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/4.png" loading="lazy">
+</figure>
+
+<p>牛肉湯非常好喝，很甘甜肉也不少，喝了很多碗。</p>
+<p>接著就是本日重點的主餐牛肉盤。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/0.png" loading="lazy">
+</figure>
+
+<p>誇張的肉量鋪在盤面上，油花非常漂亮。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/5.png" loading="lazy">
+</figure>
+
+<p>肉沒有調味過，直接烤起來就非常好吃，吃起來就像是有調味一樣，甚至不用沾醬味道就十分足夠。我可能不是很會形容，但肉質我覺得同價位的話比茶六、屋馬要來得好，且好上不少。</p>
+<p>另外我們還點了薄牛舌，這個超級難烤，我們烤得支離破碎黏在烤網上，最後請店員來幫我們烤哈哈哈。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/6.png" loading="lazy">
+</figure>
+
+<p>牛舌很好吃，但下次要點厚的，因為薄的真的太難烤了。</p>
+<p>用餐期間還有送上蜂蜜檸檬沙瓦，我點的飲料梅子氣泡飲非常好喝，我喝過很多梅子氣泡飲，但這是我喝過最好喝的，酸甘甜，比一般的還酸一點，但很好喝。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/7.png" loading="lazy">
+</figure>
+
+<p>最後就是甜點，我點的是漬芭樂，金桔淋在芭樂上味道非常好吃，梅汁淋在剉冰上味道也十分足夠，2 種味道不衝突很和諧，搭配起來很解膩。</p>
+<figure class="blog-img-box">
+    <img src="/images/3mountain/8.png" loading="lazy">
+</figure>
+
+<p>店內冷氣開很強，吃冰會吃到有點冷哈哈哈，身體都在抖了。</p>
+<p>我們還有吃銅鑼燒跟黑糖剉冰，都很不錯。</p>
+<p>價格部份 4 人點 3 人套餐再單點（建議不要點到剛好的人數，他們的套餐份量有點多），加服務費後一人大概 $1300 左右，不便宜，但以今天的體驗來說我會覺得值得，之後也會願意再來。</p>
+<p>很棒的一餐。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Kaohsiung</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【學記】Makefile 語法與變數示範</title>
+    <url>/2024/11/03/Learning/makefile/</url>
+    <content><![CDATA[<h1 id="What-is-Makefile"><a href="#What-is-Makefile" class="headerlink" title="What is Makefile?"></a>What is Makefile?</h1><p>甚麼是 Makefile 呢？</p>
+<p>舉例而言，像是在這份 <a href="https://github.com/smilingweixiao/ChatVerse">Project</a> 中，可以透過 make 指令編譯前端與開啟後端，在下達 make 指令時 make 就會去查找一個叫 Makefile（或者 makefile）的檔案，從其中定義的規則去執行相對應的命令。</p>
+<h1 id="Benefits-of-Makefile"><a href="#Benefits-of-Makefile" class="headerlink" title="Benefits of Makefile?"></a>Benefits of Makefile?</h1><p>使用 Makefile 有許多的好處：</p>
+<ul>
+<li>管理 files 間的 dependency：<br>  假設 a.c depends on b.c，此時若 b.c 修改了則 a.c 也應該要重新編譯（或 link）。</li>
+<li>建立常用指令的捷徑：<br>  在同樣的一份 <a href="https://github.com/smilingweixiao/ChatVerse">Project</a> 中，會需要透過一些 commands 跟程式互動，若 command 很長的話每次都要重打就會很麻煩，此時就可以透過 makefile 來加速流程。</li>
+</ul>
+<h1 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h1><p>說了這麼多，那具體而言要怎麼寫 Makefile 呢？Makefile 語法基本可以分成以下幾部分：</p>
+<ul>
+<li>Rule</li>
+<li>Variable</li>
+<li>Assignment</li>
+<li>Special character</li>
+</ul>
+<h2 id="Rule"><a href="#Rule" class="headerlink" title="Rule"></a>Rule</h2><p>如同上面說的，在下達 make 指令時 make 會到 Makefile 中查找規則，一般 Makefile rule 如下：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">target: target.c</span></span><br><span class="line">	<span class="variable">$(CC)</span> target.c</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>target</code> 就是目標檔案。</li>
+<li>在 <code>target</code> 後可以看到一個冒號，在冒號後的就是 dependency，當 dependency 改變時，make 會偵測到並重新 compile dependency 再 compile target。</li>
+<li><code>$(CC) target.c</code> 就是要執行的命令。</li>
+<li>命令前必須為 tab，也就是 \t 字元。</li>
+</ul>
+<p>所以當執行 <code>make target</code> 的時候，實際是執行 <code>gcc target.c</code>。</p>
+<blockquote>
+<p><code>$(CC)</code> 將 <code>CC</code> 這個變數展開，變數定義會在下文介紹。</p>
+</blockquote>
+<h2 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h2><p>Makefile 中有許多特殊的 variable，像是上面有用到的 CC，而這些 variable 可以大致分為以下這幾種：</p>
+<h3 id="Compile-related-variables"><a href="#Compile-related-variables" class="headerlink" title="Compile related variables"></a>Compile related variables</h3><ul>
+<li>CC：指定要使用的 c compiler，e.g. gcc</li>
+<li>CXX：指定要使用的 c++ compiler，e.g. g++</li>
+<li>LD：指定要使用的 linker，e.g. ld</li>
+</ul>
+<h3 id="Automatic-variables"><a href="#Automatic-variables" class="headerlink" title="Automatic variables"></a>Automatic variables</h3><ul>
+<li>$@：target 檔名，如果 makefile rule 如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">target: target.c</span></span><br><span class="line"><span class="variable">$(CC)</span> target.c</span><br></pre></td></tr></table></figure>
+則 $@ 就代表 <code>target</code>。</li>
+<li>$^：所有的 dependency，如果 makefile rule 如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">target: target.c dependency.c</span></span><br><span class="line"><span class="variable">$(CC)</span> target.c</span><br></pre></td></tr></table></figure>
+則 $^ 會 expand 成 <code>target.c, dependency.c</code>。</li>
+<li>$&lt;：第一個 dependency，如果 makefile rule 如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">target: target.c dependency.c</span></span><br><span class="line"><span class="variable">$(CC)</span> target.c</span><br></pre></td></tr></table></figure>
+則 $&lt; 為 <code>target.c</code>。</li>
+<li>$*：使用在 pattern rule，將在 special character 的章節說明。</li>
+</ul>
+<h3 id="Common-flag-variables"><a href="#Common-flag-variables" class="headerlink" title="Common flag variables"></a>Common flag variables</h3><ul>
+<li>CFLAG：c files 的 compile flags。</li>
+<li>CXXFLAGS：c++ files 的 compile flags。</li>
+<li>LDFLAGS：linker 的 flags。</li>
+</ul>
+<h3 id="Target-specific-variables"><a href="#Target-specific-variables" class="headerlink" title="Target specific variables"></a>Target specific variables</h3><p>可以在 Makefile 中針對特定的 target 定義 variable，如下：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">hw2a: CFLAGS += -pthread</span></span><br><span class="line"><span class="section">hw2b: CC = mpicc</span></span><br><span class="line"><span class="section">hw2b: CXX = mpicxx</span></span><br><span class="line"><span class="section">hw2b: CFLAGS += -fopenmp</span></span><br></pre></td></tr></table></figure>
+
+<p>若 Makefile 如下：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">hw2a: hw2a.cc</span></span><br><span class="line">    <span class="variable">$(CC)</span> <span class="variable">$(CFLAGS)</span> hw2a.cc</span><br></pre></td></tr></table></figure>
+
+<p>則在執行 hw2a 的 rule 時，<code>CFLAGS</code> 就會多上 <code>-pthread</code> 的 flag。因此，可以透過此方法設定對於某些 target file 加上特別的 compile flag。</p>
+<h2 id="Assignment"><a href="#Assignment" class="headerlink" title="Assignment"></a>Assignment</h2><p>在 Makefile 中可以自定義 variables，而 variable 有很多種 assign 的方法：</p>
+<ul>
+<li>Simple assignment (&#x3D;)：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">CC = gcc</span><br></pre></td></tr></table></figure>
+要注意的是，<code>=</code> 這種 assignment 屬於 defer assignment，也就是會等到該變數被使用時才會展開右手邊的內容取得最終的值。</li>
+<li>Immediate assignment (:&#x3D;)：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">DATE := <span class="variable">$(<span class="built_in">shell</span> date)</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>$(shell ...)</code> 可以執行 shell command，上面就是透過 shell 取得時間後存在 <code>DATE</code> 變數中<br>與 <code>=</code> 不同的是，<code>:=</code> 這種 asignment 會立即展開右邊取得最終的值，所以在底下的 Makefile 中：</p>
+</blockquote>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">DATE := <span class="variable">$(<span class="built_in">shell</span> date)</span></span><br><span class="line">DATE_DELAY = <span class="variable">$(<span class="built_in">shell</span> date)</span></span><br></pre></td></tr></table></figure>
+<code>DATE</code> 與 <code>DATE_DELAY</code> 時間將會不同，<code>DATE_DELAY</code> 的時間為該變數被用到時，而 <code>DATE</code> 則為 Makefile parse 到這一行的當下。</li>
+<li>Appending assignment (+&#x3D;)：<br>例如 CFLAGS 本來為 -O3<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">CFLAGS += -pthread</span><br></pre></td></tr></table></figure>
+則 <code>CFLAGS</code> 會變成 <code>-O3 -pthread</code>。通常可以配合上述的 Target specifi variable 使用，對於特定的 target 使用 <code>+=</code> 給定特別的 flags。</li>
+<li>Conditional assignment (?&#x3D;)：<br>若變數未定義則指定新的值，否則採用原有的值。與 <code>=</code> 同為 defer assignment。</li>
+</ul>
+<h2 id="Special-character"><a href="#Special-character" class="headerlink" title="Special character"></a>Special character</h2><p>在 Makefile 中也有很多的特殊字元，每個都有特別的意義，如下：</p>
+<ul>
+<li>@：make 一般會 print 出要執行的指令，在 command 前加上 @ 則不會 print 出<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	@rm -f <span class="variable">$(TARGETS)</span> $(TARGETS:=.o)</span><br></pre></td></tr></table></figure></li>
+<li>%：wildcard character，也就是可以 match 各種的 pattern，使用方式如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">	<span class="variable">$(CC)</span> <span class="variable">$(CFLAGS)</span> -c <span class="variable">$&lt;</span> -o <span class="variable">$*</span>.o</span><br></pre></td></tr></table></figure>
+假設下 <code>make target.o</code>，此時會執行 <code>gcc -c target.c -o target.o</code>，可以看到 <code>$*</code> 會自動替換成 % 所 match 到的字元。</li>
+<li>-：makefile 只要遇到任何錯誤都會中斷執行，加 <code>-</code> 在 command 前面，使得就算 command 出錯，也不影響後續的 commands，如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	-rm *.o</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="PHONY"><a href="#PHONY" class="headerlink" title="PHONY"></a>PHONY</h3><p>這是一個很重要的 kerword。在前文中很常看到 PHONY 的身影，這個 keyword 是用來宣告這些 rule 是一個指令，而不是一個檔案，如下：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	@rm -f <span class="variable">$(TARGETS)</span> $(TARGETS:=.o)</span><br></pre></td></tr></table></figure>
+
+<p>如果沒有加 <code>.PHONY: clean</code>，此時資料夾中又有 clean 這個檔案，則 makefile 會認為 clean 這個 target up to date，因此 clean 下的指令將永遠不會被執行。而加上 <code>.PHONY: clean</code> 可以解決這樣的問題。</p>
+<h3 id="Makefile-print"><a href="#Makefile-print" class="headerlink" title="Makefile print"></a>Makefile print</h3><p>Makefile 內部其實有很多預設的變數，可以透過以下指令查看：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">make -p &gt; make_print</span><br><span class="line">cat make_print</span><br></pre></td></tr></table></figure>
+
+<h3 id="Compiler"><a href="#Compiler" class="headerlink" title="Compiler"></a>Compiler</h3><p>有時候會見到以下這樣的 Makefile：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">CC = gcc</span><br><span class="line">CXX = g++</span><br><span class="line">CFLAGS = -lm -O3</span><br><span class="line"><span class="section">hw2a: CFLAGS += -pthread</span></span><br><span class="line"><span class="section">hw2b: CC = mpicc</span></span><br><span class="line"><span class="section">hw2b: CXX = mpicxx</span></span><br><span class="line"><span class="section">hw2b: CFLAGS += -fopenmp</span></span><br><span class="line">CXXFLAGS = <span class="variable">$(CFLAGS)</span></span><br><span class="line">TARGETS = hw2a hw2b</span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: all</span></span><br><span class="line"><span class="section">all: <span class="variable">$(TARGETS)</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -f <span class="variable">$(TARGETS)</span> $(TARGETS:=.o)</span><br></pre></td></tr></table></figure>
+
+<p>此時或許會懷疑又沒有說明 make hw2a 的 rule，make 要怎麼知道使用哪個 compiler 呢？</p>
+<p>可以透過前面說的 <code>make -p</code> 查看，其實 make 有很多預設的使用情境，在沒有說明 compiler 的情況下，對於 .c file make 會優先使用 CC 這個 variable 內的 compiler，而對於 .cc or .cpp 則會使用 CXX compiler。</p>
+<h3 id="Set-variable-in-CLI"><a href="#Set-variable-in-CLI" class="headerlink" title="Set variable in CLI"></a>Set variable in CLI</h3><p>variable 也可以直接在下 make command 時設定，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">make CC=clang CXX=clang++</span><br></pre></td></tr></table></figure>
+
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+<li><a href="https://www.gnu.org/software/make/manual/">GNU make manual</a></li>
+<li><a href="https://hackmd.io/@sysprog/SySTMXPvl">Make 語法和示範</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【食記】九添福牛肉麵</title>
+    <url>/2025/03/25/Food/9tainfu/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/APu5Mg97tMVpCewN9">300新竹市北區西大路436號1樓</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車到東門市場再走大約 10 分鐘，或者直接騎車去，騎樓有位置可以停。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>我一進到店內就感受到老闆一定有很嚴重的潔癖，我還真的沒有看過一間這麼乾淨的牛肉麵店。</p>
+<p>看到評論推薦牛腩麵，就點一份來看看。也順手夾了一些滷味。</p>
+<p>滷味先上菜，熱騰的食物淋上蒜蓉醬油，散發出的光澤光看著就感覺很好吃（看起來太好吃了，來不及拍照就開動了哈哈哈）。食材本身滷得剛好，有些滷味的蘿蔔就沒有軟，或者其他食材的熟度控制不好，但這間的都恰到好處。</p>
+<figure class="blog-img-box">
+    <img src="/images/9tainfu/1.png" loading="lazy">
+</figure>
+
+
+<p>他們的蒜蓉醬非常特別，原本滷味可能是中上水準，但醬油加上去後晉升到我會很想再來吃的程度。</p>
+<p>接著是今天的重點－牛腩麵。牛肉非常多，原本覺得 $230 很貴，但以這個肉量來講的話，我會覺得算適中的價格，但老闆有沒有考慮肉少一點，價格也便宜一點阿&#x3D;&#x3D;</p>
+<figure class="blog-img-box">
+    <img src="/images/9tainfu/0.png" loading="lazy">
+</figure>
+
+<p>牛腩很多吃起來很爽，有些很軟嫩，有些會需要嚼比較久，但吃起來還是很爽，不過總體而言並沒有說到很好咀嚼，吃多的話嘴巴可能會痠。</p>
+<p>麵體中規中矩，湯頭甘甜好喝，重點是完全不油，如果不喜歡那種很油的牛肉麵的人，很推薦來這間吃。</p>
+<p>另外還有紅燒牛油可以自行添加，我加了一些後湯頭變得更甘與香。</p>
+<p>另外，google map 5 星評論會送蒜泥白肉，我本來以為只是一小盤敷衍，結果來一大盤，真有誠意。</p>
+<figure class="blog-img-box">
+    <img src="/images/9tainfu/2.png" loading="lazy">
+</figure>
+
+<p>總體而言，這是一間非常乾淨的牛肉麵店，桌子乾淨到我願意上去躺的程度，牛肉麵本身不油膩，如果想吃甘甜但又負擔不重的牛肉麵，這間會是很棒的選擇，滷味也很好吃，推薦。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Beef Noodle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】姜滿堂</title>
+    <url>/2024/08/23/Food/chan-man-tong/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/bAeJLC2LvEKeesGw7">300194新竹市東區中央路229號8樓</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>巨城 8 樓，公車在東門國小下車可以到，火車站也有接駁車。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>姜滿堂是一間非常令人驚艷的燒肉店，雖然價格不低（每人約 $800 ~ $1000），但肉質非常好，食物也很美味。</p>
+<p>餐前有小菜，種類多而且好吃，也可以自助續菜。</p>
+<figure class="blog-img-box">
+    <img src="/images/chan_man_tong/1.png" loading="lazy">
+</figure>
+
+<p>一般都是點套餐，有分牛豬、全牛等等，我們通常是點全牛。</p>
+<figure class="blog-img-box">
+    <img src="/images/chan_man_tong/2.png" loading="lazy">
+</figure>
+
+<p>全牛套餐有：</p>
+<ul>
+<li>肩小排</li>
+<li>里肌</li>
+<li>翼板</li>
+<li>牛五花</li>
+<li>帶骨牛小排</li>
+</ul>
+<p>上餐時肉類都是在冷凍狀態，但也不會太凍，去吃很多次了，品質非常穩定，不會有解凍過多或者凍壞的問題，肉的品質也都是一如既往的好。肉本身也有做過調味，味道足夠。</p>
+<p>雙人套餐肉量很足夠，吃完很滿足而且很飽，超爽，肉質真的很好。</p>
+<figure class="blog-img-box">
+    <img src="/images/chan_man_tong/3.png" loading="lazy">
+</figure>
+
+<p>服務部分都還不錯，換烤網積極，有問題詢問也親切回覆。</p>
+<p>附餐我們只點過炸雞年糕，不誇張，這是我吃過最好吃的，年糕有薄薄的一層脆外殼，裹上甜辣醬汁，真的超好吃，雞肉也是，就算裹著醬汁，也還是酥脆，但裡面的肉卻是軟嫩的，我覺得他的炸雞年糕根本可以直接獨立開一間店。</p>
+<figure class="blog-img-box">
+    <img src="/images/chan_man_tong/0.png" loading="lazy">
+</figure>
+
+<p>飲料我們都喝氣泡水，水蜜桃的還不錯，檸檬的滿酸的，但很解膩，推！</p>
+<p>總而言之，姜滿堂是一間價格不低，但品質非常穩定，吃完會感到很滿足且開心的韓式烤肉店。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】老陳海南雞飯</title>
+    <url>/2024/07/20/Food/chen-hainen/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/UHy77i9QNpE1iVcu8">402台中市南區復興路三段300號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>我們那天從火車站走過去走很久，後來騎腳踏車回去就很快。</p>
+<p>所以建議可以騎腳踏車沿建國路的腳踏車道騎，海南雞店斜對面有 Ubike 停車站。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>平日中午約11.30去的，大概等5分鐘，但開始用餐的時候外面就排很多人了。</p>
+<p>點了 $125 綜合飯（海南雞+打拋豬）。</p>
+<figure class="blog-img-box">
+    <img src="/images/chen_hainen/0.png" loading="lazy">
+</figure>
+
+<p>海南雞很嫩，配醬非常好吃，醬真的調得超級好，很搭。</p>
+<p>打拋豬酸辣開胃，台灣的打拋豬很少有做出那個酸酸開胃的感覺，覺得很好吃。</p>
+<p>配菜部分新鮮，脆，不錯，比較沒有調味。</p>
+<p>雞湯好喝，不水，大概像屋馬之類的燒肉店那樣。</p>
+<p>總體而言很棒的餐廳，不貴而且肉量多，很好吃，非常推薦。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Taichung</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】村豚拉麵</title>
+    <url>/2024/08/07/Food/chunton/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/Pw8Yz8GzzogmdPn1A">830高雄市鳳山區五權南路226號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>高雄捷運橘線鳳山站下車可以到。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>很少看到可以線上抽號碼牌的拉麵店，我覺得這個設計很不錯，可惜線上無法知道候位進度。</p>
+<p>今天點的是特盛雞豚拉麵，湯底是醬油豚骨。<br>湯底部分，是我很喜歡的豚骨類型，不是很膩很濃稠的，入口是很濃的豚骨香，但並不會過於黏膩。</p>
+<p>肉的話有三種，雞肉味道很不錯，就一般常見的舒肥雞胸；叉燒的話非常好吃，炙燒的味道很香。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/chunton/0.png" loading="lazy">
+</figure>
+
+<p>比較少吃到還有菠菜的拉麵，我覺得這個搭配很不錯。</p>
+<p>總體而言，麵湯是我很喜歡的不會過於濃膩的豚骨湯、麵體表現一般、叉燒好吃的拉麵店，可以線上抽取號碼牌是這間的加分之處。</p>
+<p>價格部分我覺得中規中矩，但我已經被新竹物價洗腦了，價格並不是能很客觀的以高雄物價判斷。</p>
+<p>總之，值得二訪，推薦。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Kaohsiung</tag>
+        <tag>Ramen</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】CURRY WU日式熟成濃咖哩專賣店</title>
+    <url>/2024/07/17/Food/curry-wu/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/NER8KfbYatvDi8gd9">300新竹市北區興南街28號1樓</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在新竹大遠百旁邊，先到大遠百往旁邊巷子走就會到了。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一間隱身在巷子中的店，這條巷子令人意外的有很多吃的。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/5.png" loading="lazy">
+</figure>
+
+<p>我們提前 20 分鐘左右到場，當天到開店後都還有位置，但過一下子之後位置就滿了。</p>
+<p>店內空間比想像中的大，可以看得出老闆 &amp; 老闆娘的用心裝潢。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/4.png" loading="lazy">
+</figure>
+
+<p>我們是第一組，但到餐點送上還是等了約 10 分鐘，應該是人手比較少，所以動作比較慢。<br>點餐時老闆很熱情的介紹他們的咖哩與主食，跟老闆聊天很開心。</p>
+<p>我們點了唐揚雞咖哩定食跟牛奶豬排咖哩定食。</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/curry_wu/1.png" loading="lazy">
+                </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/curry_wu/3.png" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>老闆說他的唐揚雞是全新竹最嫩，不嫩退費。果然非常嫩，皮薄多汁，超級好吃。<br>豬排大得跟不用錢一樣，厲害的是即使吃到最後，皮跟肉也沒有分離，且完全不會有豬排的膩，真的很棒。<br>咖哩特別濃，濃到像是固體一樣，但完全不會膩，可以感覺到咖哩真的有下很大一番功夫，老闆說他去日本學了 6 年。<br>旁邊的配菜也很棒，很特別的味噌湯與好吃的海帶絲（？），天婦羅也是最頂的那種。<br>飯後居然還有冰淇淋，有種付了定食價格但多被招待了一份的感覺，冰淇淋的出現完全超出我的預料。</p>
+<figure class="blog-img-box">
+    <img src="/images/curry_wu/0.png" loading="lazy">
+</figure>
+
+<p>總體而言，是一間很棒的店，而且不像沐嵐要排隊很久，害我打著打著又想吃了 na…</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Curry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】丁滷味</title>
+    <url>/2024/12/08/Food/dinlooway/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WbJPkvRXaSSXba8Y6">813高雄市左營區崇德路243號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>捷運生態園區站走路 7 分鐘可到</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從小吃到大的滷味店，以為是很正常的口味，直到長大後吃了其他間，才知道這間的味道有多厲害。</p>
+<figure class="blog-img-box">
+    <img src="/images/dinlooway/0.png" loading="lazy">
+</figure>
+
+<p>滷得超級入味，滷汁掛在料上，超級好吃，不是只有滷表面的那種。</p>
+<p>所有食材都煮得很用心，需要不同烹飪時間的會分批下鍋，像是豬肉就不會太老，滷得很嫩，很厲害。</p>
+<p>特別要提一下他們的滷蘿蔔，其他間滷味店都是放酸菜之類的，只有這間我吃到是放蘿蔔，他們的滷蘿蔔超厲害，每次我都請他們加多一點。</p>
+<p>我覺得所有食物都很好吃，最近發現他們開始賣熱炒，看評價是說很好吃，下次去吃看看。</p>
+<p>最後，要再特別提他們的滷科學麵，很鹹香超好吃，真的超讚，必點。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Kaohsiung</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】Dor,留手工義大利麵</title>
+    <url>/2024/08/10/Food/dorliu/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kPL7NB7W4rKA9mmr9">813高雄市左營區新莊一路133號1樓</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><ul>
+<li>捷運：高雄捷運巨蛋站下車後騎 Ubike 可以到</li>
+<li>火車：左營（舊城）</li>
+</ul>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從小吃到大的義大利麵店，主打的是手工義大利麵。</p>
+<p>這間義大利麵的口感很有嚼勁，很與眾不同，我滿喜歡的。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/dorliu/0.png" loading="lazy">
+</figure>
+
+<p>這次用餐吃的是煙花女義大利麵，餐點敘述說酸辣鹹，但我覺得他三樣都沒做到，口味上來講是這間目前我吃過最失望的，這道餐點我覺得很普通。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/dorliu/1.png" loading="lazy">
+</figure>
+
+<p>之前有點過藍乳酪奶油雞肉義大利麵跟牛肝菌菇燉飯等等的其他品項，印象中都非常美味。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/dorliu/2.png" loading="lazy">
+</figure>
+
+<p>炸物好吃，就是一般的炸物拼盤。</p>
+<p>濃湯好喝，是很濃的那種，味道很好；水果醋沙拉還不錯，最上層撒上起司粉再淋上水果醋，我覺得水果醋的味道很好。</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/dorliu/3.png" loading="lazy">
+                </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/dorliu/4.png" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>價格算是中規中矩，但口味上我覺得很值得一試，且環境很不錯，可以坐下來聊聊天。（雖然這次吃飯隔壁桌吵到我講話連坐對面的都聽不到，希望之後不會再遇到這樣吵雜的用餐環境）</p>
+<p>推薦，來高雄可以來吃看看。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Pasta</tag>
+        <tag>Kauhsiung</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】喜劇收場</title>
+    <url>/2024/07/17/Food/happy-ending/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/z4SyeGDCKmju7A8a8">300新竹市東區三民路2巷5號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車 (藍1, 5608等等) 到東門國小下車，喜劇收場就在旁邊。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>位置很多，通常不需要等待，來吃之前可以去FB粉絲團確認有沒有休假</p>
+<p>漢堡麵包很有彈性，外表有光澤，麵味很香，就算只有漢堡皮我也可以吃得很開心，不是普通漢堡的麵包，這點真的很喜歡也覺得這才是漢堡應該有的樣子</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/happy_ending/happy_ending0.jpg" loading="lazy">
+                </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/happy_ending/happy_ending1.jpg" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>漢堡肉跟醬很搭，有很多種類的漢堡，目前吃5、6次左右每次都覺得很好吃，漢堡很有自己的特色。</p>
+<p>炸物酥脆剛好，非常好吃，非常推薦；飲料的話無糖綠不錯，緩解罪惡感</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/happy_ending/happy_ending2.jpg" loading="lazy">
+            </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/happy_ending/happy_ending3.jpg" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>環境很有自己的特色，很喜歡觀察老闆是怎麼佈置的，特別是廁所那隻狗，每次都能嚇到女友，我真的太喜歡那隻狗狗了</p>
+<p>CP值很高，200塊左右能吃到很好吃的漢堡跟炸物配飲料，非常推薦</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Burger</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】隱川居酒屋</title>
+    <url>/2024/07/31/Food/inchu/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kURxJz9X4Bgpququ8">300新竹市東區中正路86號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在東門市場對面，公車一下車就是了。</p>
+<p>5608, 藍 1, 20, 2 號公車等等都可以到。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>位置不少，通常可以直接訂到。</p>
+<p>去了應該不下10次，每次必點雞腿肉串以及日式生牛肉。</p>
+<p>雞腿肉串現烤很香，多汁又好吃，招牌跟明太子都很推，蔥鹽的我個人覺得還好。</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/inchu/1.png" loading="lazy">
+                </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/inchu/3.png" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>日式生牛肉非常好吃，價格稍貴但每次都還是會點，酸酸甜甜的味道配上生牛肉，再夾1、2片洋蔥，人間美味。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/inchu/2.png" loading="lazy">
+</figure>
+
+<p>通常我還會點馬鈴薯燉肉，因為這是我媽的拿手料理，很久沒吃了所以會想點，價格 $100 份量不少，在這間店內份量算多的一道菜。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/inchu/0.png" loading="lazy">
+</figure>
+
+<p>其他料理也都很不錯。</p>
+<p>酒的話我只喝過紅茶梅酒，非常好喝但小小一杯。</p>
+<p>約4、500的居酒屋，非常推薦，很常跟朋友來吃。</p>
+<p>這附近有很多居酒屋，綜合價格跟美味程度，這間在我心中是最高的。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Izakaya</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】辣辣叭麻辣干鍋</title>
+    <url>/2024/08/07/Food/lalapa/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/rFT52x3ZK31BWY5S6">807高雄市三民區大順二路816號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在輕軌大順民族跟灣仔內站中間，下輕軌後只需要走一下就到了。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>直接說重點，口味非常棒，但價格太貴，因此評價的話我只會給到 3.5 ~ 4 星。</p>
+<p>口味上是很經典的麻辣乾鍋，料的種類跟滷味店相同，不外乎就是蔬菜、麵類、肉類、火鍋料類等等。</p>
+<p>肉的部分當天吃了牛肚、豬肉還有大腸頭，除了火鍋肉片以外的肉類都有事先滷過，我覺得他們事先滷過的食材都非常入味且好吃，鹹香下飯，白飯殺手。</p>
+<p>米血裹著醬汁，又辣又鹹真的超級好吃。特別要提一下他們的豆腐，非常的臭，我很喜歡，大推。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/lalapa/0.png" loading="lazy">
+</figure>
+
+<p>內用有白飯飲料吃到飽，如果覺得太乾還可以加雞湯，不過我沒吃過加雞湯的，不知道味道如何。</p>
+<p>價格部分都是秤重，非常貴，務必做好心理準備，還記得之前 2 個人去吃的時候現金 $700 居然不夠，還要把一些料放回去哈哈哈。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/lalapa/1.png" loading="lazy">
+</figure>
+
+<p>內用空間寬敞、冷氣涼爽，環境很舒適。</p>
+<p>總而言之，這是一間味道非常棒，但價格太貴的麻辣乾鍋店，雖然價格很貴，但真的想吃乾鍋的時候這個價格還是下得了手的，或許就是因為他足夠美味吧。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Kaohsiung</tag>
+        <tag>Dry pot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】沐嵐</title>
+    <url>/2024/07/17/Food/moonlight/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/s2cuPqJGG39swnPt8">300新竹市東區西大路240號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><h4 id="火車站出發"><a href="#火車站出發" class="headerlink" title="火車站出發"></a>火車站出發</h4><p>面向火車站右手邊一直走，穿過竹蓮地下道後就在附近了。</p>
+<h4 id="清大出發"><a href="#清大出發" class="headerlink" title="清大出發"></a>清大出發</h4><p>搭 83 號公車，在西大路口下車，沐嵐就在旁邊。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>如果問我在新竹待了四年，最推薦的一間店，沐嵐會是其中一間，儘管需要排隊很久。</p>
+<p>營業後才來通常要等上一個小時，如果在開店前 30 分鐘提前抵達候位，可以第一批入內用餐，節省很多等待時間。</p>
+<p>餐點部分，餐前有湯，非常好喝，很難以敘述是怎樣的湯，但味道甘甜，每次都會續碗。</p>
+<figure class="blog-img-box">
+    <img src="/images/moonlight/5.png" loading="lazy">
+</figure>
+接著送上主餐，誇張的肉量平舖在咖哩上，視覺上極度震撼，更何況這樣的料理只要 $200 出頭。
+<figure class="blog-img-box">
+    <img src="/images/moonlight/4.png" loading="lazy">
+</figure>
+肉的料理方式多為舒肥，口感極嫩，肉也鮮甜好吃，肉量真的多到會吃到嘴巴痠。
+飯旁有一些生菜及其他副食，咖哩本身並不是很特別，沐嵐雖然說是賣咖哩，但更主要還是靠肉打出名氣。
+<figure class="blog-img-box">
+    <img src="/images/moonlight/2.png" loading="lazy">
+</figure>
+
+<p>在換了新店面後，環境變得很舒適，並不像以前一樣吃得滿身汗還會沾上油煙味。</p>
+<p>總體而言，沐嵐是一間以 CP 值來說還不錯的店（相比 3 年前漲價 $50，3 年前那個價格是真的划算），食物非常好吃，儘管需要排隊很久，但這正是因為他的美味使然，推薦。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Curry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】波市多拿坡里披薩</title>
+    <url>/2024/08/07/Food/posto/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/29vCbRkJuDVsKufR7">813高雄市左營區至聖路289號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>高雄捷運凹子底捷運站出來走 2, 3 分鐘就到了。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這是一間，我吃過最好吃的披薩店。</p>
+<p>店內裝潢滿漂亮，可以好好坐下來用餐輕鬆聊天，但有限制用餐時間，印象中是 90 分鐘，很夠。</p>
+<p>菜單選擇不多，但我想他們每樣都很好吃。</p>
+<p>今天點的是菠菜培根蛋黃披薩，披薩餅皮非常薄，薄到料會掉下來的那種。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/posto/0.png" loading="lazy">
+</figure>
+
+<p>味道上真的非常美味，菠菜培根我覺得好吃，但沒有到印象中辣味牛肉的驚艷，雖然辣味牛肉是約一年前吃的，但那個味道我還記得，真的很好吃。</p>
+<p>套餐 $100 含沙拉、紅茶、小菜。小菜的話我很推薦烤馬鈴薯，我覺得很好吃。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/posto/1.png" loading="lazy">
+</figure>
+
+<p>價格部分中規中矩，但披薩分量很多，如果 3 個人分 2 片披薩，這樣 CP 值就算不錯。</p>
+<p>很推薦，交通方便、味道美味，一定要來吃看看。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Kaohsiung</tag>
+        <tag>Pizza</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】QQ 圓</title>
+    <url>/2024/07/20/Food/qqdumpling/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/AhSwifYeNhkNZKaj9">300新竹市東區光復路二段378號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在清大正對面。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一碗 $35 很划算，QQ 圓口味有分：</p>
+<ul>
+<li>水果（奇異果、草莓、百香果）</li>
+<li>芋頭、地瓜、紅豆、黑芝麻</li>
+<li>牛奶</li>
+<li>香草</li>
+<li>綜合</li>
+</ul>
+<p>除了口味之外，還有分冰的跟熱的。<br>冰的夏天多為鳳梨冰，前陣子有桑葚冰，味道都很棒，比較像是清冰，不會太甜，搭配 QQ 軟軟的 QQ 圓，真的超香超好吃。<br>熱的是水果茶，冬天來上暖暖的一碗真的很溫暖，不得不說水果茶真的很香。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/qqdumpling/0.png" loading="lazy">
+</figure>
+
+<p>QQ 圓很有嚼勁，愈嚼愈香，真的很好吃，是別的地方吃不到的。</p>
+<p>通常是下午 15, 16 點左右開始賣（詳細時間不清楚），直到賣完為止。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/qqdumpling/1.png" loading="lazy">
+</figure>
+
+<p>阿公說以前還有賣鹹的，但會做鹹配料的老婆走了，阿公說他自己炒不出那個味道，之後就停賣了。</p>
+<p>這間 QQ 圓為我的四年大學生活添加了不少美好回憶，很好吃，超級推薦。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】來杯果豬</title>
+    <url>/2024/07/17/Food/piggy-drink/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/oLAVp6w3ZyxkyHqy7">30045新竹市東區建新路7號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在清大機車塔對面，走路過去即可。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從裝潢就可以感覺到老闆跟老闆娘的用心，小小間但很溫馨。</p>
+<p>老闆非常熱情，對飲料有自己的堅持。還記得上次老闆說他比例不小心做錯了，這杯送我們，要再做一杯給我們。於是我們就得到了2杯飲料，而且其實真的喝不出差別。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/piggy_drink/0.jpg" loading="lazy">
+</figure>
+
+<p>有集點活動，似乎每$35可以累積一點，累積10點後可以折抵$35。</p>
+<p>飲料我們只有喝過芭樂美梅，正是這杯飲料讓我決定要為他寫一篇 blog。 芭樂美梅是一杯冰沙，味道上很完美的將芭樂與梅子結合，就像在吃甘梅芭樂。口感是很完美的冰沙，不會有過大的冰渣，也不會太快融化。 This is perfect，可以排上我喝過最好喝的飲料第一名。</p>
+<p>總而言之，來杯果豬是一間很推薦的飲料店，老闆很客氣，飲料很好喝，特別是冰沙系列。</p>
+<h2 id="價位"><a href="#價位" class="headerlink" title="價位"></a>價位</h2><p>我覺得比其他飲料店貴一點點，大概$5~10的價格，奶類都滿貴的，但好像用比較好的牛奶 ( ?</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Drink</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【食記】斜角古早味綿綿冰</title>
+    <url>/2024/07/17/Food/tilt-corner/</url>
+    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WkjiZiGo47XRph2t9">300新竹市東區南大路393號</a></p>
+<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在南大路上，可以從清大校本部搭 83 號公車或南大校車，再走一下下就到了。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>走進這間店是一個意外的行程，卻帶給了我非常難忘的收穫。</p>
+<p>在吃飽的當下，我們路過了這間店，內用環境看起來非常舒適，我們也想找個地方坐坐，於是入內。</p>
+<p>看到價格的當下覺得實在是非常便宜，3 球冰淇淋才 $60，真的是非常超值。</p>
+<p>冰淇淋送上時，碗是冰的，感覺像是特別冰過減緩冰淇淋的融化。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/tilt_corner/0.png" loading="lazy">
+</figure>
+冰淇淋的口感並不像義式冰淇淋那樣綿密，我覺得反而有帶點冰沙的口感，但確實是冰淇淋，很難以敘述，我想是因為製作過程沒有加入很多奶油的緣故，也因此斜角的冰淇淋不會膩，可以一吃再吃。
+個人推薦情人果和牛奶，牛奶非常濃郁，一定要點；情人果酸酸甜甜很好吃。
+
+<p>老闆態度非常好，內用環境也很涼快舒適。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/tilt_corner/1.png" loading="lazy">
+</figure>
+
+<p>路過偶然走進來的店，彷彿像發現了寶藏一樣，意外的驚喜與難忘。</p>
+]]></content>
+      <categories>
+        <category>Food</category>
+      </categories>
+      <tags>
+        <tag>Food</tag>
+        <tag>Hsinchu</tag>
+        <tag>Ice cream</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【心得】汽車駕照</title>
     <url>/2025/06/07/Review/driver-license/</url>
     <content><![CDATA[<p>好久沒更新網頁了，來分享一下學期中考汽車駕照的心得，這篇文會包含報名需要的資料、駕訓班都在做什麼、考試當天的流程，還有最後就是我的心得。</p>
@@ -963,35 +1950,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【食記】100 種味道</title>
-    <url>/2024/07/20/Food/100-taste/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/KCAXkX54B8N8S7yX9">300新竹市東區三民路35號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在巨城旁邊，可以搭車到東門過小後沿著 <a href="https://maps.app.goo.gl/XbxUASJbF2fGPJxf7">隆恩圳親水公園</a> 走就會到了</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>久聞盛名，每次經過都想進去吃，進去後才發現要提前訂位才能內用，不過拿著甜點到旁邊親水公園吃也是不錯的選擇。</p>
-<p>內用低消一杯飲料，很奇怪，明明是甜點店，所以加上甜點後一次用餐超過 $300。價值這種東西是看個人，總之我是覺得太貴了。</p>
-<figure class="blog-img-box">
-    <img src="/images/100_taste/1.png" loading="lazy">
-</figure>
-
-<p>有非常多種類的甜點提供選擇，當天我點了綠葡萄蜂蜜優格塔。</p>
-<figure class="blog-img-box">
-    <img src="/images/100_taste/0.png" loading="lazy">
-</figure>
-
-<p>甜點很好吃，水果新鮮大顆，蜂蜜優格跟綠葡萄真的很搭，就算三個月前吃的，嘴裡還依稀記得那個味道。</p>
-<p>飲料我點西西里檸檬氣泡咖啡，超級好喝，好喝到我之後還特別去 7-11 點一樣的喝。</p>
-<p>總而言之，是一間很棒的甜點店，氣氛很好，甜點好吃、飲料好喝，但內用的消費會很高，可以自己斟酌。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Dessert</tag>
-        <tag>Hsinchu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【心得】2024 梅竹黑客松</title>
     <url>/2024/10/24/Review/meichu-hackathon/</url>
     <content><![CDATA[<p>今年的黑客松對我而言是充滿了驚喜的一屆。</p>
@@ -1061,602 +2019,6 @@
         <tag>CS</tag>
         <tag>Review</tag>
         <tag>Hackathon</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】九添福牛肉麵</title>
-    <url>/2025/03/25/Food/9tainfu/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/APu5Mg97tMVpCewN9">300新竹市北區西大路436號1樓</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車到東門市場再走大約 10 分鐘，或者直接騎車去，騎樓有位置可以停。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>我一進到店內就感受到老闆一定有很嚴重的潔癖，我還真的沒有看過一間這麼乾淨的牛肉麵店。</p>
-<p>看到評論推薦牛腩麵，就點一份來看看。也順手夾了一些滷味。</p>
-<p>滷味先上菜，熱騰的食物淋上蒜蓉醬油，散發出的光澤光看著就感覺很好吃（看起來太好吃了，來不及拍照就開動了哈哈哈）。食材本身滷得剛好，有些滷味的蘿蔔就沒有軟，或者其他食材的熟度控制不好，但這間的都恰到好處。</p>
-<figure class="blog-img-box">
-    <img src="/images/9tainfu/1.png" loading="lazy">
-</figure>
-
-
-<p>他們的蒜蓉醬非常特別，原本滷味可能是中上水準，但醬油加上去後晉升到我會很想再來吃的程度。</p>
-<p>接著是今天的重點－牛腩麵。牛肉非常多，原本覺得 $230 很貴，但以這個肉量來講的話，我會覺得算適中的價格，但老闆有沒有考慮肉少一點，價格也便宜一點阿&#x3D;&#x3D;</p>
-<figure class="blog-img-box">
-    <img src="/images/9tainfu/0.png" loading="lazy">
-</figure>
-
-<p>牛腩很多吃起來很爽，有些很軟嫩，有些會需要嚼比較久，但吃起來還是很爽，不過總體而言並沒有說到很好咀嚼，吃多的話嘴巴可能會痠。</p>
-<p>麵體中規中矩，湯頭甘甜好喝，重點是完全不油，如果不喜歡那種很油的牛肉麵的人，很推薦來這間吃。</p>
-<p>另外還有紅燒牛油可以自行添加，我加了一些後湯頭變得更甘與香。</p>
-<p>另外，google map 5 星評論會送蒜泥白肉，我本來以為只是一小盤敷衍，結果來一大盤，真有誠意。</p>
-<figure class="blog-img-box">
-    <img src="/images/9tainfu/2.png" loading="lazy">
-</figure>
-
-<p>總體而言，這是一間非常乾淨的牛肉麵店，桌子乾淨到我願意上去躺的程度，牛肉麵本身不油膩，如果想吃甘甜但又負擔不重的牛肉麵，這間會是很棒的選擇，滷味也很好吃，推薦。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Beef Noodle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】三山燒肉</title>
-    <url>/2024/12/08/Food/3mountain/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kVtSPDEHB3bWat22A">804高雄市鼓山區博愛二路337號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><ul>
-<li>捷運：巨蛋站下車後走 5 分鐘，或者凹子底也可以到</li>
-<li>輕軌：愛河之心站下車後走 10 分鐘</li>
-</ul>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>外觀跟內裝都是全白，以燒肉店來說非常特別。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/1.png" loading="lazy">
-</figure>
-（此圖片來自網路，若有違權請告知，會撤除）
-
-<p></p>
-
-<p>使用 QRcode 點餐，有平板可以參考照片。</p>
-<p>當天我們四人用餐，點的是日美澳牛肉套餐，店員推薦說可以吃到各個國家的肉。套餐除了主餐一大盤牛肉外還有前餐雞腿肉、牛肉、松板豬如下圖。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/2.png" loading="lazy">
-</figure>
-
-<p>中間那層牛肉推薦是烤一烤後拿起來放一分鐘，剪完再下去考一次，滿驚豔的，以前對這種肉印象滿差，因為通常都會很難嚼也不太好吃，但這次的吃起來很夠味，而且很 juicy。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/2-5.png" loading="lazy">
-</figure>
-
-<p>另外還有送上蔬果盤，沾醬還滿好吃的。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/3.png" loading="lazy">
-</figure>
-
-<p>在吃前餐的同時，牛肉湯也送上了，除了牛肉以外還有蔥、洋蔥、薑等等的料。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/4.png" loading="lazy">
-</figure>
-
-<p>牛肉湯非常好喝，很甘甜肉也不少，喝了很多碗。</p>
-<p>接著就是本日重點的主餐牛肉盤。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/0.png" loading="lazy">
-</figure>
-
-<p>誇張的肉量鋪在盤面上，油花非常漂亮。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/5.png" loading="lazy">
-</figure>
-
-<p>肉沒有調味過，直接烤起來就非常好吃，吃起來就像是有調味一樣，甚至不用沾醬味道就十分足夠。我可能不是很會形容，但肉質我覺得同價位的話比茶六、屋馬要來得好，且好上不少。</p>
-<p>另外我們還點了薄牛舌，這個超級難烤，我們烤得支離破碎黏在烤網上，最後請店員來幫我們烤哈哈哈。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/6.png" loading="lazy">
-</figure>
-
-<p>牛舌很好吃，但下次要點厚的，因為薄的真的太難烤了。</p>
-<p>用餐期間還有送上蜂蜜檸檬沙瓦，我點的飲料梅子氣泡飲非常好喝，我喝過很多梅子氣泡飲，但這是我喝過最好喝的，酸甘甜，比一般的還酸一點，但很好喝。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/7.png" loading="lazy">
-</figure>
-
-<p>最後就是甜點，我點的是漬芭樂，金桔淋在芭樂上味道非常好吃，梅汁淋在剉冰上味道也十分足夠，2 種味道不衝突很和諧，搭配起來很解膩。</p>
-<figure class="blog-img-box">
-    <img src="/images/3mountain/8.png" loading="lazy">
-</figure>
-
-<p>店內冷氣開很強，吃冰會吃到有點冷哈哈哈，身體都在抖了。</p>
-<p>我們還有吃銅鑼燒跟黑糖剉冰，都很不錯。</p>
-<p>價格部份 4 人點 3 人套餐再單點（建議不要點到剛好的人數，他們的套餐份量有點多），加服務費後一人大概 $1300 左右，不便宜，但以今天的體驗來說我會覺得值得，之後也會願意再來。</p>
-<p>很棒的一餐。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Kaohsiung</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】姜滿堂</title>
-    <url>/2024/08/23/Food/chan-man-tong/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/bAeJLC2LvEKeesGw7">300194新竹市東區中央路229號8樓</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>巨城 8 樓，公車在東門國小下車可以到，火車站也有接駁車。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>姜滿堂是一間非常令人驚艷的燒肉店，雖然價格不低（每人約 $800 ~ $1000），但肉質非常好，食物也很美味。</p>
-<p>餐前有小菜，種類多而且好吃，也可以自助續菜。</p>
-<figure class="blog-img-box">
-    <img src="/images/chan_man_tong/1.png" loading="lazy">
-</figure>
-
-<p>一般都是點套餐，有分牛豬、全牛等等，我們通常是點全牛。</p>
-<figure class="blog-img-box">
-    <img src="/images/chan_man_tong/2.png" loading="lazy">
-</figure>
-
-<p>全牛套餐有：</p>
-<ul>
-<li>肩小排</li>
-<li>里肌</li>
-<li>翼板</li>
-<li>牛五花</li>
-<li>帶骨牛小排</li>
-</ul>
-<p>上餐時肉類都是在冷凍狀態，但也不會太凍，去吃很多次了，品質非常穩定，不會有解凍過多或者凍壞的問題，肉的品質也都是一如既往的好。肉本身也有做過調味，味道足夠。</p>
-<p>雙人套餐肉量很足夠，吃完很滿足而且很飽，超爽，肉質真的很好。</p>
-<figure class="blog-img-box">
-    <img src="/images/chan_man_tong/3.png" loading="lazy">
-</figure>
-
-<p>服務部分都還不錯，換烤網積極，有問題詢問也親切回覆。</p>
-<p>附餐我們只點過炸雞年糕，不誇張，這是我吃過最好吃的，年糕有薄薄的一層脆外殼，裹上甜辣醬汁，真的超好吃，雞肉也是，就算裹著醬汁，也還是酥脆，但裡面的肉卻是軟嫩的，我覺得他的炸雞年糕根本可以直接獨立開一間店。</p>
-<figure class="blog-img-box">
-    <img src="/images/chan_man_tong/0.png" loading="lazy">
-</figure>
-
-<p>飲料我們都喝氣泡水，水蜜桃的還不錯，檸檬的滿酸的，但很解膩，推！</p>
-<p>總而言之，姜滿堂是一間價格不低，但品質非常穩定，吃完會感到很滿足且開心的韓式烤肉店。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】老陳海南雞飯</title>
-    <url>/2024/07/20/Food/chen-hainen/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/UHy77i9QNpE1iVcu8">402台中市南區復興路三段300號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>我們那天從火車站走過去走很久，後來騎腳踏車回去就很快。</p>
-<p>所以建議可以騎腳踏車沿建國路的腳踏車道騎，海南雞店斜對面有 Ubike 停車站。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>平日中午約11.30去的，大概等5分鐘，但開始用餐的時候外面就排很多人了。</p>
-<p>點了 $125 綜合飯（海南雞+打拋豬）。</p>
-<figure class="blog-img-box">
-    <img src="/images/chen_hainen/0.png" loading="lazy">
-</figure>
-
-<p>海南雞很嫩，配醬非常好吃，醬真的調得超級好，很搭。</p>
-<p>打拋豬酸辣開胃，台灣的打拋豬很少有做出那個酸酸開胃的感覺，覺得很好吃。</p>
-<p>配菜部分新鮮，脆，不錯，比較沒有調味。</p>
-<p>雞湯好喝，不水，大概像屋馬之類的燒肉店那樣。</p>
-<p>總體而言很棒的餐廳，不貴而且肉量多，很好吃，非常推薦。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Taichung</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】村豚拉麵</title>
-    <url>/2024/08/07/Food/chunton/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/Pw8Yz8GzzogmdPn1A">830高雄市鳳山區五權南路226號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>高雄捷運橘線鳳山站下車可以到。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>很少看到可以線上抽號碼牌的拉麵店，我覺得這個設計很不錯，可惜線上無法知道候位進度。</p>
-<p>今天點的是特盛雞豚拉麵，湯底是醬油豚骨。<br>湯底部分，是我很喜歡的豚骨類型，不是很膩很濃稠的，入口是很濃的豚骨香，但並不會過於黏膩。</p>
-<p>肉的話有三種，雞肉味道很不錯，就一般常見的舒肥雞胸；叉燒的話非常好吃，炙燒的味道很香。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/chunton/0.png" loading="lazy">
-</figure>
-
-<p>比較少吃到還有菠菜的拉麵，我覺得這個搭配很不錯。</p>
-<p>總體而言，麵湯是我很喜歡的不會過於濃膩的豚骨湯、麵體表現一般、叉燒好吃的拉麵店，可以線上抽取號碼牌是這間的加分之處。</p>
-<p>價格部分我覺得中規中矩，但我已經被新竹物價洗腦了，價格並不是能很客觀的以高雄物價判斷。</p>
-<p>總之，值得二訪，推薦。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Kaohsiung</tag>
-        <tag>Ramen</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】CURRY WU日式熟成濃咖哩專賣店</title>
-    <url>/2024/07/17/Food/curry-wu/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/NER8KfbYatvDi8gd9">300新竹市北區興南街28號1樓</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在新竹大遠百旁邊，先到大遠百往旁邊巷子走就會到了。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一間隱身在巷子中的店，這條巷子令人意外的有很多吃的。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/5.png" loading="lazy">
-</figure>
-
-<p>我們提前 20 分鐘左右到場，當天到開店後都還有位置，但過一下子之後位置就滿了。</p>
-<p>店內空間比想像中的大，可以看得出老闆 &amp; 老闆娘的用心裝潢。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/4.png" loading="lazy">
-</figure>
-
-<p>我們是第一組，但到餐點送上還是等了約 10 分鐘，應該是人手比較少，所以動作比較慢。<br>點餐時老闆很熱情的介紹他們的咖哩與主食，跟老闆聊天很開心。</p>
-<p>我們點了唐揚雞咖哩定食跟牛奶豬排咖哩定食。</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/curry_wu/1.png" loading="lazy">
-                </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/curry_wu/3.png" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>老闆說他的唐揚雞是全新竹最嫩，不嫩退費。果然非常嫩，皮薄多汁，超級好吃。<br>豬排大得跟不用錢一樣，厲害的是即使吃到最後，皮跟肉也沒有分離，且完全不會有豬排的膩，真的很棒。<br>咖哩特別濃，濃到像是固體一樣，但完全不會膩，可以感覺到咖哩真的有下很大一番功夫，老闆說他去日本學了 6 年。<br>旁邊的配菜也很棒，很特別的味噌湯與好吃的海帶絲（？），天婦羅也是最頂的那種。<br>飯後居然還有冰淇淋，有種付了定食價格但多被招待了一份的感覺，冰淇淋的出現完全超出我的預料。</p>
-<figure class="blog-img-box">
-    <img src="/images/curry_wu/0.png" loading="lazy">
-</figure>
-
-<p>總體而言，是一間很棒的店，而且不像沐嵐要排隊很久，害我打著打著又想吃了 na…</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Curry</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】丁滷味</title>
-    <url>/2024/12/08/Food/dinlooway/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WbJPkvRXaSSXba8Y6">813高雄市左營區崇德路243號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>捷運生態園區站走路 7 分鐘可到</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從小吃到大的滷味店，以為是很正常的口味，直到長大後吃了其他間，才知道這間的味道有多厲害。</p>
-<figure class="blog-img-box">
-    <img src="/images/dinlooway/0.png" loading="lazy">
-</figure>
-
-<p>滷得超級入味，滷汁掛在料上，超級好吃，不是只有滷表面的那種。</p>
-<p>所有食材都煮得很用心，需要不同烹飪時間的會分批下鍋，像是豬肉就不會太老，滷得很嫩，很厲害。</p>
-<p>特別要提一下他們的滷蘿蔔，其他間滷味店都是放酸菜之類的，只有這間我吃到是放蘿蔔，他們的滷蘿蔔超厲害，每次我都請他們加多一點。</p>
-<p>我覺得所有食物都很好吃，最近發現他們開始賣熱炒，看評價是說很好吃，下次去吃看看。</p>
-<p>最後，要再特別提他們的滷科學麵，很鹹香超好吃，真的超讚，必點。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Kaohsiung</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】Dor,留手工義大利麵</title>
-    <url>/2024/08/10/Food/dorliu/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kPL7NB7W4rKA9mmr9">813高雄市左營區新莊一路133號1樓</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><ul>
-<li>捷運：高雄捷運巨蛋站下車後騎 Ubike 可以到</li>
-<li>火車：左營（舊城）</li>
-</ul>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從小吃到大的義大利麵店，主打的是手工義大利麵。</p>
-<p>這間義大利麵的口感很有嚼勁，很與眾不同，我滿喜歡的。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/dorliu/0.png" loading="lazy">
-</figure>
-
-<p>這次用餐吃的是煙花女義大利麵，餐點敘述說酸辣鹹，但我覺得他三樣都沒做到，口味上來講是這間目前我吃過最失望的，這道餐點我覺得很普通。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/dorliu/1.png" loading="lazy">
-</figure>
-
-<p>之前有點過藍乳酪奶油雞肉義大利麵跟牛肝菌菇燉飯等等的其他品項，印象中都非常美味。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/dorliu/2.png" loading="lazy">
-</figure>
-
-<p>炸物好吃，就是一般的炸物拼盤。</p>
-<p>濃湯好喝，是很濃的那種，味道很好；水果醋沙拉還不錯，最上層撒上起司粉再淋上水果醋，我覺得水果醋的味道很好。</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/dorliu/3.png" loading="lazy">
-                </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/dorliu/4.png" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>價格算是中規中矩，但口味上我覺得很值得一試，且環境很不錯，可以坐下來聊聊天。（雖然這次吃飯隔壁桌吵到我講話連坐對面的都聽不到，希望之後不會再遇到這樣吵雜的用餐環境）</p>
-<p>推薦，來高雄可以來吃看看。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Pasta</tag>
-        <tag>Kauhsiung</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】喜劇收場</title>
-    <url>/2024/07/17/Food/happy-ending/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/z4SyeGDCKmju7A8a8">300新竹市東區三民路2巷5號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>搭公車 (藍1, 5608等等) 到東門國小下車，喜劇收場就在旁邊。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>位置很多，通常不需要等待，來吃之前可以去FB粉絲團確認有沒有休假</p>
-<p>漢堡麵包很有彈性，外表有光澤，麵味很香，就算只有漢堡皮我也可以吃得很開心，不是普通漢堡的麵包，這點真的很喜歡也覺得這才是漢堡應該有的樣子</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/happy_ending/happy_ending0.jpg" loading="lazy">
-                </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/happy_ending/happy_ending1.jpg" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>漢堡肉跟醬很搭，有很多種類的漢堡，目前吃5、6次左右每次都覺得很好吃，漢堡很有自己的特色。</p>
-<p>炸物酥脆剛好，非常好吃，非常推薦；飲料的話無糖綠不錯，緩解罪惡感</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/happy_ending/happy_ending2.jpg" loading="lazy">
-            </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/happy_ending/happy_ending3.jpg" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>環境很有自己的特色，很喜歡觀察老闆是怎麼佈置的，特別是廁所那隻狗，每次都能嚇到女友，我真的太喜歡那隻狗狗了</p>
-<p>CP值很高，200塊左右能吃到很好吃的漢堡跟炸物配飲料，非常推薦</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Burger</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】隱川居酒屋</title>
-    <url>/2024/07/31/Food/inchu/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/kURxJz9X4Bgpququ8">300新竹市東區中正路86號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在東門市場對面，公車一下車就是了。</p>
-<p>5608, 藍 1, 20, 2 號公車等等都可以到。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>位置不少，通常可以直接訂到。</p>
-<p>去了應該不下10次，每次必點雞腿肉串以及日式生牛肉。</p>
-<p>雞腿肉串現烤很香，多汁又好吃，招牌跟明太子都很推，蔥鹽的我個人覺得還好。</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/inchu/1.png" loading="lazy">
-                </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/inchu/3.png" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>日式生牛肉非常好吃，價格稍貴但每次都還是會點，酸酸甜甜的味道配上生牛肉，再夾1、2片洋蔥，人間美味。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/inchu/2.png" loading="lazy">
-</figure>
-
-<p>通常我還會點馬鈴薯燉肉，因為這是我媽的拿手料理，很久沒吃了所以會想點，價格 $100 份量不少，在這間店內份量算多的一道菜。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/inchu/0.png" loading="lazy">
-</figure>
-
-<p>其他料理也都很不錯。</p>
-<p>酒的話我只喝過紅茶梅酒，非常好喝但小小一杯。</p>
-<p>約4、500的居酒屋，非常推薦，很常跟朋友來吃。</p>
-<p>這附近有很多居酒屋，綜合價格跟美味程度，這間在我心中是最高的。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Izakaya</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】沐嵐</title>
-    <url>/2024/07/17/Food/moonlight/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/s2cuPqJGG39swnPt8">300新竹市東區西大路240號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><h4 id="火車站出發"><a href="#火車站出發" class="headerlink" title="火車站出發"></a>火車站出發</h4><p>面向火車站右手邊一直走，穿過竹蓮地下道後就在附近了。</p>
-<h4 id="清大出發"><a href="#清大出發" class="headerlink" title="清大出發"></a>清大出發</h4><p>搭 83 號公車，在西大路口下車，沐嵐就在旁邊。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>如果問我在新竹待了四年，最推薦的一間店，沐嵐會是其中一間，儘管需要排隊很久。</p>
-<p>營業後才來通常要等上一個小時，如果在開店前 30 分鐘提前抵達候位，可以第一批入內用餐，節省很多等待時間。</p>
-<p>餐點部分，餐前有湯，非常好喝，很難以敘述是怎樣的湯，但味道甘甜，每次都會續碗。</p>
-<figure class="blog-img-box">
-    <img src="/images/moonlight/5.png" loading="lazy">
-</figure>
-接著送上主餐，誇張的肉量平舖在咖哩上，視覺上極度震撼，更何況這樣的料理只要 $200 出頭。
-<figure class="blog-img-box">
-    <img src="/images/moonlight/4.png" loading="lazy">
-</figure>
-肉的料理方式多為舒肥，口感極嫩，肉也鮮甜好吃，肉量真的多到會吃到嘴巴痠。
-飯旁有一些生菜及其他副食，咖哩本身並不是很特別，沐嵐雖然說是賣咖哩，但更主要還是靠肉打出名氣。
-<figure class="blog-img-box">
-    <img src="/images/moonlight/2.png" loading="lazy">
-</figure>
-
-<p>在換了新店面後，環境變得很舒適，並不像以前一樣吃得滿身汗還會沾上油煙味。</p>
-<p>總體而言，沐嵐是一間以 CP 值來說還不錯的店（相比 3 年前漲價 $50，3 年前那個價格是真的划算），食物非常好吃，儘管需要排隊很久，但這正是因為他的美味使然，推薦。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Curry</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】辣辣叭麻辣干鍋</title>
-    <url>/2024/08/07/Food/lalapa/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/rFT52x3ZK31BWY5S6">807高雄市三民區大順二路816號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>在輕軌大順民族跟灣仔內站中間，下輕軌後只需要走一下就到了。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>直接說重點，口味非常棒，但價格太貴，因此評價的話我只會給到 3.5 ~ 4 星。</p>
-<p>口味上是很經典的麻辣乾鍋，料的種類跟滷味店相同，不外乎就是蔬菜、麵類、肉類、火鍋料類等等。</p>
-<p>肉的部分當天吃了牛肚、豬肉還有大腸頭，除了火鍋肉片以外的肉類都有事先滷過，我覺得他們事先滷過的食材都非常入味且好吃，鹹香下飯，白飯殺手。</p>
-<p>米血裹著醬汁，又辣又鹹真的超級好吃。特別要提一下他們的豆腐，非常的臭，我很喜歡，大推。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/lalapa/0.png" loading="lazy">
-</figure>
-
-<p>內用有白飯飲料吃到飽，如果覺得太乾還可以加雞湯，不過我沒吃過加雞湯的，不知道味道如何。</p>
-<p>價格部分都是秤重，非常貴，務必做好心理準備，還記得之前 2 個人去吃的時候現金 $700 居然不夠，還要把一些料放回去哈哈哈。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/lalapa/1.png" loading="lazy">
-</figure>
-
-<p>內用空間寬敞、冷氣涼爽，環境很舒適。</p>
-<p>總而言之，這是一間味道非常棒，但價格太貴的麻辣乾鍋店，雖然價格很貴，但真的想吃乾鍋的時候這個價格還是下得了手的，或許就是因為他足夠美味吧。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Kaohsiung</tag>
-        <tag>Dry pot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】來杯果豬</title>
-    <url>/2024/07/17/Food/piggy-drink/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/oLAVp6w3ZyxkyHqy7">30045新竹市東區建新路7號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在清大機車塔對面，走路過去即可。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>從裝潢就可以感覺到老闆跟老闆娘的用心，小小間但很溫馨。</p>
-<p>老闆非常熱情，對飲料有自己的堅持。還記得上次老闆說他比例不小心做錯了，這杯送我們，要再做一杯給我們。於是我們就得到了2杯飲料，而且其實真的喝不出差別。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/piggy_drink/0.jpg" loading="lazy">
-</figure>
-
-<p>有集點活動，似乎每$35可以累積一點，累積10點後可以折抵$35。</p>
-<p>飲料我們只有喝過芭樂美梅，正是這杯飲料讓我決定要為他寫一篇 blog。 芭樂美梅是一杯冰沙，味道上很完美的將芭樂與梅子結合，就像在吃甘梅芭樂。口感是很完美的冰沙，不會有過大的冰渣，也不會太快融化。 This is perfect，可以排上我喝過最好喝的飲料第一名。</p>
-<p>總而言之，來杯果豬是一間很推薦的飲料店，老闆很客氣，飲料很好喝，特別是冰沙系列。</p>
-<h2 id="價位"><a href="#價位" class="headerlink" title="價位"></a>價位</h2><p>我覺得比其他飲料店貴一點點，大概$5~10的價格，奶類都滿貴的，但好像用比較好的牛奶 ( ?</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Drink</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】QQ 圓</title>
-    <url>/2024/07/20/Food/qqdumpling/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/AhSwifYeNhkNZKaj9">300新竹市東區光復路二段378號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在清大正對面。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>一碗 $35 很划算，QQ 圓口味有分：</p>
-<ul>
-<li>水果（奇異果、草莓、百香果）</li>
-<li>芋頭、地瓜、紅豆、黑芝麻</li>
-<li>牛奶</li>
-<li>香草</li>
-<li>綜合</li>
-</ul>
-<p>除了口味之外，還有分冰的跟熱的。<br>冰的夏天多為鳳梨冰，前陣子有桑葚冰，味道都很棒，比較像是清冰，不會太甜，搭配 QQ 軟軟的 QQ 圓，真的超香超好吃。<br>熱的是水果茶，冬天來上暖暖的一碗真的很溫暖，不得不說水果茶真的很香。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/qqdumpling/0.png" loading="lazy">
-</figure>
-
-<p>QQ 圓很有嚼勁，愈嚼愈香，真的很好吃，是別的地方吃不到的。</p>
-<p>通常是下午 15, 16 點左右開始賣（詳細時間不清楚），直到賣完為止。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/qqdumpling/1.png" loading="lazy">
-</figure>
-
-<p>阿公說以前還有賣鹹的，但會做鹹配料的老婆走了，阿公說他自己炒不出那個味道，之後就停賣了。</p>
-<p>這間 QQ 圓為我的四年大學生活添加了不少美好回憶，很好吃，超級推薦。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】斜角古早味綿綿冰</title>
-    <url>/2024/07/17/Food/tilt-corner/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/WkjiZiGo47XRph2t9">300新竹市東區南大路393號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>就在南大路上，可以從清大校本部搭 83 號公車或南大校車，再走一下下就到了。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>走進這間店是一個意外的行程，卻帶給了我非常難忘的收穫。</p>
-<p>在吃飽的當下，我們路過了這間店，內用環境看起來非常舒適，我們也想找個地方坐坐，於是入內。</p>
-<p>看到價格的當下覺得實在是非常便宜，3 球冰淇淋才 $60，真的是非常超值。</p>
-<p>冰淇淋送上時，碗是冰的，感覺像是特別冰過減緩冰淇淋的融化。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/tilt_corner/0.png" loading="lazy">
-</figure>
-冰淇淋的口感並不像義式冰淇淋那樣綿密，我覺得反而有帶點冰沙的口感，但確實是冰淇淋，很難以敘述，我想是因為製作過程沒有加入很多奶油的緣故，也因此斜角的冰淇淋不會膩，可以一吃再吃。
-個人推薦情人果和牛奶，牛奶非常濃郁，一定要點；情人果酸酸甜甜很好吃。
-
-<p>老闆態度非常好，內用環境也很涼快舒適。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/tilt_corner/1.png" loading="lazy">
-</figure>
-
-<p>路過偶然走進來的店，彷彿像發現了寶藏一樣，意外的驚喜與難忘。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Hsinchu</tag>
-        <tag>Ice cream</tag>
       </tags>
   </entry>
   <entry>
@@ -1810,6 +2172,71 @@
       </tags>
   </entry>
   <entry>
+    <title>【遊記】將軍村</title>
+    <url>/2025/08/09/Travel/general-village/</url>
+    <content><![CDATA[<p>這次的旅程來到了新竹的 <a href="https://maps.app.goo.gl/QAo9qRLJpBYHmDuv8">將軍村</a>，就在清大附近走路約 10 mins 就可以到。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Travel/general-village/2.jpg" loading="lazy">
+</figure>
+
+<p>將軍村雖然不大，但卻充滿悠閒的氛圍，我覺得偶爾的假日走來這裡拍拍照放鬆，或者來杯下午茶很 chill，緩和一下平日疲憊的身軀，附近也有 Nova、燦坤等等，可以逛一整個下午。</p>
+<p>我們來的這個週末只有零星的幾個攤販，不過似乎可以參考將軍村的 <a href="https://www.facebook.com/GVillage.tw">FB 粉絲團</a>，不定期會有市集的樣子，如果後續還有機會來的話再來更新市集的心得。</p>
+<p>這次來這邊的目的主要是來測試我買的新鏡頭 XD，因為是 70200 f4，所以等等可能不會看到廣角的畫面，多半會是特寫。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Travel/general-village/3.jpg" loading="lazy">
+</figure>
+
+<p>將軍村有很多紅磚，或者比較眷村氛圍的點，用這些作為背景可以拍出很好看的照片。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Travel/general-village/1.jpg" loading="lazy">
+</figure>
+
+<p>附近拍了一些照片後，接著我們到了日出咖啡來喝一杯下午茶。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Travel/general-village/4.jpg" loading="lazy">
+</figure>
+
+<p>日出咖啡的內裝很漂亮，眷村改建的配上一些現代簡單的裝潢，讓用餐氛圍很雅致（不過因為沒有廣角，這邊就沒有內部的照片了）。</p>
+<p>巴斯克乳酪很好吃，內裡是膏狀流心的那種，外層焦香，是我吃過數一數二好吃的巴斯克，西西里咖啡也很好喝，很棒的一間咖啡廳，推推。</p>
+<p>離開日出咖啡後，我們又在附近拍了些照片。</p>
+<section class="testimonials">
+    <ul class="testimonials-list has-scrollbar">
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/Travel/general-village/5.jpg" loading="lazy">
+                </figure>
+        </li>
+        <li class="blog-image-item">
+            <figure class="blog-img-box">
+                <img src="/images/Travel/general-village/6.jpg" loading="lazy">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+<p>有點像沙龍照 XD。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Travel/general-village/7.jpg" loading="lazy">
+</figure>
+
+<p>將軍村的很多角落都很值得留影，有種人文的美。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Travel/general-village/8.jpg" loading="lazy">
+</figure>
+
+<p>最後離開前彩虹出來迎接我們，幫這個開心的下午畫上完美的句點。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Travel/general-village/9.jpg" loading="lazy">
+</figure>]]></content>
+      <categories>
+        <category>Travel</category>
+      </categories>
+      <tags>
+        <tag>Hsinchu</tag>
+        <tag>Travel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【遊記】菁桐</title>
     <url>/2024/08/29/Travel/jingtone/</url>
     <content><![CDATA[<p>離開 <a href="/2024/08/29/Travel/monkey-tong">侯硐</a> 後，我們往今天的下一站 - 菁桐邁進。</p>
@@ -1899,103 +2326,6 @@
         <tag>Train</tag>
         <tag>New Taipei</tag>
         <tag>Lanterm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【食記】波市多拿坡里披薩</title>
-    <url>/2024/08/07/Food/posto/</url>
-    <content><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://maps.app.goo.gl/29vCbRkJuDVsKufR7">813高雄市左營區至聖路289號</a></p>
-<h2 id="交通方式"><a href="#交通方式" class="headerlink" title="交通方式"></a>交通方式</h2><p>高雄捷運凹子底捷運站出來走 2, 3 分鐘就到了。</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這是一間，我吃過最好吃的披薩店。</p>
-<p>店內裝潢滿漂亮，可以好好坐下來用餐輕鬆聊天，但有限制用餐時間，印象中是 90 分鐘，很夠。</p>
-<p>菜單選擇不多，但我想他們每樣都很好吃。</p>
-<p>今天點的是菠菜培根蛋黃披薩，披薩餅皮非常薄，薄到料會掉下來的那種。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/posto/0.png" loading="lazy">
-</figure>
-
-<p>味道上真的非常美味，菠菜培根我覺得好吃，但沒有到印象中辣味牛肉的驚艷，雖然辣味牛肉是約一年前吃的，但那個味道我還記得，真的很好吃。</p>
-<p>套餐 $100 含沙拉、紅茶、小菜。小菜的話我很推薦烤馬鈴薯，我覺得很好吃。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/posto/1.png" loading="lazy">
-</figure>
-
-<p>價格部分中規中矩，但披薩分量很多，如果 3 個人分 2 片披薩，這樣 CP 值就算不錯。</p>
-<p>很推薦，交通方便、味道美味，一定要來吃看看。</p>
-]]></content>
-      <categories>
-        <category>Food</category>
-      </categories>
-      <tags>
-        <tag>Food</tag>
-        <tag>Kaohsiung</tag>
-        <tag>Pizza</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【遊記】將軍村</title>
-    <url>/2025/08/09/Travel/general-village/</url>
-    <content><![CDATA[<p>這次的旅程來到了新竹的 <a href="https://maps.app.goo.gl/QAo9qRLJpBYHmDuv8">將軍村</a>，就在清大附近走路約 10 mins 就可以到。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/Travel/general-village/2.jpg" loading="lazy">
-</figure>
-
-<p>將軍村雖然不大，但卻充滿悠閒的氛圍，我覺得偶爾的假日走來這裡拍拍照放鬆，或者來杯下午茶很 chill，緩和一下平日疲憊的身軀，附近也有 Nova、燦坤等等，可以逛一整個下午。</p>
-<p>我們來的這個週末只有零星的幾個攤販，不過似乎可以參考將軍村的 <a href="https://www.facebook.com/GVillage.tw">FB 粉絲團</a>，不定期會有市集的樣子，如果後續還有機會來的話再來更新市集的心得。</p>
-<p>這次來這邊的目的主要是來測試我買的新鏡頭 XD，因為是 70200 f4，所以等等可能不會看到廣角的畫面，多半會是特寫。</p>
-<p>既然是長焦鏡頭，那就先拍一點人像吧～</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/Travel/general-village/3.jpg" loading="lazy">
-</figure>
-
-<p>將軍村有很多紅磚，或者比較眷村氛圍的點，用這些作為背景可以拍出很好看的照片。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/Travel/general-village/1.jpg" loading="lazy">
-</figure>
-
-<p>附近拍了一些照片後，接著我們到了日出咖啡來喝一杯下午茶。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/Travel/general-village/4.jpg" loading="lazy">
-</figure>
-
-<p>日出咖啡的內裝很漂亮，眷村改建的配上一些現代簡單的裝潢，讓用餐氛圍很雅致（不過因為沒有廣角，這邊就沒有內部的照片了）。</p>
-<p>巴斯克乳酪很好吃，內裡是膏狀流心的那種，外層焦香，是我吃過數一數二好吃的巴斯克，西西里咖啡也很好喝，很棒的一間咖啡廳，推推。</p>
-<p>離開日出咖啡後，我們又在附近拍了些照片。</p>
-<section class="testimonials">
-    <ul class="testimonials-list has-scrollbar">
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/Travel/general-village/5.jpg" loading="lazy">
-                </figure>
-        </li>
-        <li class="blog-image-item">
-            <figure class="blog-img-box">
-                <img src="/images/Travel/general-village/6.jpg" loading="lazy">
-            </figure>
-        </li>
-    </ul>
-</section>
-
-<p>有點像沙龍照 XD。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/Travel/general-village/7.jpg" loading="lazy">
-</figure>
-
-<p>將軍村的很多角落都很值得留影，有種人文的美。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/Travel/general-village/8.jpg" loading="lazy">
-</figure>
-
-<p>最後離開前彩虹出來迎接我們，幫這個開心的下午畫上完美的句點。</p>
-<figure class="blog-img-box" data-testimonials-item>
-    <img src="/images/Travel/general-village/9.jpg" loading="lazy">
-</figure>]]></content>
-      <categories>
-        <category>Travel</category>
-      </categories>
-      <tags>
-        <tag>Hsinchu</tag>
-        <tag>Travel</tag>
       </tags>
   </entry>
   <entry>
@@ -2145,337 +2475,6 @@
         <tag>Train</tag>
         <tag>New Taipei</tag>
         <tag>Cat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【學記】使用 Docker 建立執行環境</title>
-    <url>/2024/08/11/Learning/docker-env/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我們時常會遇到一份 project 需要執行在與本機不同的環境下，舉例而言：</p>
-<blockquote>
-<p>NachOS 是一份教學用 OS 軟體，需要執行在 32 bits system 上，而本機環境是 64 bits architecture。<br>我們需要一份可以跑 NachOS 的環境，且 run 在該環境的 NachOS 要與本地的同步，以方便之後交作業。</p>
-</blockquote>
-<p>若想要在本地架設 NachOS 執行環境的話，會需要以下：</p>
-<ul>
-<li>開啟支援 32 bits 的功能</li>
-<li>clone 下程式碼</li>
-</ul>
-<p>等等操作，其中可能會導致本地環境變亂，或者影響其他 project 的環境。</p>
-<p>此時，若使用 Docker，我們可以為某份 project 創造專門的執行環境。</p>
-<h3 id="Start-Container"><a href="#Start-Container" class="headerlink" title="Start Container"></a>Start Container</h3><p>要創建一個執行環境，我們需要透過 Docker create 一個 container。</p>
-<blockquote>
-<p>可以將 container 看成輕量化的虛擬機。</p>
-</blockquote>
-<p>如果要從 0 開始 build 一個 container，可以參考網路上的<a href="https://philipzheng.gitbook.io/docker_practice">其他教學</a>，但這裡我們從 <a href="https://hub.docker.com/search">Docker Hub</a> 使用現成的，這也是 Docker 的一大好處。</p>
-<p>這裡以執行 NachOS 為例，<a href="https://philipzheng.gitbook.io/docker_practice">nwtgck&#x2F;nachos-build</a> 是一份別人 build 好的 Docker image，我們可以透過以下指令建立起一個新的 container。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it nwtgck/nachos-build</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Note: </p>
-<ul>
-<li>Docker image 可以看成 container 的藍圖，每個 container 會基於 image 建立，而建立後成為一個獨立的 instance，後續的操作就與 images 無關。</li>
-<li>-it 的 flag 代表的是互動模式，說明在 container 建立後連線進去該 container 的 terminal。</li>
-</ul>
-</blockquote>
-<p>執行後我們可以看到環境的改變如下，代表我們已經進到這個 container 裡面。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">user@localMachine:/$ docker run -it nwtgck/nachos-build</span><br><span class="line">root@6db3b1879ebf:/#</span><br></pre></td></tr></table></figure>
-
-<p>成功建立起 container 後，在 container 內的任何操作都不會影響到本地的環境。</p>
-<p>但是，要怎麼將 code 帶進 container，還有在 container 內做的修改，要怎麼帶出 container 呢？</p>
-<p>此時，我們要用到 Docker 的 mount volume。</p>
-<h3 id="Mount-Volume"><a href="#Mount-Volume" class="headerlink" title="Mount Volume"></a>Mount Volume</h3><blockquote>
-<p>請注意 mount 要在 container stop 的情況下執行，因此若要 mount 進上面 create 的 container，請先 logout 再執行下面的指令。</p>
-</blockquote>
-<p>透過以下指令我們 run 一個新的 container 並將 NachOS mount 進該 container 內：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it -v ./nachos-4.0:/root/nachos-4.0 -w /root/nachos-4.0 nwtgck/nachos-build</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Note:</p>
-<ul>
-<li>-v flag 代表 mount volume，冒號前為 source dir；冒號後為 destination dir。</li>
-<li>-w flag 代表 working directory，連線進 container 後會直接進入該 dir。</li>
-</ul>
-</blockquote>
-<p>此時，NachOS 就在 container 內且與本機同步，我們可以透過 touch 與 ls 實驗：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root@6db3b1879ebf:/root/nachos-4.0# ls</span><br><span class="line">COPYRIGHT  README-3.4  README-4.0  c++example  code  nachos-4.0  nachos.ps</span><br><span class="line"></span><br><span class="line">root@6db3b1879ebf:/root/nachos-4.0# touch test.txt</span><br><span class="line">root@6db3b1879ebf:/root/nachos-4.0# exit</span><br><span class="line"></span><br><span class="line">user@localMachine:/$ ls ./nachos-4.0/test.txt</span><br><span class="line">./nachos-4.0/test.txt</span><br></pre></td></tr></table></figure>
-
-<p>因此，透過上述 2 項 Docker 的功能，我們實現了為本地的 code 創造任意的執行環境，且與此同時，可以在本機習慣的 IDE 進行操作。</p>
-]]></content>
-      <categories>
-        <category>Learning</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
-        <tag>Virtual</tag>
-        <tag>Learning</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【學記】git stash</title>
-    <url>/2024/07/21/Learning/git-stash/</url>
-    <content><![CDATA[<p><code>git stash</code> 的使用情境為何？讓我們先看一個例子：</p>
-<p>當修改了 working directory 後，目前的 working directory 會成為 dirty 的。<br>而有時候會需要在 dirty 的情況下查看之前的 commit 或 pull，此時有以下 2 種作法：</p>
-<ol>
-<li>將 working directory 的改動 commit 起來暫存</li>
-<li>使用 <code>git stash</code></li>
-</ol>
-<p>假設目前情境如下：</p>
-<blockquote>
-<p>When you are in the middle of something, your boss comes in and demands that you fix something immediately.<br>Traditionally, you would make a commit to a temporary branch to store your changes away, and return to your original branch to make the emergency fix.<br>- from git stash --help</p>
-</blockquote>
-<h3 id="Commit-的做法"><a href="#Commit-的做法" class="headerlink" title="Commit 的做法"></a>Commit 的做法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hack hack hack</span><br><span class="line">git switch -c &quot;my_wip&quot; // create new branch and switch</span><br><span class="line">git commit -a -m &quot;WIP&quot;</span><br><span class="line">git switch master</span><br><span class="line">...</span><br><span class="line">edit something</span><br><span class="line">...</span><br><span class="line">git commit -a -m &quot;Fix in a hurry&quot;</span><br><span class="line">git switch my_wip</span><br><span class="line">git reset --soft HEAD^</span><br><span class="line">... continue hacking ...</span><br></pre></td></tr></table></figure>
-
-<h3 id="Using-git-stash"><a href="#Using-git-stash" class="headerlink" title="Using git stash"></a>Using git stash</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hack hack hack</span><br><span class="line">git stash // actually git stash push</span><br><span class="line">...</span><br><span class="line">edit something</span><br><span class="line">...</span><br><span class="line">git commit -a -m &quot;Fix in a hurry&quot;</span><br><span class="line">git stash pop // explain later</span><br><span class="line">... continue hacking ...</span><br></pre></td></tr></table></figure>
-
-<p>從上面的例子可以看到 <code>git stash</code> 相比使用 commit 再 reset 要來得簡潔許多。</p>
-<p>由此可知，<code>git stash</code> 的用途就是將 local 的修改 stash（存放） 起來，之後可以拿出來使用，就像倉鼠一樣！</p>
-<h2 id="git-stash-的-command"><a href="#git-stash-的-command" class="headerlink" title="git stash 的 command"></a>git stash 的 command</h2><p>而 <code>git stash</code> 有哪些 command 呢？我們可以透過 <code>git stash --help</code> 查看。</p>
-<p>以下將介紹一些常用的 command。</p>
-<h3 id="git-stash-push"><a href="#git-stash-push" class="headerlink" title="git stash push"></a>git stash push</h3><p><code>git stash</code> command 實際上就是 <code>git stash push</code>，想不到吧！<code>git stash</code> 就像是縮寫一樣。</p>
-<p>而為什麼是叫做 push 呢？</p>
-<p>當我們把東西 stash 起來的時候，是存放到一個 list 的結構內，我們可以透過 <code>git stash list</code> 查看。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br><span class="line">stash@&#123;0&#125;: WIP on dog: 053fb21 add dog 2</span><br><span class="line">stash@&#123;1&#125;: WIP on cat: b174a5a add cat 2</span><br></pre></td></tr></table></figure>
-
-<p>所以如果要將東西放上這個 list，使用的是 push。</p>
-<blockquote>
-<p>git stash 只會將已經 tracked 的 files stash 起來，那些新 create 的 files 並不會被 stash。<br>如果要將 Untracked files stash 起來，需要多加一個 flag：<code>git stash push -u</code>，當然，只打 <code>git stash -u</code> 也可以。</p>
-</blockquote>
-<h3 id="git-stash-list"><a href="#git-stash-list" class="headerlink" title="git stash list"></a>git stash list</h3><p>同上所述，這個 command 會將目前的 stash list print 出來。</p>
-<p>形式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br><span class="line">stash@&#123;0&#125;: WIP on dog: 053fb21 add dog 2</span><br><span class="line">stash@&#123;1&#125;: WIP on cat: b174a5a add cat 2</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>stash@{0} 是 stash 的代稱。</p>
-</blockquote>
-<h3 id="git-stash-pop"><a href="#git-stash-pop" class="headerlink" title="git stash pop"></a>git stash pop</h3><p>當我們將東西 stash 起來後，就像倉鼠一樣，將東西存放在頰囊內，是之後要拿出來吃的！</p>
-<p>這時候就可以用到 <code>git stash pop</code> 這個指令，會將 list 最上面的 stash pop 出來，放到目前的 branch 上。</p>
-<p>如果要指定某個要 pop 的 stash，可以在 <code>git stash pop</code> 後面加上 stash 的代稱，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash pop stash@&#123;0&#125;</span><br></pre></td></tr></table></figure>
-
-<p>指定 stash 做操作的 operation 同樣適用在其他類似的 command。</p>
-<h3 id="git-stash-apply"><a href="#git-stash-apply" class="headerlink" title="git stash apply"></a>git stash apply</h3><p>操作同 <code>git stash pop</code>，不過並不會將 stash 從 stash list 移除。</p>
-<h3 id="git-stash-drop"><a href="#git-stash-drop" class="headerlink" title="git stash drop"></a>git stash drop</h3><p>將 stash 從 list 上直接移除，如果沒有指定哪個 stash 的話，會移除最新的 stash，也就是 stash@{0}。</p>
-<h2 id="進階操作"><a href="#進階操作" class="headerlink" title="進階操作"></a>進階操作</h2><h3 id="stash-index"><a href="#stash-index" class="headerlink" title="stash index"></a>stash index</h3><p>如果在原本的 working directory 中，其中有些修改已經 staged 起來，這時候如果要使用 stash，可以透過 <code>git stash push --keep-index</code>。</p>
-<p>在 pop 出來的時候特別指定連 index 也要 restore 即可，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash push --keep-index</span><br><span class="line">git pop --index</span><br></pre></td></tr></table></figure>
-
-<h3 id="指定哪些要-stash"><a href="#指定哪些要-stash" class="headerlink" title="指定哪些要 stash"></a>指定哪些要 stash</h3><p>透過 push 的 --patch (or -p) flag，可以在後面指定要 stash 的 file 的路徑，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash push --patch /path/to/file</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>path 也可以用 regular expression 表示。<br>像是 <code>git stash push --patch **/to/**</code></p>
-</blockquote>
-<p>此時 git 會開啟 interactive 的模式，一一確認這個 hunk（這名詞後文有解釋） 是否要 stash，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">diff --git a/test b/test</span><br><span class="line">index acbd8ae..662d47a 100644</span><br><span class="line">--- a/test</span><br><span class="line">+++ b/test</span><br><span class="line">@@ -10,6 +10,7 @@ test</span><br><span class="line">(...)</span><br><span class="line">+    test</span><br><span class="line">(...)</span><br><span class="line">Stash this hunk [y,n,q,a,d,/,e,?]?</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>[y,n,q,a,d,&#x2F;,e,?] 解釋如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">y - stage this hunk</span><br><span class="line">n - do not stage this hunk</span><br><span class="line">q - quit; do not stage this hunk or any of the remaining ones</span><br><span class="line">a - stage this hunk and all later hunks in the file</span><br><span class="line">d - do not stage this hunk or any of the later hunks in the file</span><br><span class="line">g - select a hunk to go to</span><br><span class="line">/ - search for a hunk matching the given regex</span><br><span class="line">j - leave this hunk undecided, see next undecided hunk</span><br><span class="line">J - leave this hunk undecided, see next hunk</span><br><span class="line">k - leave this hunk undecided, see previous undecided hunk</span><br><span class="line">K - leave this hunk undecided, see previous hunk</span><br><span class="line">s - split the current hunk into smaller hunks</span><br><span class="line">e - manually edit the current hunk</span><br><span class="line">? - print help</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>hunk 是一個 files 中相對應的修改，可以透過 <code>git diff</code> 查看，一般顯示如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">diff --git a/example.txt b/example.txt</span><br><span class="line">index e69de29..d95f3ad 100644</span><br><span class="line">--- a/example.txt</span><br><span class="line">+++ b/example.txt</span><br><span class="line">@@ -1,5 +1,5 @@</span><br><span class="line"> line 1</span><br><span class="line">-line 2</span><br><span class="line">+line 2 modified</span><br><span class="line"> line 3</span><br><span class="line">-line 4</span><br><span class="line">+line 4 modified</span><br><span class="line"> line 5</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>而如果在 <code>git stash push --patch</code> 後面沒有指定路徑的話，git 將會針對所有的 hunk 詢問是否要 stash。</p>
-<p>如果想要省時間， -- 可以直接替代 --patch，用法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash push -- /path/to/file</span><br></pre></td></tr></table></figure>
-<p>或者這樣也可以</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash -- /path/to/file</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果使用 -- 指定路徑，git 將會直接 stash 起來，而不會跳出 interactive 的詢問。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Learning</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
-        <tag>Learning</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【學記】Makefile 語法與變數示範</title>
-    <url>/2024/11/03/Learning/makefile/</url>
-    <content><![CDATA[<h1 id="What-is-Makefile"><a href="#What-is-Makefile" class="headerlink" title="What is Makefile?"></a>What is Makefile?</h1><p>甚麼是 Makefile 呢？</p>
-<p>舉例而言，像是在這份 <a href="https://github.com/smilingweixiao/ChatVerse">Project</a> 中，可以透過 make 指令編譯前端與開啟後端，在下達 make 指令時 make 就會去查找一個叫 Makefile（或者 makefile）的檔案，從其中定義的規則去執行相對應的命令。</p>
-<h1 id="Benefits-of-Makefile"><a href="#Benefits-of-Makefile" class="headerlink" title="Benefits of Makefile?"></a>Benefits of Makefile?</h1><p>使用 Makefile 有許多的好處：</p>
-<ul>
-<li>管理 files 間的 dependency：<br>  假設 a.c depends on b.c，此時若 b.c 修改了則 a.c 也應該要重新編譯（或 link）。</li>
-<li>建立常用指令的捷徑：<br>  在同樣的一份 <a href="https://github.com/smilingweixiao/ChatVerse">Project</a> 中，會需要透過一些 commands 跟程式互動，若 command 很長的話每次都要重打就會很麻煩，此時就可以透過 makefile 來加速流程。</li>
-</ul>
-<h1 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h1><p>說了這麼多，那具體而言要怎麼寫 Makefile 呢？Makefile 語法基本可以分成以下幾部分：</p>
-<ul>
-<li>Rule</li>
-<li>Variable</li>
-<li>Assignment</li>
-<li>Special character</li>
-</ul>
-<h2 id="Rule"><a href="#Rule" class="headerlink" title="Rule"></a>Rule</h2><p>如同上面說的，在下達 make 指令時 make 會到 Makefile 中查找規則，一般 Makefile rule 如下：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">target: target.c</span></span><br><span class="line">	<span class="variable">$(CC)</span> target.c</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>target</code> 就是目標檔案。</li>
-<li>在 <code>target</code> 後可以看到一個冒號，在冒號後的就是 dependency，當 dependency 改變時，make 會偵測到並重新 compile dependency 再 compile target。</li>
-<li><code>$(CC) target.c</code> 就是要執行的命令。</li>
-<li>命令前必須為 tab，也就是 \t 字元。</li>
-</ul>
-<p>所以當執行 <code>make target</code> 的時候，實際是執行 <code>gcc target.c</code>。</p>
-<blockquote>
-<p><code>$(CC)</code> 將 <code>CC</code> 這個變數展開，變數定義會在下文介紹。</p>
-</blockquote>
-<h2 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h2><p>Makefile 中有許多特殊的 variable，像是上面有用到的 CC，而這些 variable 可以大致分為以下這幾種：</p>
-<h3 id="Compile-related-variables"><a href="#Compile-related-variables" class="headerlink" title="Compile related variables"></a>Compile related variables</h3><ul>
-<li>CC：指定要使用的 c compiler，e.g. gcc</li>
-<li>CXX：指定要使用的 c++ compiler，e.g. g++</li>
-<li>LD：指定要使用的 linker，e.g. ld</li>
-</ul>
-<h3 id="Automatic-variables"><a href="#Automatic-variables" class="headerlink" title="Automatic variables"></a>Automatic variables</h3><ul>
-<li>$@：target 檔名，如果 makefile rule 如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">target: target.c</span></span><br><span class="line"><span class="variable">$(CC)</span> target.c</span><br></pre></td></tr></table></figure>
-則 $@ 就代表 <code>target</code>。</li>
-<li>$^：所有的 dependency，如果 makefile rule 如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">target: target.c dependency.c</span></span><br><span class="line"><span class="variable">$(CC)</span> target.c</span><br></pre></td></tr></table></figure>
-則 $^ 會 expand 成 <code>target.c, dependency.c</code>。</li>
-<li>$&lt;：第一個 dependency，如果 makefile rule 如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">target: target.c dependency.c</span></span><br><span class="line"><span class="variable">$(CC)</span> target.c</span><br></pre></td></tr></table></figure>
-則 $&lt; 為 <code>target.c</code>。</li>
-<li>$*：使用在 pattern rule，將在 special character 的章節說明。</li>
-</ul>
-<h3 id="Common-flag-variables"><a href="#Common-flag-variables" class="headerlink" title="Common flag variables"></a>Common flag variables</h3><ul>
-<li>CFLAG：c files 的 compile flags。</li>
-<li>CXXFLAGS：c++ files 的 compile flags。</li>
-<li>LDFLAGS：linker 的 flags。</li>
-</ul>
-<h3 id="Target-specific-variables"><a href="#Target-specific-variables" class="headerlink" title="Target specific variables"></a>Target specific variables</h3><p>可以在 Makefile 中針對特定的 target 定義 variable，如下：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">hw2a: CFLAGS += -pthread</span></span><br><span class="line"><span class="section">hw2b: CC = mpicc</span></span><br><span class="line"><span class="section">hw2b: CXX = mpicxx</span></span><br><span class="line"><span class="section">hw2b: CFLAGS += -fopenmp</span></span><br></pre></td></tr></table></figure>
-
-<p>若 Makefile 如下：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">hw2a: hw2a.cc</span></span><br><span class="line">    <span class="variable">$(CC)</span> <span class="variable">$(CFLAGS)</span> hw2a.cc</span><br></pre></td></tr></table></figure>
-
-<p>則在執行 hw2a 的 rule 時，<code>CFLAGS</code> 就會多上 <code>-pthread</code> 的 flag。因此，可以透過此方法設定對於某些 target file 加上特別的 compile flag。</p>
-<h2 id="Assignment"><a href="#Assignment" class="headerlink" title="Assignment"></a>Assignment</h2><p>在 Makefile 中可以自定義 variables，而 variable 有很多種 assign 的方法：</p>
-<ul>
-<li>Simple assignment (&#x3D;)：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">CC = gcc</span><br></pre></td></tr></table></figure>
-要注意的是，<code>=</code> 這種 assignment 屬於 defer assignment，也就是會等到該變數被使用時才會展開右手邊的內容取得最終的值。</li>
-<li>Immediate assignment (:&#x3D;)：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">DATE := <span class="variable">$(<span class="built_in">shell</span> date)</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>$(shell ...)</code> 可以執行 shell command，上面就是透過 shell 取得時間後存在 <code>DATE</code> 變數中<br>與 <code>=</code> 不同的是，<code>:=</code> 這種 asignment 會立即展開右邊取得最終的值，所以在底下的 Makefile 中：</p>
-</blockquote>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">DATE := <span class="variable">$(<span class="built_in">shell</span> date)</span></span><br><span class="line">DATE_DELAY = <span class="variable">$(<span class="built_in">shell</span> date)</span></span><br></pre></td></tr></table></figure>
-<code>DATE</code> 與 <code>DATE_DELAY</code> 時間將會不同，<code>DATE_DELAY</code> 的時間為該變數被用到時，而 <code>DATE</code> 則為 Makefile parse 到這一行的當下。</li>
-<li>Appending assignment (+&#x3D;)：<br>例如 CFLAGS 本來為 -O3<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">CFLAGS += -pthread</span><br></pre></td></tr></table></figure>
-則 <code>CFLAGS</code> 會變成 <code>-O3 -pthread</code>。通常可以配合上述的 Target specifi variable 使用，對於特定的 target 使用 <code>+=</code> 給定特別的 flags。</li>
-<li>Conditional assignment (?&#x3D;)：<br>若變數未定義則指定新的值，否則採用原有的值。與 <code>=</code> 同為 defer assignment。</li>
-</ul>
-<h2 id="Special-character"><a href="#Special-character" class="headerlink" title="Special character"></a>Special character</h2><p>在 Makefile 中也有很多的特殊字元，每個都有特別的意義，如下：</p>
-<ul>
-<li>@：make 一般會 print 出要執行的指令，在 command 前加上 @ 則不會 print 出<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	@rm -f <span class="variable">$(TARGETS)</span> $(TARGETS:=.o)</span><br></pre></td></tr></table></figure></li>
-<li>%：wildcard character，也就是可以 match 各種的 pattern，使用方式如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">	<span class="variable">$(CC)</span> <span class="variable">$(CFLAGS)</span> -c <span class="variable">$&lt;</span> -o <span class="variable">$*</span>.o</span><br></pre></td></tr></table></figure>
-假設下 <code>make target.o</code>，此時會執行 <code>gcc -c target.c -o target.o</code>，可以看到 <code>$*</code> 會自動替換成 % 所 match 到的字元。</li>
-<li>-：makefile 只要遇到任何錯誤都會中斷執行，加 <code>-</code> 在 command 前面，使得就算 command 出錯，也不影響後續的 commands，如下：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	-rm *.o</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="PHONY"><a href="#PHONY" class="headerlink" title="PHONY"></a>PHONY</h3><p>這是一個很重要的 kerword。在前文中很常看到 PHONY 的身影，這個 keyword 是用來宣告這些 rule 是一個指令，而不是一個檔案，如下：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	@rm -f <span class="variable">$(TARGETS)</span> $(TARGETS:=.o)</span><br></pre></td></tr></table></figure>
-
-<p>如果沒有加 <code>.PHONY: clean</code>，此時資料夾中又有 clean 這個檔案，則 makefile 會認為 clean 這個 target up to date，因此 clean 下的指令將永遠不會被執行。而加上 <code>.PHONY: clean</code> 可以解決這樣的問題。</p>
-<h3 id="Makefile-print"><a href="#Makefile-print" class="headerlink" title="Makefile print"></a>Makefile print</h3><p>Makefile 內部其實有很多預設的變數，可以透過以下指令查看：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">make -p &gt; make_print</span><br><span class="line">cat make_print</span><br></pre></td></tr></table></figure>
-
-<h3 id="Compiler"><a href="#Compiler" class="headerlink" title="Compiler"></a>Compiler</h3><p>有時候會見到以下這樣的 Makefile：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">CC = gcc</span><br><span class="line">CXX = g++</span><br><span class="line">CFLAGS = -lm -O3</span><br><span class="line"><span class="section">hw2a: CFLAGS += -pthread</span></span><br><span class="line"><span class="section">hw2b: CC = mpicc</span></span><br><span class="line"><span class="section">hw2b: CXX = mpicxx</span></span><br><span class="line"><span class="section">hw2b: CFLAGS += -fopenmp</span></span><br><span class="line">CXXFLAGS = <span class="variable">$(CFLAGS)</span></span><br><span class="line">TARGETS = hw2a hw2b</span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: all</span></span><br><span class="line"><span class="section">all: <span class="variable">$(TARGETS)</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -f <span class="variable">$(TARGETS)</span> $(TARGETS:=.o)</span><br></pre></td></tr></table></figure>
-
-<p>此時或許會懷疑又沒有說明 make hw2a 的 rule，make 要怎麼知道使用哪個 compiler 呢？</p>
-<p>可以透過前面說的 <code>make -p</code> 查看，其實 make 有很多預設的使用情境，在沒有說明 compiler 的情況下，對於 .c file make 會優先使用 CC 這個 variable 內的 compiler，而對於 .cc or .cpp 則會使用 CXX compiler。</p>
-<h3 id="Set-variable-in-CLI"><a href="#Set-variable-in-CLI" class="headerlink" title="Set variable in CLI"></a>Set variable in CLI</h3><p>variable 也可以直接在下 make command 時設定，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">make CC=clang CXX=clang++</span><br></pre></td></tr></table></figure>
-
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
-<li><a href="https://www.gnu.org/software/make/manual/">GNU make manual</a></li>
-<li><a href="https://hackmd.io/@sysprog/SySTMXPvl">Make 語法和示範</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Learning</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>【學記】SSH Tunneling</title>
-    <url>/2024/08/20/Learning/ssh-tunneling/</url>
-    <content><![CDATA[<h2 id="What-is-SSH-Tunneling"><a href="#What-is-SSH-Tunneling" class="headerlink" title="What is SSH Tunneling?"></a>What is SSH Tunneling?</h2><p>網路的連線由 2 個端點組成，而連線中經常會經過 untrusted networks（例如 internet），其中的資料傳輸就不安全，可能會有被偷窺，甚至收到錯誤資料的風險，tunneling 技術就是為此而生。</p>
-<p>Tunneling 指的是將網路上的 2 個端點用某種方式連接起來，形成一個隧道，而 SSH tunneling 就是用 SSH protocol 建立隧道，不但能加密通訊，即便中間有設下防火牆或者要連上在別的內網的機器，SSH tunneling 都能建立連線。</p>
-<p><img src="/images/ssh_tunneling/0.png"></p>
-<blockquote>
-<p>舉例而言，今天有個 web server 建立在 remote server 的 9000 port，而該 server 並沒有 external IP，而是需要透過 jump host 才能連上。<br>我們可以透過 SSH 的 port forwarding 來建立一個在自己的 machine 與 remote server 間的 tunnel，如此一來便能連上架設在 remote server 上的 web server</p>
-</blockquote>
-<h2 id="Type-of-port-forwarding"><a href="#Type-of-port-forwarding" class="headerlink" title="Type of port forwarding"></a>Type of port forwarding</h2><p>port forwarding 可以分為：</p>
-<ul>
-<li>Local port forwarding</li>
-<li>Remote port forwarding</li>
-<li>Dynamic port forwarding</li>
-</ul>
-<p>以下將分別介紹各個 port forwarding 的使用方式以及使用場景。</p>
-<h2 id="Local-port-forwarding"><a href="#Local-port-forwarding" class="headerlink" title="Local port forwarding"></a>Local port forwarding</h2><h3 id="command"><a href="#command" class="headerlink" title="command"></a>command</h3><p>Local port forwarding 的指令格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -L [bind_address:]local_port:host:remote_port user@remote-server</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意 host address 是對於 remote-server 的 address，因此若 host 為 localhost 則是指 remote-server 自己。</p>
-</blockquote>
-<p>假設我們要將 local 的 9090 port forward 到 remote server 的 8080 port，指令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -L 9090:localhost:8080 user@remote-server</span><br></pre></td></tr></table></figure>
-
-<p>即在 client 上開啟 9090 port 等待連線，當有人連上時，將所有的資料送到 remote-server:8080，也就是將 request 導向 server 上。</p>
-<h3 id="scenario"><a href="#scenario" class="headerlink" title="scenario"></a>scenario</h3><p>SSH local port forwarding 的使用情境為何？讓我們看一個例子。</p>
-<blockquote>
-<p>假設在 server 的 8080 port 架有一個 website，而該 server 需要透過 jump host 才能連上（也就是沒有 external IP），若我們想要在自己電腦的瀏覽器 access 該 website，可以怎麼做呢？</p>
-</blockquote>
-<p><img src="/images/ssh_tunneling/3.png"></p>
-<p>首先，設定 SSH 讓自己的電腦可以透過 SSH 連上 remote server，可以透過編輯 ~&#x2F;.ssh&#x2F;config 設定使用 jump host，而這並不是本篇學記的重點，因此不多著墨。</p>
-<p>目前的 ~&#x2F;.ssh&#x2F;config 如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host jumpHost</span><br><span class="line">    HostName 1.2.3.4</span><br><span class="line">    User mike</span><br><span class="line"></span><br><span class="line">Host remoteServer</span><br><span class="line">    HostName remote-server.com</span><br><span class="line">    User mike</span><br><span class="line">    ProxyJump jumpHost</span><br></pre></td></tr></table></figure>
-
-<p>測試連線：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh remoteServer</span><br></pre></td></tr></table></figure>
-
-<p>local port forwarding：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -L 9090:localhost:8080 remoteServer</span><br></pre></td></tr></table></figure>
-
-<p>此時當我們在瀏覽器打開 localhost:9090，會將瀏覽器的連線請求導向 remote server 的 8080 port，也就是該網頁架設的地點，如此一來我們便可以透過 ssh port forwarding 連上原本無法連上的服務。</p>
-<h2 id="Remote-port-forwarding"><a href="#Remote-port-forwarding" class="headerlink" title="Remote port forwarding"></a>Remote port forwarding</h2><p>Remote port forwarding 的指令、使用方法與場景跟 local port forwarding 類似。</p>
-<h3 id="command-1"><a href="#command-1" class="headerlink" title="command"></a>command</h3><p>Remote port forwarding 的指令格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -R [bind_address:]port:host:host_port user@remote-server</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意 host address 是對於 client 的 address，因此若 host 為 localhost 的話則是你的電腦自己。</p>
-</blockquote>
-<p>假設我們要將 remote server 的 8080 port forward 到自己的 9090 port，指令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -R 0.0.0.0:8080:localhost:9090 user@remote-server</span><br></pre></td></tr></table></figure>
-
-<p>即當有人連線到 remote server 的 8080 port，將所有的資料送到你電腦的 9090 port 上，此時若你的電腦有 web server 架設在 9090 port，便可以收到該資料。</p>
-<p>綜上，我們可以看出 remote 跟 local port forwarding 的差別在於 service 架設在哪裡，在自己的電腦要給別人連線（remote port forwarding）或是在 server 上，要用自己電腦的瀏覽器連線（local port forwarding）。</p>
-<h3 id="scenario-1"><a href="#scenario-1" class="headerlink" title="scenario"></a>scenario</h3><p>Remote port forwarding 的使用情境，我們看以下的例子。</p>
-<p>假設我要在自己的電腦上架設一個 web server（9090 port），而不想直接暴露自己的 IP，要求 user 透過 ssh server 連線，此時我們可以透過以下指令將 ssh server 的 8080 port forward 到我的 9090 port：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -R 8080:localho:9090 user@remote-server</span><br></pre></td></tr></table></figure>
-
-<p>此時當 user 連線上 remote server 的 8080 port，我架設在我電腦 9090 port 的 web service 便會收到 request，因為我透過 remote port forwarding 將 remote server 的 8080 port 上的所有資料送到我電腦上的 9090 port 了。</p>
-<p><img src="/images/ssh_tunneling/4.png"></p>
-<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p>我前幾天想要查看在 remote server 上的 prometheus 資料，該 server 需要透過多層 jump host 才能連上，但我又想要在自己電腦的瀏覽器上查看 grafana dashboard（一個資料視覺化的工具，有支援 prometheus）。此時可以透過 local port forwarding 將 local 的 9000 port forward 到 remote 的 9000 port，再將架設在 remote server 的 kubernetes cluster 中的 grafana port forward 到 remote server 的 9000 port，這樣一來所有連線請求送到我電腦的 9000 port 就會被 forward 到執行 grafana 的 container 上，因此就可以看到 grafana 的資料了！</p>
-<p>local port forwarding：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -L 9000:localhost:9000 remoteServer</span><br></pre></td></tr></table></figure>
-
-<p>kubernetes port forward：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">kubectl port-forward svc/prometheus-grafana 9000:90</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>90 port 是透過 kubectl get svc 查看得知。</p>
-</blockquote>
-<p>打開瀏覽器連線 localhost:9000：<br><img src="/images/ssh_tunneling/1.png"></p>
-]]></content>
-      <categories>
-        <category>Learning</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
-        <tag>Learning</tag>
-        <tag>SSH</tag>
       </tags>
   </entry>
 </search>
