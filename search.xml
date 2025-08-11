@@ -41,6 +41,48 @@
       </tags>
   </entry>
   <entry>
+    <title>【心得】臨時筆記軟體 Antinote</title>
+    <url>/2025/08/09/Review/antinote/</url>
+    <content><![CDATA[<p>從 Windows, Ubuntu 切換來 Mac 之後，我就一直在尋找一個好用的臨時筆記軟體。像 Windows 就有 notepad，Ubuntu 則有內建的 text editor，MacOS 其實也有內建的 notes，不過我還是想要簡潔一點的介面，偶然間看到 <a href="https://antinote.io/">Antinote</a> 這個 app，決定來試用看看。</p>
+<p>Antinote 的介面主打簡潔，但其中又有很多強大的 features。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Review/antinote/1.png" loading="lazy">
+</figure>
+
+<p>詳細功能可以參考官網，我只會提一些對我來說很方便的點。</p>
+<h2 id="Global-hotkey"><a href="#Global-hotkey" class="headerlink" title="Global hotkey"></a>Global hotkey</h2><p>第一個最常用的就是有 global hotkey，我只要按下 <code>option + A</code>，就會跳出一個小視窗，我就可以快速開始打字，臨時想到一個東西想要記錄的時候就很方便。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Review/antinote/2.jpg" loading="lazy">
+</figure>
+
+<h2 id="Pinned-window"><a href="#Pinned-window" class="headerlink" title="Pinned window"></a>Pinned window</h2><p>再來就是我可能需要複製貼上，或者同步查看筆記跟另一個視窗，Antinote 提供一個很方便的視窗釘選功能，只要按下右上角那個綠色的就可以把 Antinote 的視窗 pin 住</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Review/antinote/4.png" loading="lazy">
+</figure>
+
+<p>這時候我如果滑鼠去點後面的視窗 Antinote 也不會不見。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Review/antinote/3.png" loading="lazy">
+</figure>
+
+<h2 id="自動-copy-paste"><a href="#自動-copy-paste" class="headerlink" title="自動 copy-paste"></a>自動 copy-paste</h2><p>如果有時候需要重複貼上的話，Antinote 有提供只要按下 copy 就自動貼上文字的功能，也有只要選取就自動貼上。</p>
+<p>使用方法只要在 note 的一開頭給予指令 <code>paste</code> 即可。</p>
+<figure class="blog-img-box" data-testimonials-item>
+    <img src="/images/Review/antinote/5.png" loading="lazy">
+</figure>
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>其他還有很多很好用的功能，像是 list 類型的 note、markdown support、word count、甚至還有蕃茄鐘跟匯率換算，有非常非常多的功能，而全部終生買斷只要 5 美金，我體驗過後覺得很不錯就直接買了，推薦。</p>
+<p>另外 papaya 老師也有出一部 <a href="https://youtu.be/fG3JzCk8VLA?si=-_W8pvXdYVyhXP_U">影片</a> 介紹，我就是看到這部影片決定要來體驗看看的，整體而言非常推薦。</p>
+]]></content>
+      <categories>
+        <category>Review</category>
+      </categories>
+      <tags>
+        <tag>Review</tag>
+        <tag>Recommendation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【遊記】將軍村</title>
     <url>/2025/08/09/Travel/general-village/</url>
     <content><![CDATA[<p>這次的旅程來到了新竹的 <a href="https://maps.app.goo.gl/QAo9qRLJpBYHmDuv8">將軍村</a>，就在清大附近走路約 10 mins 就可以到。</p>
@@ -101,8 +143,8 @@
         <category>Travel</category>
       </categories>
       <tags>
-        <tag>Hsinchu</tag>
         <tag>Travel</tag>
+        <tag>Hsinchu</tag>
       </tags>
   </entry>
   <entry>
@@ -203,8 +245,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
         <tag>Beef Noodle</tag>
       </tags>
   </entry>
@@ -661,8 +703,8 @@
         <category>Review</category>
       </categories>
       <tags>
-        <tag>NTHU</tag>
         <tag>CS</tag>
+        <tag>NTHU</tag>
         <tag>Review</tag>
       </tags>
   </entry>
@@ -834,8 +876,8 @@
         <category>Review</category>
       </categories>
       <tags>
-        <tag>NTHU</tag>
         <tag>CS</tag>
+        <tag>NTHU</tag>
         <tag>Review</tag>
         <tag>Hackathon</tag>
       </tags>
@@ -1242,9 +1284,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -1295,9 +1337,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -1438,9 +1480,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
         <tag>System</tag>
       </tags>
   </entry>
@@ -1487,8 +1529,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
       </tags>
   </entry>
   <entry>
@@ -1567,8 +1609,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>CS</tag>
         <tag>Learning</tag>
+        <tag>CS</tag>
         <tag>SSH</tag>
       </tags>
   </entry>
@@ -1629,10 +1671,10 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>CS</tag>
         <tag>Virtual</tag>
         <tag>Learning</tag>
         <tag>Docker</tag>
+        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -1819,8 +1861,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
         <tag>Izakaya</tag>
       </tags>
   </entry>
@@ -1904,8 +1946,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>CS</tag>
         <tag>Learning</tag>
+        <tag>CS</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -1940,8 +1982,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
       </tags>
   </entry>
   <entry>
@@ -1968,9 +2010,9 @@
         <category>Food</category>
       </categories>
       <tags>
+        <tag>Hsinchu</tag>
         <tag>Food</tag>
         <tag>Dessert</tag>
-        <tag>Hsinchu</tag>
       </tags>
   </entry>
   <entry>
@@ -2043,8 +2085,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
         <tag>Curry</tag>
       </tags>
   </entry>
@@ -2074,8 +2116,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
         <tag>Ice cream</tag>
       </tags>
   </entry>
@@ -2121,9 +2163,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -2168,9 +2210,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
         <tag>Python</tag>
       </tags>
   </entry>
@@ -2217,9 +2259,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
         <tag>System</tag>
       </tags>
   </entry>
@@ -2270,9 +2312,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
         <tag>ML</tag>
         <tag>AI</tag>
       </tags>
@@ -2310,9 +2352,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -2361,9 +2403,9 @@
         <category>Course</category>
       </categories>
       <tags>
+        <tag>CS</tag>
         <tag>Course</tag>
         <tag>NTHU</tag>
-        <tag>CS</tag>
         <tag>System</tag>
       </tags>
   </entry>
@@ -2396,8 +2438,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
         <tag>Curry</tag>
       </tags>
   </entry>
@@ -2421,8 +2463,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
         <tag>Drink</tag>
       </tags>
   </entry>
@@ -2472,8 +2514,8 @@
         <category>Food</category>
       </categories>
       <tags>
-        <tag>Food</tag>
         <tag>Hsinchu</tag>
+        <tag>Food</tag>
         <tag>Burger</tag>
       </tags>
   </entry>
