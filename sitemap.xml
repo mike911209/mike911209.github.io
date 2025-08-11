@@ -503,132 +503,6 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/tags/Course/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/NTHU/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/General-Course/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/System/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/ML/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/AI/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Python/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Travel/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Hsinchu/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Train/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Lantern/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/New-Taipei/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Lanterm/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Cat/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Review/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Recommendation/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Intern/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/tags/Hackathon/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mike911209.github.io/tags/Food/</loc>
     <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -643,7 +517,7 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/tags/Beef-Noodle/</loc>
+    <loc>https://mike911209.github.io/tags/Hsinchu/</loc>
     <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -651,6 +525,13 @@
   
   <url>
     <loc>https://mike911209.github.io/tags/Kaohsiung/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Beef-Noodle/</loc>
     <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -733,6 +614,125 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://mike911209.github.io/tags/Review/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Recommendation/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/NTHU/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Intern/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Hackathon/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Travel/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Train/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Lantern/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/New-Taipei/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Lanterm/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Cat/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Course/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/General-Course/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/System/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/ML/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/AI/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/tags/Python/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -743,14 +743,7 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/categories/Course/</loc>
-    <lastmod>2025-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mike911209.github.io/categories/Travel/</loc>
+    <loc>https://mike911209.github.io/categories/Food/</loc>
     <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -764,7 +757,14 @@
   </url>
   
   <url>
-    <loc>https://mike911209.github.io/categories/Food/</loc>
+    <loc>https://mike911209.github.io/categories/Travel/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mike911209.github.io/categories/Course/</loc>
     <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
